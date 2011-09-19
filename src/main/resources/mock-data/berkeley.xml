@@ -1,0 +1,147 @@
+<!--
+
+    Licensed to Jasig under one or more contributor license
+    agreements. See the NOTICE file distributed with this work
+    for additional information regarding copyright ownership.
+    Jasig licenses this file to you under the Apache License,
+    Version 2.0 (the "License"); you may not use this file
+    except in compliance with the License. You may obtain a
+    copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on
+    an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied. See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<menu
+    xmlns="https://source.jasig.org/schemas/portlet/dining/menu"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://source.jasig.org/schemas/portlet/dining/menu ../xsd/menu.xsd"
+    day="Today">
+    
+    <dining-hall name="Berkeley">
+        <meal name="Continental Breakfast">
+            <food-category name="The Entrees">
+                <dish name="Waffle Bar">
+                    <code>G</code>
+                </dish>
+            </food-category>
+            <food-category name="Morning Sweets">
+                <dish name="Ham and Cheese Scones">
+                    <code>D</code>
+                    <code>E</code>
+                    <code>P</code>
+                    <code>G</code>
+                </dish>
+            </food-category>
+        </meal>
+        <meal name="Lunch">
+            <food-category name="Soup">
+                <dish name="Yankee Bean Soup">
+                    <code>SY</code>
+                </dish>
+            </food-category>
+            <food-category name="Entrees">
+                <dish name="Citrus and Cilantro Tofu">
+                    <code>SM</code>
+                    <code>V</code>
+                    <code>SY</code>
+                    <code>G</code>
+                </dish>
+                <dish name="Conrmeal-Crusted Catfish">
+                    <code>SY</code>
+                    <code>G</code>
+                </dish>
+                <dish name="Mediterranean Foccacia">
+                    <code>D</code>
+                    <code>W</code>
+                    <code>G</code>
+                </dish>
+                <dish name="BBQ Chicken Breast Sandwich">
+                    <code>W</code>
+                    <code>G</code>
+                </dish>
+            </food-category>
+            <food-category name="Grill">
+                <dish name="Grilled-to-order Star Ranch All Natural Burgers and Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."></dish>
+            </food-category>
+            <food-category name="Market Deli">
+                <dish name="Italian Deli Zep">
+                    <code>D</code>
+                    <code>P</code>
+                    <code>W</code>
+                    <code>G</code>
+                </dish>
+            </food-category>
+            <food-category name="Sides">
+                <dish name="Rice"></dish>
+            </food-category>
+            <food-category name="Vegetables">
+                <dish name="Southern Style Collard Greens">
+                    <code>A</code>
+                </dish>
+            </food-category>
+            <food-category name="Salad">
+                <dish name="Mesclun, Cauliflower and Cheddar">
+                    <code>A</code>
+                </dish>
+                <dish name="White Bean Salad with Sundried Tomato Vinaigrette">
+                    <code>A</code>
+                </dish>
+                <dish name="Combination Salad">
+                    <code>A</code>
+                    <code>SY</code>
+                </dish>
+            </food-category>
+        </meal>
+        <meal name="Dinner">
+            <food-category name="Entrees">
+                <dish name="Apricot Roasted Chicken">
+                    <code>A</code>
+                    <code>D</code>
+                </dish>
+                <dish name="Roast Chicken Picnic Pieces"></dish>
+            </food-category>
+            <food-category name="Chef's Table">
+                <dish name="Sage Aioli">
+                    <code>E</code>
+                </dish>
+                <dish name="Sweet and Smokey Roast Pork">
+                    <code>A</code>
+                    <code>P</code>
+                </dish>
+            </food-category>
+            <food-category name="Grill">
+                <dish name="Sautéed Swiss Chard with Beans and Bread">
+                    <code>W</code>
+                    <code>G</code>
+                </dish>
+                <dish name="Grilled-to-order Star Ranch All Natural Burgers and Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."></dish>
+            </food-category>
+            <food-category name="Sides">
+                <dish name="Israeli Couscous"></dish>
+            </food-category>
+            <food-category name="Vegetables">
+                <dish name="Broccoli With Lemon, Olive Oil and Garlic"></dish>
+            </food-category>
+            <food-category name="Salad">
+                <dish name="Mesclun, Cauliflower and Cheddar">
+                    <code>A</code>
+                </dish>
+                <dish name="White Bean Salad with Sundried Tomato Vinaigrette">
+                    <code>A</code>
+                </dish>
+                <dish name="Combination Salad">
+                    <code>A</code>
+                    <code>SY</code>
+                </dish>
+            </food-category>
+        </meal>
+    </dining-hall>
+    
+</menu>
