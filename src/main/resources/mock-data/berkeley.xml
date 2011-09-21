@@ -1,147 +1,718 @@
-<!--
-
-    Licensed to Jasig under one or more contributor license
-    agreements. See the NOTICE file distributed with this work
-    for additional information regarding copyright ownership.
-    Jasig licenses this file to you under the Apache License,
-    Version 2.0 (the "License"); you may not use this file
-    except in compliance with the License. You may obtain a
-    copy of the License at:
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on
-    an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied. See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
--->
-<menu
-    xmlns="https://source.jasig.org/schemas/portlet/dining/menu"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://source.jasig.org/schemas/portlet/dining/menu ../xsd/menu.xsd"
-    day="Today">
-    
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns="https://source.jasig.org/schemas/portlet/dining/menu"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" day="Today"
+    xsi:schemaLocation="https://source.jasig.org/schemas/portlet/dining/menu ../xsd/menu.xsd">
     <dining-hall name="Berkeley">
-        <meal name="Continental Breakfast">
+        <meal name="Brunch">
+            <food-category name="First Course">
+                <dish name="Steelcut Oats">
+                    <code>5</code>
+                    <code>2</code>
+                    <nutrition-item value="6 oz ladle" name="Serving Size" />
+                    <nutrition-item value="146" name="Calories" />
+                    <nutrition-item value="4.6 grams" name="Protein" />
+                    <nutrition-item value="3.7 grams" name="Fat" />
+                    <nutrition-item value="0.9 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="1.3 grams" name="Saturated Fat" />
+                    <nutrition-item value="4 milligrams" name="Cholesterol" />
+                    <nutrition-item value="23.8 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.3 grams" name="Sugar" />
+                    <nutrition-item value="3.6 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.16 milligrams" name="B-1" />
+                    <nutrition-item value="0.40 milligrams" name="Niacin" />
+                    <nutrition-item value="0.06 milligrams" name="B-2" />
+                    <nutrition-item value="79.4 IU" name="Vitamin A" />
+                    <nutrition-item value="1.5 milligrams" name="Iron" />
+                    <nutrition-item value="21.6 milligrams" name="Calcium" />
+                    <nutrition-item value="268 milligrams" name="Sodium" />
+                    <ingredients>hot water, organic steel cut oats, salted
+                        butter, kosher
+                        salt.</ingredients>
+                </dish>
+            </food-category>
             <food-category name="The Entrees">
+                <dish name="Vegan Waffle Batter">
+                    <code>11</code>
+                    <code>14</code>
+                    <nutrition-item value="1 waffle" name="Serving Size" />
+                    <nutrition-item value="304" name="Calories" />
+                    <nutrition-item value="8.9 grams" name="Protein" />
+                    <nutrition-item value="4.1 grams" name="Fat" />
+                    <nutrition-item value="0.9 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.4 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="56.6 grams" name="Carbohydrates" />
+                    <nutrition-item value="9.0 grams" name="Sugar" />
+                    <nutrition-item value="1.5 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.43 milligrams" name="B-1" />
+                    <nutrition-item value="3.28 milligrams" name="Niacin" />
+                    <nutrition-item value="0.28 milligrams" name="B-2" />
+                    <nutrition-item value="481.5 IU" name="Vitamin A" />
+                    <nutrition-item value="3.5 milligrams" name="Iron" />
+                    <nutrition-item value="221.7 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="926 milligrams" name="Sodium" />
+                    <ingredients>plain soy milk, flour, confectioners' sugar,
+                        baking powder,
+                        butter alternative (canola}, imitation
+                        vanilla extract, baking
+                        soda, cornmeal, salt.
+                    </ingredients>
+                </dish>
                 <dish name="Waffle Bar">
-                    <code>G</code>
+                    <code>14</code>
+                    <nutrition-item value="1 waffle" name="Serving Size" />
+                    <nutrition-item value="278" name="Calories" />
+                    <nutrition-item value="7.7 grams" name="Protein" />
+                    <nutrition-item value="4.3 grams" name="Fat" />
+                    <nutrition-item value="0.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="1.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="53.6 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.8 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="0.00 milligrams" name="Niacin" />
+                    <nutrition-item value="0.00 milligrams" name="B-2" />
+                    <nutrition-item value="0.0 IU" name="Vitamin A" />
+                    <nutrition-item value="2.6 milligrams" name="Iron" />
+                    <nutrition-item value="38.3 milligrams" name="Calcium" />
+                    <nutrition-item value="766 milligrams" name="Sodium" />
+                    <ingredients>water, waffle mix.</ingredients>
+                </dish>
+                <dish name="Pepperoni French Bread Pizza">
+                    <code>2</code>
+                    <code>8</code>
+                    <code>13</code>
+                    <code>14</code>
+                    <nutrition-item value="1 piece" name="Serving Size" />
+                    <nutrition-item value="315" name="Calories" />
+                    <nutrition-item value="14.7 grams" name="Protein" />
+                    <nutrition-item value="12.6 grams" name="Fat" />
+                    <nutrition-item value="0.8 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="5.8 grams" name="Saturated Fat" />
+                    <nutrition-item value="33 milligrams" name="Cholesterol" />
+                    <nutrition-item value="35.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="3.8 grams" name="Sugar" />
+                    <nutrition-item value="2.8 grams" name="Dietary Fiber" />
+                    <nutrition-item value="1.9 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.32 milligrams" name="B-1" />
+                    <nutrition-item value="2.94 milligrams" name="Niacin" />
+                    <nutrition-item value="0.30 milligrams" name="B-2" />
+                    <nutrition-item value="481.2 IU" name="Vitamin A" />
+                    <nutrition-item value="1.9 milligrams" name="Iron" />
+                    <nutrition-item value="260.0 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="818 milligrams" name="Sodium" />
+                    <ingredients>french bread, organic tomato sauce with basil,
+                        shredded whole
+                        milk mozzarella, pepperoni slices.
+                    </ingredients>
+                </dish>
+                <dish name="Cheese French Bread Pizza">
+                    <code>5</code>
+                    <code>2</code>
+                    <code>13</code>
+                    <code>14</code>
+                    <nutrition-item value="1 piece" name="Serving Size" />
+                    <nutrition-item value="293" name="Calories" />
+                    <nutrition-item value="13.7 grams" name="Protein" />
+                    <nutrition-item value="10.6 grams" name="Fat" />
+                    <nutrition-item value="0.7 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="5.1 grams" name="Saturated Fat" />
+                    <nutrition-item value="29 milligrams" name="Cholesterol" />
+                    <nutrition-item value="35.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="3.8 grams" name="Sugar" />
+                    <nutrition-item value="2.8 grams" name="Dietary Fiber" />
+                    <nutrition-item value="1.9 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.31 milligrams" name="B-1" />
+                    <nutrition-item value="2.73 milligrams" name="Niacin" />
+                    <nutrition-item value="0.29 milligrams" name="B-2" />
+                    <nutrition-item value="481.2 IU" name="Vitamin A" />
+                    <nutrition-item value="1.8 milligrams" name="Iron" />
+                    <nutrition-item value="259.0 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="743 milligrams" name="Sodium" />
+                    <ingredients>french bread, organic tomato sauce with basil,
+                        shredded whole
+                        milk mozzarella.</ingredients>
+                </dish>
+            </food-category>
+            <food-category name="The Grill">
+                <dish name="Buttermilk Pancakes ">
+                    <code>2</code>
+                    <code>3</code>
+                    <code>14</code>
+                    <nutrition-item value="2 pancakes" name="Serving Size" />
+                    <nutrition-item value="279" name="Calories" />
+                    <nutrition-item value="8.4 grams" name="Protein" />
+                    <nutrition-item value="7.1 grams" name="Fat" />
+                    <nutrition-item value="1.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="2.4 grams" name="Saturated Fat" />
+                    <nutrition-item value="53 milligrams" name="Cholesterol" />
+                    <nutrition-item value="45.6 grams" name="Carbohydrates" />
+                    <nutrition-item value="5.3 grams" name="Sugar" />
+                    <nutrition-item value="1.2 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.6 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.38 milligrams" name="B-1" />
+                    <nutrition-item value="2.73 milligrams" name="Niacin" />
+                    <nutrition-item value="0.35 milligrams" name="B-2" />
+                    <nutrition-item value="232.2 IU" name="Vitamin A" />
+                    <nutrition-item value="2.6 milligrams" name="Iron" />
+                    <nutrition-item value="260.6 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="367 milligrams" name="Sodium" />
+                    <ingredients>buttermilk, flour, reduced-fat milk, cage free
+                        whole liquid
+                        eggs, granulated sugar, butter alternative
+                        (canola}, salted
+                        butter, baking powder.</ingredients>
+                </dish>
+                <dish name="Scrambled Egg Whites ">
+                    <code>7</code>
+                    <code>3</code>
+                    <code>11</code>
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="59" name="Calories" />
+                    <nutrition-item value="12.3 grams" name="Protein" />
+                    <nutrition-item value="0.8 grams" name="Fat" />
+                    <nutrition-item value="0.3 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.1 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="0.8 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.8 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="0.12 milligrams" name="Niacin" />
+                    <nutrition-item value="0.49 milligrams" name="B-2" />
+                    <nutrition-item value="0.0 IU" name="Vitamin A" />
+                    <nutrition-item value="0.1 milligrams" name="Iron" />
+                    <nutrition-item value="8.2 milligrams" name="Calcium" />
+                    <nutrition-item value="187 milligrams" name="Sodium" />
+                    <ingredients>cage free whole liquid eggs, soybean oil.
+                    </ingredients>
+                </dish>
+                <dish name="Scrambled Eggs ">
+                    <code>7</code>
+                    <code>3</code>
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="204" name="Calories" />
+                    <nutrition-item value="14.0 grams" name="Protein" />
+                    <nutrition-item value="16.4 grams" name="Fat" />
+                    <nutrition-item value="1.3 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="3.8 grams" name="Saturated Fat" />
+                    <nutrition-item value="492 milligrams" name="Cholesterol" />
+                    <nutrition-item value="0.0 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="0.00 milligrams" name="Niacin" />
+                    <nutrition-item value="0.08 milligrams" name="B-2" />
+                    <nutrition-item value="1170.4 IU" name="Vitamin A" />
+                    <nutrition-item value="1.7 milligrams" name="Iron" />
+                    <nutrition-item value="57.7 milligrams" name="Calcium" />
+                    <nutrition-item value="140 milligrams" name="Sodium" />
+                    <ingredients>cage free whole liquid eggs, butter alternative
+                        (canola}.</ingredients>
+                </dish>
+            </food-category>
+            <food-category name="Breakfast Meats">
+                <dish name="Bacon Slices">
+                    <code>8</code>
+                    <nutrition-item value="2 slices" name="Serving Size" />
+                    <nutrition-item value="80" name="Calories" />
+                    <nutrition-item value="5.5 grams" name="Protein" />
+                    <nutrition-item value="6.2 grams" name="Fat" />
+                    <nutrition-item value="0.7 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="2.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="16 milligrams" name="Cholesterol" />
+                    <nutrition-item value="0.4 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.06 milligrams" name="B-1" />
+                    <nutrition-item value="1.64 milligrams" name="Niacin" />
+                    <nutrition-item value="0.04 milligrams" name="B-2" />
+                    <nutrition-item value="5.5 IU" name="Vitamin A" />
+                    <nutrition-item value="0.2 milligrams" name="Iron" />
+                    <nutrition-item value="1.6 milligrams" name="Calcium" />
+                    <nutrition-item value="341 milligrams" name="Sodium" />
+                    <ingredients>pre-cooked bacon slices.</ingredients>
+                </dish>
+                <dish name="Corned Beef Hash">
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="170" name="Calories" />
+                    <nutrition-item value="7.7 grams" name="Protein" />
+                    <nutrition-item value="11.5 grams" name="Fat" />
+                    <nutrition-item value="0.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="8.5 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="1.27 milligrams" name="Niacin" />
+                    <nutrition-item value="0.07 milligrams" name="B-2" />
+                    <nutrition-item value="0.0 IU" name="Vitamin A" />
+                    <nutrition-item value="0.8 milligrams" name="Iron" />
+                    <nutrition-item value="8.5 milligrams" name="Calcium" />
+                    <nutrition-item value="535 milligrams" name="Sodium" />
+                    <ingredients>corned beef hash.</ingredients>
+                </dish>
+            </food-category>
+            <food-category name="The Sides">
+                <dish name="Home Fries">
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="138" name="Calories" />
+                    <nutrition-item value="2.0 grams" name="Protein" />
+                    <nutrition-item value="4.7 grams" name="Fat" />
+                    <nutrition-item value="1.3 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.4 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="22.8 grams" name="Carbohydrates" />
+                    <nutrition-item value="1.0 grams" name="Sugar" />
+                    <nutrition-item value="2.1 grams" name="Dietary Fiber" />
+                    <nutrition-item value="8.6 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.11 milligrams" name="B-1" />
+                    <nutrition-item value="1.52 milligrams" name="Niacin" />
+                    <nutrition-item value="0.02 milligrams" name="B-2" />
+                    <nutrition-item value="100.3 IU" name="Vitamin A" />
+                    <nutrition-item value="0.4 milligrams" name="Iron" />
+                    <nutrition-item value="74.2 milligrams" name="Calcium" />
+                    <nutrition-item value="152 milligrams" name="Sodium" />
+                    <ingredients>diced potatoes, butter alternative (canola},
+                        salt, fresh curly
+                        parsley, ground paprika, ground white
+                        pepper.</ingredients>
+                </dish>
+            </food-category>
+            <food-category name="The Salad">
+                <dish name="Greens with Mango-Ginger Vinaigrette">
+                    <code>1</code>
+                    <code>14</code>
+                    <nutrition-item value="1.5 oz portion" name="Serving Size" />
+                    <nutrition-item value="1" name="Calories" />
+                    <nutrition-item value="0.0 grams" name="Protein" />
+                    <nutrition-item value="0.0 grams" name="Fat" />
+                    <nutrition-item value="0.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="0.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="0.00 milligrams" name="Niacin" />
+                    <nutrition-item value="0.00 milligrams" name="B-2" />
+                    <nutrition-item value="1.1 IU" name="Vitamin A" />
+                    <nutrition-item value="0.0 milligrams" name="Iron" />
+                    <nutrition-item value="0.5 milligrams" name="Calcium" />
+                    <nutrition-item value="3 milligrams" name="Sodium" />
+                    <ingredients>mesclun greens, arbequina ev oil olive, mango
+                        pieces, water,
+                        juice lime fresh, seasoned rice vinegar,
+                        fresh shallots, ginger
+                        root puree, granulated sugar,
+                        wasabi powder, iodized salt.</ingredients>
+                </dish>
+                <dish name="Couscous With Lemon &amp; Tomatoes ">
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="118" name="Calories" />
+                    <nutrition-item value="4.5 grams" name="Protein" />
+                    <nutrition-item value="0.6 grams" name="Fat" />
+                    <nutrition-item value="0.1 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.1 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="23.8 grams" name="Carbohydrates" />
+                    <nutrition-item value="1.0 grams" name="Sugar" />
+                    <nutrition-item value="2.4 grams" name="Dietary Fiber" />
+                    <nutrition-item value="9.2 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.08 milligrams" name="B-1" />
+                    <nutrition-item value="1.27 milligrams" name="Niacin" />
+                    <nutrition-item value="0.08 milligrams" name="B-2" />
+                    <nutrition-item value="2531.3 IU" name="Vitamin A" />
+                    <nutrition-item value="1.3 milligrams" name="Iron" />
+                    <nutrition-item value="1567.4 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="186 milligrams" name="Sodium" />
+                    <ingredients>fresh native tomatoes, toasted israeli
+                        couscous, fresh
+                        spinach, lemon juice, arbequina ev oil
+                        olive, water, fresh
+                        italian parsley, fresh thyme, fresh
+                        rosemary, saffron salt, black
+                        pepper.</ingredients>
                 </dish>
             </food-category>
             <food-category name="Morning Sweets">
-                <dish name="Ham and Cheese Scones">
-                    <code>D</code>
-                    <code>E</code>
-                    <code>P</code>
-                    <code>G</code>
+                <dish name="Cinnamon Streusel Coffee Cake">
+                    <code>6</code>
+                    <code>2</code>
+                    <code>3</code>
+                    <code>14</code>
+                    <nutrition-item value="1/32 sheet" name="Serving Size" />
+                    <nutrition-item value="314" name="Calories" />
+                    <nutrition-item value="4.6 grams" name="Protein" />
+                    <nutrition-item value="14.5 grams" name="Fat" />
+                    <nutrition-item value="4.4 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="3.3 grams" name="Saturated Fat" />
+                    <nutrition-item value="13 milligrams" name="Cholesterol" />
+                    <nutrition-item value="44.0 grams" name="Carbohydrates" />
+                    <nutrition-item value="4.7 grams" name="Sugar" />
+                    <nutrition-item value="0.9 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.1 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.32 milligrams" name="B-1" />
+                    <nutrition-item value="2.50 milligrams" name="Niacin" />
+                    <nutrition-item value="0.21 milligrams" name="B-2" />
+                    <nutrition-item value="321.4 IU" name="Vitamin A" />
+                    <nutrition-item value="2.3 milligrams" name="Iron" />
+                    <nutrition-item value="151.8 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="339 milligrams" name="Sodium" />
+                    <ingredients />
                 </dish>
             </food-category>
-        </meal>
-        <meal name="Lunch">
-            <food-category name="Soup">
-                <dish name="Yankee Bean Soup">
-                    <code>SY</code>
-                </dish>
-            </food-category>
-            <food-category name="Entrees">
-                <dish name="Citrus and Cilantro Tofu">
-                    <code>SM</code>
-                    <code>V</code>
-                    <code>SY</code>
-                    <code>G</code>
-                </dish>
-                <dish name="Conrmeal-Crusted Catfish">
-                    <code>SY</code>
-                    <code>G</code>
-                </dish>
-                <dish name="Mediterranean Foccacia">
-                    <code>D</code>
-                    <code>W</code>
-                    <code>G</code>
-                </dish>
-                <dish name="BBQ Chicken Breast Sandwich">
-                    <code>W</code>
-                    <code>G</code>
-                </dish>
-            </food-category>
-            <food-category name="Grill">
-                <dish name="Grilled-to-order Star Ranch All Natural Burgers and Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."></dish>
-            </food-category>
-            <food-category name="Market Deli">
-                <dish name="Italian Deli Zep">
-                    <code>D</code>
-                    <code>P</code>
-                    <code>W</code>
-                    <code>G</code>
-                </dish>
-            </food-category>
-            <food-category name="Sides">
-                <dish name="Rice"></dish>
-            </food-category>
-            <food-category name="Vegetables">
-                <dish name="Southern Style Collard Greens">
-                    <code>A</code>
-                </dish>
-            </food-category>
-            <food-category name="Salad">
-                <dish name="Mesclun, Cauliflower and Cheddar">
-                    <code>A</code>
-                </dish>
-                <dish name="White Bean Salad with Sundried Tomato Vinaigrette">
-                    <code>A</code>
-                </dish>
-                <dish name="Combination Salad">
-                    <code>A</code>
-                    <code>SY</code>
+            <food-category name="The Sweets">
+                <dish name="Rocky Road Cookie (Walnuts)">
+                    <code>6</code>
+                    <code>2</code>
+                    <code>3</code>
+                    <code>14</code>
+                    <nutrition-item value="2 each" name="Serving Size" />
+                    <nutrition-item value="534" name="Calories" />
+                    <nutrition-item value="8.1 grams" name="Protein" />
+                    <nutrition-item value="27.9 grams" name="Fat" />
+                    <nutrition-item value="8.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="6.3 grams" name="Saturated Fat" />
+                    <nutrition-item value="34 milligrams" name="Cholesterol" />
+                    <nutrition-item value="66.8 grams" name="Carbohydrates" />
+                    <nutrition-item value="15.1 grams" name="Sugar" />
+                    <nutrition-item value="4.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.1 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.25 milligrams" name="B-1" />
+                    <nutrition-item value="2.31 milligrams" name="Niacin" />
+                    <nutrition-item value="0.18 milligrams" name="B-2" />
+                    <nutrition-item value="4.3 IU" name="Vitamin A" />
+                    <nutrition-item value="2.4 milligrams" name="Iron" />
+                    <nutrition-item value="43.4 milligrams" name="Calcium" />
+                    <nutrition-item value="404 milligrams" name="Sodium" />
+                    <ingredients />
                 </dish>
             </food-category>
         </meal>
         <meal name="Dinner">
-            <food-category name="Entrees">
-                <dish name="Apricot Roasted Chicken">
-                    <code>A</code>
-                    <code>D</code>
+            <food-category name="The Entrees">
+                <dish name="Miso Glazed Whole Roasted Salmon">
+                    <code>15</code>
+                    <code>1</code>
+                    <code>4</code>
+                    <code>11</code>
+                    <nutrition-item value="1 piece" name="Serving Size" />
+                    <nutrition-item value="208" name="Calories" />
+                    <nutrition-item value="26.4 grams" name="Protein" />
+                    <nutrition-item value="6.7 grams" name="Fat" />
+                    <nutrition-item value="3.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="1.1 grams" name="Saturated Fat" />
+                    <nutrition-item value="66 milligrams" name="Cholesterol" />
+                    <nutrition-item value="9.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="7.3 grams" name="Sugar" />
+                    <nutrition-item value="0.4 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.18 milligrams" name="B-1" />
+                    <nutrition-item value="9.07 milligrams" name="Niacin" />
+                    <nutrition-item value="0.23 milligrams" name="B-2" />
+                    <nutrition-item value="119.6 IU" name="Vitamin A" />
+                    <nutrition-item value="0.9 milligrams" name="Iron" />
+                    <nutrition-item value="19.8 milligrams" name="Calcium" />
+                    <nutrition-item value="332 milligrams" name="Sodium" />
+                    <ingredients>coho salmon, marinated miso.</ingredients>
                 </dish>
-                <dish name="Roast Chicken Picnic Pieces"></dish>
+                <dish name="Alice's Savory Herb Meatballs">
+                    <code>2</code>
+                    <code>3</code>
+                    <code>13</code>
+                    <code>14</code>
+                    <nutrition-item value="3 meatballs + sauce"
+                        name="Serving Size" />
+                    <nutrition-item value="296" name="Calories" />
+                    <nutrition-item value="15.9 grams" name="Protein" />
+                    <nutrition-item value="19.9 grams" name="Fat" />
+                    <nutrition-item value="1.7 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="6.3 grams" name="Saturated Fat" />
+                    <nutrition-item value="85 milligrams" name="Cholesterol" />
+                    <nutrition-item value="15.0 grams" name="Carbohydrates" />
+                    <nutrition-item value="7.0 grams" name="Sugar" />
+                    <nutrition-item value="2.5 grams" name="Dietary Fiber" />
+                    <nutrition-item value="5.1 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.09 milligrams" name="B-1" />
+                    <nutrition-item value="2.63 milligrams" name="Niacin" />
+                    <nutrition-item value="0.22 milligrams" name="B-2" />
+                    <nutrition-item value="531.3 IU" name="Vitamin A" />
+                    <nutrition-item value="1.9 milligrams" name="Iron" />
+                    <nutrition-item value="204.4 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="514 milligrams" name="Sodium" />
+                    <ingredients>angus ground beef, organic tomato sauce with
+                        basil, fresh red
+                        onions, reduced-fat milk, cage free
+                        eggs, parmesan cheese, french
+                        bread, olive/canola oil
+                        blend, fresh italian parsley, fresh
+                        thyme, black pepper,
+                        cayenne pepper.</ingredients>
+                </dish>
+                <dish name="Harira">
+                    <code>15</code>
+                    <code>12</code>
+                    <nutrition-item value="6 0z ladle" name="Serving Size" />
+                    <nutrition-item value="274" name="Calories" />
+                    <nutrition-item value="14.1 grams" name="Protein" />
+                    <nutrition-item value="6.4 grams" name="Fat" />
+                    <nutrition-item value="2.2 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.6 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="42.2 grams" name="Carbohydrates" />
+                    <nutrition-item value="6.6 grams" name="Sugar" />
+                    <nutrition-item value="13.4 grams" name="Dietary Fiber" />
+                    <nutrition-item value="4.2 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.31 milligrams" name="B-1" />
+                    <nutrition-item value="1.25 milligrams" name="Niacin" />
+                    <nutrition-item value="0.14 milligrams" name="B-2" />
+                    <nutrition-item value="138.1 IU" name="Vitamin A" />
+                    <nutrition-item value="4.7 milligrams" name="Iron" />
+                    <nutrition-item value="150.5 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="226 milligrams" name="Sodium" />
+                    <ingredients>water, crushed tomatoes, dried chickpeas, dried
+                        lentils, diced
+                        onions, diced celery, butter alternative
+                        (canola}, vegetable
+                        base, fresh cilantro, black pepper,
+                        turmeric, fresh curly
+                        parsley, ground cinnamon.
+                    </ingredients>
+                </dish>
+                <dish name="Rigatoni">
+                    <code>11</code>
+                    <code>13</code>
+                    <code>14</code>
+                    <nutrition-item value="3 serve spoons" name="Serving Size" />
+                    <nutrition-item value="628" name="Calories" />
+                    <nutrition-item value="20.9 grams" name="Protein" />
+                    <nutrition-item value="3.3 grams" name="Fat" />
+                    <nutrition-item value="0.1 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="125.4 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="1.57 milligrams" name="B-1" />
+                    <nutrition-item value="8.95 milligrams" name="Niacin" />
+                    <nutrition-item value="0.76 milligrams" name="B-2" />
+                    <nutrition-item value="0.0 IU" name="Vitamin A" />
+                    <nutrition-item value="5.4 milligrams" name="Iron" />
+                    <nutrition-item value="0.1 milligrams" name="Calcium" />
+                    <nutrition-item value="0 milligrams" name="Sodium" />
+                    <ingredients>water, rigatoni pasta, soybean oil.
+                    </ingredients>
+                </dish>
+                <dish name="Organic Tomato Sauce">
+                    <nutrition-item value="3 oz ladle" name="Serving Size" />
+                    <nutrition-item value="67" name="Calories" />
+                    <nutrition-item value="1.5 grams" name="Protein" />
+                    <nutrition-item value="1.8 grams" name="Fat" />
+                    <nutrition-item value="0.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="11.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="8.1 grams" name="Sugar" />
+                    <nutrition-item value="3.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="4.4 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="0.00 milligrams" name="Niacin" />
+                    <nutrition-item value="0.00 milligrams" name="B-2" />
+                    <nutrition-item value="555.0 IU" name="Vitamin A" />
+                    <nutrition-item value="0.5 milligrams" name="Iron" />
+                    <nutrition-item value="29.6 milligrams" name="Calcium" />
+                    <nutrition-item value="400 milligrams" name="Sodium" />
+                    <ingredients>organic tomato sauce with basil.</ingredients>
+                </dish>
             </food-category>
-            <food-category name="Chef's Table">
-                <dish name="Sage Aioli">
-                    <code>E</code>
-                </dish>
-                <dish name="Sweet and Smokey Roast Pork">
-                    <code>A</code>
-                    <code>P</code>
+            <food-category name="The Grill">
+                <dish name="Green Chile Quesadilla ">
+                    <code>5</code>
+                    <code>2</code>
+                    <code>14</code>
+                    <nutrition-item value="1 each" name="Serving Size" />
+                    <nutrition-item value="276" name="Calories" />
+                    <nutrition-item value="14.8 grams" name="Protein" />
+                    <nutrition-item value="21.9 grams" name="Fat" />
+                    <nutrition-item value="1.3 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="12.2 grams" name="Saturated Fat" />
+                    <nutrition-item value="60 milligrams" name="Cholesterol" />
+                    <nutrition-item value="5.7 grams" name="Carbohydrates" />
+                    <nutrition-item value="1.2 grams" name="Sugar" />
+                    <nutrition-item value="0.4 grams" name="Dietary Fiber" />
+                    <nutrition-item value="19.3 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.02 milligrams" name="B-1" />
+                    <nutrition-item value="0.27 milligrams" name="Niacin" />
+                    <nutrition-item value="0.23 milligrams" name="B-2" />
+                    <nutrition-item value="772.5 IU" name="Vitamin A" />
+                    <nutrition-item value="0.5 milligrams" name="Iron" />
+                    <nutrition-item value="579.2 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="694 milligrams" name="Sodium" />
+                    <ingredients>shredded cheddar cheese, diced green chilies,
+                        flour tortillas,
+                        olive/canola oil blend, santa fe spice.
+                    </ingredients>
                 </dish>
             </food-category>
-            <food-category name="Grill">
-                <dish name="Sautéed Swiss Chard with Beans and Bread">
-                    <code>W</code>
-                    <code>G</code>
+            <food-category name="The Sides">
+                <dish name="Rice Pilaf">
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="183" name="Calories" />
+                    <nutrition-item value="3.3 grams" name="Protein" />
+                    <nutrition-item value="2.8 grams" name="Fat" />
+                    <nutrition-item value="0.7 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.3 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="35.2 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.8 grams" name="Sugar" />
+                    <nutrition-item value="0.8 grams" name="Dietary Fiber" />
+                    <nutrition-item value="1.4 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.19 milligrams" name="B-1" />
+                    <nutrition-item value="1.69 milligrams" name="Niacin" />
+                    <nutrition-item value="0.02 milligrams" name="B-2" />
+                    <nutrition-item value="55.2 IU" name="Vitamin A" />
+                    <nutrition-item value="1.4 milligrams" name="Iron" />
+                    <nutrition-item value="21.8 milligrams" name="Calcium" />
+                    <nutrition-item value="451 milligrams" name="Sodium" />
+                    <ingredients>water, rice, diced onions, vegetable base,
+                        butter alternative
+                        (canola}, bayleaves.</ingredients>
                 </dish>
-                <dish name="Grilled-to-order Star Ranch All Natural Burgers and Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."></dish>
             </food-category>
-            <food-category name="Sides">
-                <dish name="Israeli Couscous"></dish>
-            </food-category>
-            <food-category name="Vegetables">
-                <dish name="Broccoli With Lemon, Olive Oil and Garlic"></dish>
-            </food-category>
-            <food-category name="Salad">
-                <dish name="Mesclun, Cauliflower and Cheddar">
-                    <code>A</code>
+            <food-category name="The Vegetables">
+                <dish name="Roasted Zucchini &amp; Yellow Squash">
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="22" name="Calories" />
+                    <nutrition-item value="1.0 grams" name="Protein" />
+                    <nutrition-item value="0.7 grams" name="Fat" />
+                    <nutrition-item value="0.2 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.1 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="4.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="2.0 grams" name="Sugar" />
+                    <nutrition-item value="1.3 grams" name="Dietary Fiber" />
+                    <nutrition-item value="8.5 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.04 milligrams" name="B-1" />
+                    <nutrition-item value="0.43 milligrams" name="Niacin" />
+                    <nutrition-item value="0.07 milligrams" name="B-2" />
+                    <nutrition-item value="193.8 IU" name="Vitamin A" />
+                    <nutrition-item value="0.7 milligrams" name="Iron" />
+                    <nutrition-item value="141.4 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="208 milligrams" name="Sodium" />
+                    <ingredients>fresh yellow squash, fresh zucchini, arbequina
+                        ev oil olive,
+                        black pepper, fresh garlic puree, iodized
+                        salt, fresh cilantro,
+                        thyme leaves.</ingredients>
                 </dish>
-                <dish name="White Bean Salad with Sundried Tomato Vinaigrette">
-                    <code>A</code>
+            </food-category>
+            <food-category name="The Salad">
+                <dish name="Greens with Mango-Ginger Vinaigrette">
+                    <code>1</code>
+                    <code>14</code>
+                    <nutrition-item value="1.5 oz portion" name="Serving Size" />
+                    <nutrition-item value="1" name="Calories" />
+                    <nutrition-item value="0.0 grams" name="Protein" />
+                    <nutrition-item value="0.0 grams" name="Fat" />
+                    <nutrition-item value="0.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.0 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="0.1 grams" name="Carbohydrates" />
+                    <nutrition-item value="0.0 grams" name="Sugar" />
+                    <nutrition-item value="0.0 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.0 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.00 milligrams" name="B-1" />
+                    <nutrition-item value="0.00 milligrams" name="Niacin" />
+                    <nutrition-item value="0.00 milligrams" name="B-2" />
+                    <nutrition-item value="1.1 IU" name="Vitamin A" />
+                    <nutrition-item value="0.0 milligrams" name="Iron" />
+                    <nutrition-item value="0.5 milligrams" name="Calcium" />
+                    <nutrition-item value="3 milligrams" name="Sodium" />
+                    <ingredients>mesclun greens, arbequina ev oil olive, mango
+                        pieces, water,
+                        juice lime fresh, seasoned rice vinegar,
+                        fresh shallots, ginger
+                        root puree, granulated sugar,
+                        wasabi powder, iodized salt.</ingredients>
                 </dish>
-                <dish name="Combination Salad">
-                    <code>A</code>
-                    <code>SY</code>
+                <dish name="Couscous With Lemon &amp; Tomatoes ">
+                    <nutrition-item value="1 serve spoon" name="Serving Size" />
+                    <nutrition-item value="118" name="Calories" />
+                    <nutrition-item value="4.5 grams" name="Protein" />
+                    <nutrition-item value="0.6 grams" name="Fat" />
+                    <nutrition-item value="0.1 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="0.1 grams" name="Saturated Fat" />
+                    <nutrition-item value="0 milligrams" name="Cholesterol" />
+                    <nutrition-item value="23.8 grams" name="Carbohydrates" />
+                    <nutrition-item value="1.0 grams" name="Sugar" />
+                    <nutrition-item value="2.4 grams" name="Dietary Fiber" />
+                    <nutrition-item value="9.2 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.08 milligrams" name="B-1" />
+                    <nutrition-item value="1.27 milligrams" name="Niacin" />
+                    <nutrition-item value="0.08 milligrams" name="B-2" />
+                    <nutrition-item value="2531.3 IU" name="Vitamin A" />
+                    <nutrition-item value="1.3 milligrams" name="Iron" />
+                    <nutrition-item value="1567.4 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="186 milligrams" name="Sodium" />
+                    <ingredients>fresh native tomatoes, toasted israeli
+                        couscous, fresh
+                        spinach, lemon juice, arbequina ev oil
+                        olive, water, fresh
+                        italian parsley, fresh thyme, fresh
+                        rosemary, saffron salt, black
+                        pepper.</ingredients>
+                </dish>
+            </food-category>
+            <food-category name="The Sweets">
+                <dish name="Warmed Brownie-Walnut Pudding">
+                    <code>6</code>
+                    <code>2</code>
+                    <code>14</code>
+                    <nutrition-item value="1/40 pan" name="Serving Size" />
+                    <nutrition-item value="317" name="Calories" />
+                    <nutrition-item value="5.2 grams" name="Protein" />
+                    <nutrition-item value="9.1 grams" name="Fat" />
+                    <nutrition-item value="4.0 grams" name="Poly Unsaturated Fat" />
+                    <nutrition-item value="1.9 grams" name="Saturated Fat" />
+                    <nutrition-item value="1 milligrams" name="Cholesterol" />
+                    <nutrition-item value="59.2 grams" name="Carbohydrates" />
+                    <nutrition-item value="28.0 grams" name="Sugar" />
+                    <nutrition-item value="3.1 grams" name="Dietary Fiber" />
+                    <nutrition-item value="0.2 milligrams" name="Vitamin C" />
+                    <nutrition-item value="0.13 milligrams" name="B-1" />
+                    <nutrition-item value="1.11 milligrams" name="Niacin" />
+                    <nutrition-item value="0.13 milligrams" name="B-2" />
+                    <nutrition-item value="33.0 IU" name="Vitamin A" />
+                    <nutrition-item value="2.1 milligrams" name="Iron" />
+                    <nutrition-item value="110.7 milligrams"
+                        name="Calcium" />
+                    <nutrition-item value="345 milligrams" name="Sodium" />
+                    <ingredients />
                 </dish>
             </food-category>
         </meal>
     </dining-hall>
-    
 </menu>

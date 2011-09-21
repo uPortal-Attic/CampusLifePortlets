@@ -18,12 +18,16 @@
  */
 package org.jasig.portlet.dining.dao;
 
+import java.util.List;
+
 import javax.portlet.PortletRequest;
 
-import org.jasig.portlet.dining.model.menu.xml.Menu;
+import org.jasig.portlet.dining.model.menu.xml.DiningHall;
 
 public interface IDiningMenuDao {
     
-    public Menu getMenu(PortletRequest request);
+    public List<String> getDiningHalls(PortletRequest request);
+    
+    public DiningHall getMenu(PortletRequest request, String diningHall);
 
 }

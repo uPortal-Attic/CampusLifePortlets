@@ -29,7 +29,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jasig.portlet.dining.dao.IDiningMenuDao;
 import org.jasig.portlet.dining.model.menu.xml.DiningHall;
-import org.jasig.portlet.dining.model.menu.xml.Menu;
+import org.jasig.portlet.dining.model.menu.xml.Dish;
+import org.jasig.portlet.dining.model.menu.xml.FoodCategory;
+import org.jasig.portlet.dining.model.menu.xml.Meal;
 import org.jasig.portlet.dining.mvc.IViewSelector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -82,7 +84,7 @@ public class MainController {
             logger.debug("Using view name " + viewName + " for main view");
         }
         
-        mav.addObject("menu", menuDao.getMenu(request));
+        mav.addObject("diningHalls", menuDao.getDiningHalls(request));
 
         return mav;
 
@@ -103,15 +105,47 @@ public class MainController {
             logger.debug("Using view name " + viewName + " for main view");
         }
         
-        Menu menu = menuDao.getMenu(request);
-        for (DiningHall hall : menu.getDiningHall()) {
-            if (diningHall.equalsIgnoreCase(hall.getName())) {
-                mav.addObject("diningHall", hall);
-            }
-        }
+        DiningHall menu = menuDao.getMenu(request, diningHall);
+        mav.addObject("menu", menu);
+        mav.addObject("diningHallKey", diningHall);
 
         mav.addObject("dishCodeImages", dishCodeImages);
         
+        return mav;
+
+    }
+
+    @RenderMapping(params="action=dish")
+    public ModelAndView showDishView(
+            final RenderRequest request, final RenderResponse response,
+            final String dishName, final String diningHall) {
+
+        // determine if the request represents a mobile browser and set the
+        // view name accordingly
+        final boolean isMobile = viewSelector.isMobile(request);
+        final String viewName = isMobile ? "dish-jQM" : "dish";        
+        final ModelAndView mav = new ModelAndView(viewName);
+        
+        if(logger.isDebugEnabled()) {
+            logger.debug("Using view name " + viewName + " for main view");
+        }
+        
+        mav.addObject("dishCodeImages", dishCodeImages);
+        mav.addObject("diningHallKey", diningHall);
+        
+        DiningHall menu = menuDao.getMenu(request, diningHall);
+        for (Meal meal : menu.getMeal()) {
+            for (FoodCategory cat : meal.getFoodCategory()) {
+                for (Dish dish : cat.getDish()) {
+                    if (dishName.equals(dish.getName())) {
+                        mav.addObject("dish", dish);
+                        return mav;
+                    }
+                    
+                }
+            }
+        }
+
         return mav;
 
     }

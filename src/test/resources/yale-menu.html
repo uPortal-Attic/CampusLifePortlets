@@ -1,0 +1,3878 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="robots" content="noindex" />
+
+
+<title>Yale Dining: Menu &amp; Nutrition Center</title>
+
+
+
+
+<link href="resources/styles/core.css" rel="stylesheet" type="text/css" media="all" />
+<link href="resources/styles/topperskin_medblue.css" rel="stylesheet" type="text/css" media="all" />
+<link href="resources/styles/nav.css" rel="stylesheet" type="text/css" media="all" />
+<link href="resources/styles/typography.css" rel="stylesheet" type="text/css" media="all" />
+<link href="resources/styles/skin_bbucks_flush.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="resources/styles/flush_col3_modified.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href="resources/styles/menu.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.yale.edu/favicon.ico" /> 
+
+
+<script src="resources/code/scripts.js" type="text/javascript">
+</script>
+
+<script src="resources/code/feedback-form.js" type="text/javascript">
+</script>
+
+<script src="resources/code/jquery-1.3.2.min.js" type="text/javascript">
+</script>
+
+<script type="text/javascript" src="resources/code/jquery.qtip-1.0.0-rc3.min.js">
+</script> 
+
+<!-- tabs -->
+<link type="text/css" href="resources/styles/jquery-ui-1.7.2.custom.css" rel="stylesheet" />    
+<script type="text/javascript" src="resources/code/jquery-ui-1.7.2.custom.min.js">
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+//for open and close div slide effect       
+        $("a.Show").click(function() {
+            var Show = $(this).attr("id");
+            
+            //$("div.nutrition:visible").slideUp("medium");         
+            $("div[id='" + Show + "']:visible").slideUp("medium");
+            $("div[id='" + Show + "']:hidden").slideDown("medium");
+            
+            return false;                                  
+        });
+
+        $("div.slider").hide();
+        $("div.dailyMenu").hide();
+        //$("div.nutrition:first").show();
+    });
+
+//for tool Tip 
+$(document).ready(function()
+{
+   $('a[title]').qtip({
+      position: {
+         corner: {
+            target: 'topMiddle',
+            tooltip: 'bottomRight'
+         }
+      },
+      style: {
+        'font-size': 10,
+         color: '#333',
+         padding: '7px 13px',
+         background: '#c0daf5',
+         border: { width: 1, radius: 5, color: '#336192'},
+         width: { max: 280,  min: 0 },
+         tip: true
+      }
+   });
+});
+
+//for tool tabs 
+$(function(){
+    // Tabs
+    $('#tabs').tabs();
+});
+</script>
+
+
+
+
+
+</head>
+
+
+<body>
+
+<div id="container"><!-- HEADERS 1-4 ======================================================== -->
+
+<div id="header1"><!-- TOPPER INCLUDE ================================================ -->
+<!-- Topper -->
+<!-- ******************************************************************** -->
+<div id="topper" >
+<h2><a href="http://www.yale.edu/">Yale University</a></h2>
+
+
+<div id="topper-search-tools">
+
+<ul id="topper-links">
+
+<li><a href="http://events.yale.edu/opa/ChooseDate.jsp">Calendar</a></li>
+<li class="last"><a href="http://www.yale.edu/search/index_a_z.html">A-Z Index</a></li>
+</ul>
+
+<form action="http://google.yale.edu/search" method="get" name="web" id="topper-search">
+
+<input class="sfield" name="q" type="text" size="25" alt="Search Yale Dining" value="Search Yale Dining" onfocus="this.value=''; style.color='#000000'; style.background='#ffffdd'" />
+<input class="gobutton" type="image" src="resources/images/go_search_button.gif" value="Go" alt="Go" />
+
+<input type="hidden" name="site" value="Dining" />
+<input type="hidden" name="sort" value="date:D:L:d1" />
+<input type="hidden" name="output" value="xml_no_dtd" />
+<input type="hidden" name="oe" value="UTF-8" />
+<input type="hidden" name="ie" value="UTF-8" />
+<input type="hidden" name="client" value="bluesite_frontend" />
+
+<input type="hidden" name="proxystylesheet" value="bluesite_frontend" />
+<input type="hidden" name="proxyreload" value="1" />
+</form>
+
+
+<div id="my-container">
+<a href="javascript:;" onmouseover="togLyr('my-menu','1');">
+<img id="my-button" src="resources/images/magic-y.gif" width="21" height="26" border="0" alt="Y-Menu" /></a>
+<div id="my-wrapper">
+<div id="my-menu" onmouseover="togLyr('my-menu','1');" onmouseout="togLyr('my-menu','0');">
+<ul>
+<li><a href="http://www.yale.edu/">Yale home</a></li>
+
+  <li><a href="http://www.yale.edu/about/index.html">About Yale</a></li>
+
+  <li><a href="http://www.yale.edu/academics/index.html">Academic programs</a></li>
+  <li><a href="http://www.yale.edu/admissions/index.html">Admissions</a></li>
+  <li><a href="http://www.yale.edu/medicine/index.html">Health &amp; medicine</a></li>
+  <li><a href="http://www.yale.edu/work/index.html">Working at Yale</a></li>
+
+  <li><a href="http://www.yale.edu/newhaven/index.html">Yale &amp; New Haven</a></li>
+
+  <li><a href="http://world.yale.edu">Yale &amp; the World</a></li> 
+  <li><a href="http://www.yale.edu/tomorrow/index.html">Yale Tomorrow</a></li>
+   <li><a href="http://www.yale.edu/opa">News</a></li>
+</ul>
+<ul class="lower">
+
+<li><a href="http://www.yale.edu/gateways/prosp_students.html">Prospective students</a></li>
+<li><a href="http://www.yale.edu/gateways/students.html">Students</a></li>
+
+<li><a href="http://www.yale.edu/gateways/parents.html">Parents</a></li>
+<li><a href="http://www.yale.edu/gateways/faculty.html">Faculty</a></li>
+<li><a href="http://www.yale.edu/gateways/staff.html">Staff</a></li>
+<li><a href="http://www.yale.edu/gateways/postdoc.html">Postdocs</a></li>
+<li><a href="http://www.yale.edu/gateways/alumni.html">Alumni</a></li>
+<li><a href="http://www.yale.edu/gateways/foundations.html">Foundations &amp; corporations</a></li>
+<li><a href="http://www.yale.edu/gateways/patients.html">Patients</a></li>
+<li><a href="http://www.yale.edu/gateways/visitors.html">Visitors</a></li>
+
+</ul>
+
+</div><!-- /my-menu -->
+</div><!-- /my-wrapper -->
+</div><!-- /my-container -->
+</div><!-- closes topper-search-tools -->
+
+
+</div><!-- closes Topper -->
+<!-- ******************************************************************** -->
+
+<!-- /TOPPER INCLUDE =============================================== -->
+</div>
+
+<div id="header2">
+
+<!-- SECTION HEAD INCLUDE ========================================== -->
+
+<!-- Section Head Dining -->
+<div id="section-head" >
+<a href="http://www.yale.edu/dining/"><img src="resources/images/heading_section_dining.gif" width="200" height="28" border="0" alt="Yale Dining" /></a>
+
+<ul>
+  <li><a href="http://www.yale.edu/dining/locations/index.html">Where to eat</a></li>
+  <li><a href="http://www.yale.edu/dining/options/index.html">What we offer</a></li>
+  <li><a href="http://www.yale.edu/dining/about/index.html">Who we are</a></li>
+  <li><a href="http://www.yale.edu/dining/catering/index.html" class="last">Catering Services</a></li>
+
+</ul>
+
+</div>
+
+<!-- /SECTION HEAD INCLUDE ========================================= -->
+</div><!-- closes header1 -->
+
+<div id="header3">
+
+
+  <div id="title-head"><a href="http://www.yale.edu/dining/locations/index.html"><img src="resources/images/heading_title_menu.jpg" height="65" border="0" alt="Menu &amp; Nutrition Center"   /></a>
+
+  </div>
+
+
+
+
+</div>
+
+<!-- /HEADERS ======================================================== -->
+
+<!-- start outer-wrap -->
+<div id="outer-wrap"> <!-- gives white space to the right of content -->
+
+<div id="column-wrap">
+
+
+    <div id="col1">
+    <!-- NAV LINKS DEPT INFO INCLUDE =================================== -->
+
+    <!-- Nav links main -->
+    <ul class="nav-dining">
+    <li><a href="http://www.yale.edu/dining/locations/index.html"><strong>Where to eat</strong></a></li>
+    <li><a href="http://www.yale.edu/dining/options/index.html"><strong>What we offer</strong></a>
+        <ul>
+        <li><a href="http://www.yaledining.org/fasttrack.cfm">Fast Track</a></li>
+        <li><a href="http://www.yaledining.org/O2G.cfm">Orders 2Go</a></li>     
+        </ul>
+
+    </li>
+
+    <li><a href="http://www.yale.edu/dining/about/index.html"><strong>Who we are</strong></a></li>
+    <li><a href="http://www.yale.edu/dining/menu/index.html"><strong>Menu &amp; Nutrition Center</strong></a>
+
+      <ul>
+        <li><a href="http://www.yaledining.org/menu_selector.cfm">Menu Selector</a></li>
+
+        <li>Today's Menus
+
+            <ul>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=1">Berkeley</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=2">Branford</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=3">Calhoun</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=11">Commons</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=4">Davenport</a></li>
+
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=12">Hall of Graduate Studies</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=6">Jonathan Edwards</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=15">Marigolds</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=5">Morse</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=7">Pierson</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=23">Saybrook</a></li>
+
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=8">Silliman</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=24">Stiles</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=9">Timothy Dwight</a></li>
+            <li><a href="http://www.yaledining.org/menu.cfm?mDH=10">Trumbull</a></li>
+            </ul>
+            
+        <li><a href="http://www.yale.edu/dining/locations/retail.html">Restaurants &amp; Stores</a>
+
+            <ul>
+            <li><a href="http://www.yale.edu/dining/locations/divinity.html">Divinity School Refectory</a></li>
+            <li><a href="http://www.yale.edu/dining/locations/durfee.html">Durfee's</a></li>
+            <li><a href="http://www.yale.edu/dining/locations/kbt.html">Lobby at KBT</a></li>
+                <!-- <li><a href="solara.html">Solara @ KBT</a></li> -->
+            <li><a href="http://www.yale.edu/dining/locations/thain.html">Thain Family Caf&eacute;</a></li>
+            <li><a href="http://www.yale.edu/dining/locations/triple_e.html">Triple E</a></li>
+
+            <li><a href="http://www.yale.edu/dining/locations/uncommon.html">uncommon</a></li>
+            <li><a href="http://www.yale.edu/westcampus/services.html#Dining">West Campus Dining </a></li>
+            </ul>   
+        </li>
+            
+        </li>
+        <li><a href="http://www.yaledining.org/dietaryguide.cfm">Dietary &amp; Food Allergy Guides</a></li>
+        <li><a href="http://www.yale.edu/dining/menu/menu_standards.html">Standard Menu Items</a></li>
+
+        <li><a href="http://www.yale.edu/dining/menu/nutrient_tables.html">Nutrient Information Tables</a></li>     
+      </ul>
+    </li>
+    <li><a href="feedback.cfm"><strong>Your Feedback</strong></a></li>
+    <li><a href="http://www.facebook.com/#!/yaledining" border="0" target="_blank"><img src="images/facebook02.gif" alt="Click here to visit the Yale Dining Facebook page"></a>
+
+    </li>
+    </ul>
+    <!-- END nav-dining -->
+
+    <!-- /NAV LINKS DEPT INFO INCLUDE ================================== -->
+    </div>
+    
+
+
+<div id="col2">
+
+ <div id="breadcrumb">
+
+    <ul>
+
+      <li class="bcfirst"><a href="http://www.yale.edu/dining/">Home</a></li>
+
+      <li><a href="http://www.yale.edu/dining/menu/index.html">Menu &amp; Nutrition Center</a></li>
+
+      <li><a href="menu_selector.cfm">Menu Selector</a></li>
+
+      <li>Dining Location Menu</li>
+
+    </ul>
+
+  </div>
+
+  <div class="clear-all"></div>
+
+
+
+<div id="content" style="padding-top: 18px; position:relative;">
+
+<div class="btn-back"><a href="menu_selector.cfm?1=1">back</a></div>    
+
+    <h1>Dining Location Menu</h1>    
+    
+    </div>
+    <!-- begin tabs -->
+
+    <div id="tabs">
+        <ul>        
+
+
+            <li><a href="#tabs-1">Berkeley</a></li>
+
+        </ul>
+    
+    <!-- menu start -->
+
+    
+    <div class="menu" id="tabs-1"
+     style="background:url(images/menuBack/menuBack-lemons.jpg) no-repeat;">
+    
+     
+    <div class="subcontent" style="padding-top: 18px;">
+    
+        
+            <h2>Berkeley<br />
+
+            Menu for Wednesday, September 21, 2011</h2>
+            <p>Menus as served are subject to local changes.</p>
+            
+            
+            <p>The Berkeley Dining Room is located at 205 Elm Street. </p>
+
+
+
+<p>Managers <a href="mailto:Paul.Kikosicki@yale.edu">Paul Kikosicki</a> and <a href="mailto:michael.aaronian@yale.edu">Mike Aaronian</a><br>
+
+  would love to hear from you! </p>
+<p>&#149;&nbsp; look for them in the dining hall <br />
+&#149;&nbsp; call them at 2-0423 <br />
+&#149;&nbsp; email them your menu feedback </p> 
+        
+        <div class="sharingBox">
+            <h2>Menu tools</h2>
+            
+
+            <div class="shareIcons">
+
+                <div class="shareBtn-print"><a href="menu_print.cfm?mDH=1"> </a></div>
+                <div class="shareBtn-sub"><a href="menu_subscribe.cfm?mDH=1"> </a></div>
+                <div class="shareBtn-rss"><a href="http://www.yaledining.org/rss/menu.xml" target="_blank"> </a></div>
+                 <!-- AddThis Button BEGIN -->
+                 <div class="addthis_toolbox addthis_default_style" style="float:left; width:65px; padding:2px 0;">
+                <h2 style="margin:0;"><a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=yaledining" class="addthis_button_compact">Share</a>
+
+</h2>
+               </div>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=yaledining"></script>
+                <!-- AddThis Button END -->
+                
+                 <!-- AddThis Button BEGIN -->
+                <!--<div class="addthis_toolbox addthis_default_style">
+                <a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=yaledining" class="addthis_button_compact">Share</a>
+                </div>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=yaledining"></script>-->
+                <!-- AddThis Button END -->
+                <div class="shareBtn-rss">
+                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/#!/yaledining" layout="button_count" show_faces="false" font="trebuchet ms"></fb:like>                      
+                </div>
+
+            </div><!-- closes shareIcons -->
+
+        </div><!-- closes sharingBox -->
+    
+
+        
+    </div>
+        
+   <!-- start meal -->
+    <div class="meal">
+        <h1>Continental Breakfast</h1>
+        <div class="mealBox">
+        
+        <!-- start course -->
+
+        
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>First Course ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Grits </h2>
+
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-3899" class="Show"></a></div>
+
+                    <div class="icons">
+
+                                        
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-3899">
+                <div class="nutrBtnClose"><a href="#" id="clicker-3899" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>4 oz ladle</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>420</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   8.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   2.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   1.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.4 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  89.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   0.6 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   5.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.0 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>1.44 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>5.06 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.38 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>   3.4 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   3.5 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>   5.7 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>1 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+grits. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Entrees ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Waffle Bar </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-6897" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                  
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-6897">
+                <div class="nutrBtnClose"><a href="#" id="clicker-6897" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 waffle</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>278</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   7.7 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   4.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   1.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  53.6 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   0.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   0.8 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>   0.0 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.6 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  38.3 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>766 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+waffle mix. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>Morning Sweets ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Almond Coffee Cake </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-5655" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=6" onfocus="this.blur()" title="Menu Items Containing Tree Nuts - These menu items contain a tree nut or nut product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a nut-based ingredient, preservative or additive. If you must absolutely avoid all forms of tree nuts, contact your dining hall manager."><img src="images/key_nut.gif" alt="Contains Nuts" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=2" onfocus="this.blur()" title="Menu Items Containing Dairy - These menu items contain a dairy product as added by Yale Dining. However, some of the ingredients we use also may contain a dairy-based preservative or additive. If you must absolutely avoid all forms of dairy, contact your dining hall manager."><img src="images/key_dairy.gif" alt="Contains Dairy" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=3" onfocus="this.blur()" title="Menu Items Containing Eggs - These menu items contain an egg product as added by Yale Dining. However, some of the ingredients we use also may contain an egg-based preservative or additive. If you must absolutely avoid eggs in any form, contact your dining hall manager."><img src="images/key_eggs.gif" alt="Contains Eggs" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-5655">
+                <div class="nutrBtnClose"><a href="#" id="clicker-5655" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1/12 strip</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>297</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   5.6 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  10.1 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.8 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   2.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>36 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  45.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   3.7 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.4 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.1 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.01 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.06 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>  99.1 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.4 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  28.7 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>391 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+            <!-- end course -->  
+
+                        
+        </div>
+    </div>
+        
+   <!-- start meal -->
+    <div class="meal">
+
+        <h1>Lunch</h1>
+        <div class="mealBox">
+        
+        <!-- start course -->
+        
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Soup ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+
+                    <div class="recipe">
+                    
+                    <h2>Chicken Lemon Soup </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16111" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=3" onfocus="this.blur()" title="Menu Items Containing Eggs - These menu items contain an egg product as added by Yale Dining. However, some of the ingredients we use also may contain an egg-based preservative or additive. If you must absolutely avoid eggs in any form, contact your dining hall manager."><img src="images/key_eggs.gif" alt="Contains Eggs" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=13" onfocus="this.blur()" title="Menu Items Containing Wheat - These menu items contain wheat or a wheat product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a wheat-based preservative or additive. If you must absolutely avoid wheat in any form, contact your dining hall manager."><img src="images/key_wheat.gif" alt="Contains Wheat" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                    
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16111">
+                <div class="nutrBtnClose"><a href="#" id="clicker-16111" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>6 oz ladle</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>79</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   6.6 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   1.4 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>44 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  10.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   0.7 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   0.6 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   3.5 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.12 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>2.80 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 443.4 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.8 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 281.9 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>69 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+chicken stock, 
+chicken pieces, 
+orzo, 
+cage free eggs, 
+lemon juice, 
+carrots, 
+onions, 
+thickened starch corn, 
+fresh garlic, 
+celery, 
+fresh lemon thyme, 
+fresh dill, 
+kosher salt, 
+bayleaves. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Vegetarian Vegetable Soup </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-3967" class="Show"></a></div>
+
+                    <div class="icons">
+
+                                        
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-3967">
+                <div class="nutrBtnClose"><a href="#" id="clicker-3967" class="Show"></a></div>
+
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>6 oz ladle</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>118</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   2.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   2.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.7 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  22.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   2.4 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.7 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  14.9 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.04 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.21 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.06 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>1982.1 IU</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.7 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>1369.0 milligrams</p>
+
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>708 milligrams</p>
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+diced tomatoes in juice, 
+shredded green cabbage, 
+cubed potatoes, 
+cut green beans, 
+carrots , 
+diced onions, 
+diced celery, 
+vegetable base, 
+butter alternative (canola}, 
+dried minced garlic, 
+ground white pepper. 
+        </p>
+
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Entrees ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Sweet &amp; Sour Eggplant Stew with Chickpeas </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-15800" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=15" onfocus="this.blur()"  title="Smart Choice Item - This is part of our Eat Smart, Live Well program.  The checkmark identifies entrees whose stated portion size meets these healthy criteria: less than 500 calories, less than 30% calories from fat &amp; less than 10% saturated fat, less than 100 mg of cholesterol, and less than 600 mg of sodium.  Other entrees need more watchful overall planning."><img src="images/key_SmartChoice.gif" alt="This is a Smart Choice item" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a>                                  
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-15800">
+                <div class="nutrBtnClose"><a href="#" id="clicker-15800" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1-6 oz ladle</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>Calories:</h2><p>173</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   6.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   2.4 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.1 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  35.9 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   6.0 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   6.5 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  16.4 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>0.11 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.64 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.06 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 720.8 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   3.1 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 245.4 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>533 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+eggplant, 
+garbanzo beans, 
+organic tomato sauce with basil, 
+fresh garlic, 
+fresh shallots, 
+water, 
+arbequina ev oil olive, 
+red wine vinegar, 
+fresh oregano, 
+granulated sugar, 
+fresh thyme, 
+kosher salt, 
+black pepper, 
+cinnamon sticks. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Felafel With Tahini Dressing </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-4634" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=13" onfocus="this.blur()" title="Menu Items Containing Wheat - These menu items contain wheat or a wheat product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a wheat-based preservative or additive. If you must absolutely avoid wheat in any form, contact your dining hall manager."><img src="images/key_wheat.gif" alt="Contains Wheat" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-4634">
+
+                <div class="nutrBtnClose"><a href="#" id="clicker-4634" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 sandwich</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>583</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  20.4 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  22.4 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   6.8 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   2.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  81.9 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   6.9 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>  11.7 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  13.1 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.43 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.84 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.19 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 614.7 IU</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   5.1 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 616.6 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>758 milligrams</p>
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+white pita bread, 
+garbanzo beans, 
+fresh tomatoes, 
+shredded lettuce, 
+dried chickpeas, 
+tahini dressing, 
+fat absorbed in frying, 
+cornstarch, 
+lemon juice, 
+fresh garlic puree, 
+baking powder, 
+fresh curly parsley, 
+iodized salt, 
+ground cumin, 
+crushed red pepper. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+
+                    <div class="recipe">
+                    
+                    <h2>Spanakopita </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-4086" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=3" onfocus="this.blur()" title="Menu Items Containing Eggs - These menu items contain an egg product as added by Yale Dining. However, some of the ingredients we use also may contain an egg-based preservative or additive. If you must absolutely avoid eggs in any form, contact your dining hall manager."><img src="images/key_eggs.gif" alt="Contains Eggs" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-4086">
+                <div class="nutrBtnClose"><a href="#" id="clicker-4086" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 each</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>228</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   9.1 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  12.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  21.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   0.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>   0.0 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.0 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>   0.0 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>736 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+spanakopita. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Express Bar ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Pho Noodle Bowl Bar </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-14835" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-14835">
+                <div class="nutrBtnClose"><a href="#" id="clicker-14835" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+pho broth, 
+thai rice noodles, 
+fresh tofu, 
+bean sprouts, 
+boneless skinless chicken breast, 
+limes, 
+fresh ginger root, 
+scallions, 
+hoisin sauce, 
+fresh cilantro, 
+fresh basil, 
+fresh serrano chilies. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Grill ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+
+                    
+                    <h2>Chicken Souvlaki <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-9605" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=2" onfocus="this.blur()" title="Menu Items Containing Dairy - These menu items contain a dairy product as added by Yale Dining. However, some of the ingredients we use also may contain a dairy-based preservative or additive. If you must absolutely avoid all forms of dairy, contact your dining hall manager."><img src="images/key_dairy.gif" alt="Contains Dairy" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=13" onfocus="this.blur()" title="Menu Items Containing Wheat - These menu items contain wheat or a wheat product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a wheat-based preservative or additive. If you must absolutely avoid wheat in any form, contact your dining hall manager."><img src="images/key_wheat.gif" alt="Contains Wheat" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                  
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-9605">
+                <div class="nutrBtnClose"><a href="#" id="clicker-9605" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 1/2 srv spns</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>468</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  35.7 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  17.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   2.6 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   5.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>85 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  44.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   3.9 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.9 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   8.3 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.15 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>11.68 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.34 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 487.2 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.1 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 399.1 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>830 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+boneless skinless chicken breast, 
+white pita bread, 
+fresh red onions, 
+fresh native tomatoes, 
+feta cheese, 
+sliced ripe olives, 
+chablis, 
+lemon juice, 
+olive/canola oil blend, 
+black pepper, 
+fresh garlic puree, 
+granulated sugar, 
+fresh curly parsley, 
+leaf oregano, 
+salt. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h3>Grilled-to-order Star Ranch All Natural Burgers &amp; Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries.</h3>
+                    
+                    </div>
+                    
+                    <!-- Close CFIF NOT isStandard -->
+
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-0">
+                <div class="nutrBtnClose"><a href="#" id="clicker-0" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+
+                    <p>
+
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Market Deli ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Curried Pork Sand With Chutney &amp; Arugula <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-9963" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=15" onfocus="this.blur()"  title="Smart Choice Item - This is part of our Eat Smart, Live Well program.  The checkmark identifies entrees whose stated portion size meets these healthy criteria: less than 500 calories, less than 30% calories from fat &amp; less than 10% saturated fat, less than 100 mg of cholesterol, and less than 600 mg of sodium.  Other entrees need more watchful overall planning."><img src="images/key_SmartChoice.gif" alt="This is a Smart Choice item" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=8" onfocus="this.blur()" title="Menu Items Containing Pork - These menu items contain pork products as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a pork-based ingredient, preservative or additive. If you must absolutely avoid all forms of pork, contact your dining hall manager."><img src="images/key_pork.gif" alt="Contains pork" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=13" onfocus="this.blur()" title="Menu Items Containing Wheat - These menu items contain wheat or a wheat product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a wheat-based preservative or additive. If you must absolutely avoid wheat in any form, contact your dining hall manager."><img src="images/key_wheat.gif" alt="Contains Wheat" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-9963">
+                <div class="nutrBtnClose"><a href="#" id="clicker-9963" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>sandwich</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>337</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  23.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   8.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.9 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   2.9 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>44 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  40.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   8.5 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   2.6 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   5.9 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.65 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>5.75 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.37 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 390.0 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.7 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 222.3 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>527 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+curried pork, 
+french bread, 
+chutney, 
+arugula. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Sides ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Rice Pilafi </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-4756" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=6" onfocus="this.blur()" title="Menu Items Containing Tree Nuts - These menu items contain a tree nut or nut product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a nut-based ingredient, preservative or additive. If you must absolutely avoid all forms of tree nuts, contact your dining hall manager."><img src="images/key_nut.gif" alt="Contains Nuts" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-4756">
+                <div class="nutrBtnClose"><a href="#" id="clicker-4756" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>239</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   4.5 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   5.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   1.3 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.5 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  43.4 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   6.2 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.8 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   1.7 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.21 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.94 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.04 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>  55.5 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   1.8 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  37.9 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>452 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+vegetable stock, 
+rice, 
+diced onions, 
+midget seedless raisins, 
+sliced blanched almonds, 
+butter alternative (canola}, 
+ground cinnamon. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Vegetables ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Normandy Blend Vegetables </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-7140" class="Show"></a></div>
+
+                    <div class="icons">
+
+                                        
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-7140">
+                <div class="nutrBtnClose"><a href="#" id="clicker-7140" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>29</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   2.4 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>   4.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   0.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  21.2 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.00 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>1474.2 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.0 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  23.6 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>35 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+normandy blend vegetables. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Salad ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Curried Rice Salad <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16097" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=6" onfocus="this.blur()" title="Menu Items Containing Tree Nuts - These menu items contain a tree nut or nut product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a nut-based ingredient, preservative or additive. If you must absolutely avoid all forms of tree nuts, contact your dining hall manager."><img src="images/key_nut.gif" alt="Contains Nuts" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16097">
+                <div class="nutrBtnClose"><a href="#" id="clicker-16097" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>467</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   7.2 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  11.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   2.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.9 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  85.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>  17.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   3.4 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   8.7 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.12 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.52 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>  84.2 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.2 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  96.2 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>254 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+purple rice                    , 
+basmati rice, 
+seedless raisins, 
+golden raisins, 
+lemon juice, 
+madiera, 
+scallions, 
+arbequina ev oil olive, 
+kosher salt, 
+whole cumin seeds, 
+black pepper, 
+curry powder, 
+coriander seed, 
+cayenne pepper. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Romaine with Sesame Ginger Vinaigrette <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16091" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16091">
+
+                <div class="nutrBtnClose"><a href="#" id="clicker-16091" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>159</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   1.9 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  14.1 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   5.1 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   1.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>   8.2 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   5.1 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.1 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  12.5 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.05 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.34 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.05 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>2162.4 IU</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.7 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>1302.4 milligrams</p>
+
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>245 milligrams</p>
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+mandarin orange sections, 
+romaine, 
+cucumbers, 
+fresh tofu, 
+fresh bean sprouts, 
+sesame oil, 
+olive/canola oil blend, 
+scallions, 
+seasoned rice vinegar, 
+fresh garlic, 
+lemon juice, 
+fresh ginger root, 
+kosher salt, 
+lite soy sauce, 
+granulated sugar, 
+black pepper. 
+        </p>
+
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Aragonian Lentils &amp; Mushroom <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16089" class="Show"></a></div>
+
+                    <div class="icons">
+
+                                        
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16089">
+                <div class="nutrBtnClose"><a href="#" id="clicker-16089" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>97</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   5.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   1.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  16.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   1.6 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   6.9 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   7.8 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>0.20 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.35 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>1656.9 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.1 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>1105.9 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>135 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+french green lentils, 
+arbequina ev oil olive, 
+fresh sliced mushrooms, 
+diced fresh carrots, 
+fresh heirloom roma tomatoes, 
+fresh fennel, 
+fresh red onions, 
+fresh garlic, 
+fresh mint, 
+kosher salt, 
+black pepper, 
+sherry vinegar xeres. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Sweets ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+
+                    <div class="recipe">
+                    
+                    <h2>Iced Carrot Cupcake </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-14223" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=2" onfocus="this.blur()" title="Menu Items Containing Dairy - These menu items contain a dairy product as added by Yale Dining. However, some of the ingredients we use also may contain a dairy-based preservative or additive. If you must absolutely avoid all forms of dairy, contact your dining hall manager."><img src="images/key_dairy.gif" alt="Contains Dairy" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=3" onfocus="this.blur()" title="Menu Items Containing Eggs - These menu items contain an egg product as added by Yale Dining. However, some of the ingredients we use also may contain an egg-based preservative or additive. If you must absolutely avoid eggs in any form, contact your dining hall manager."><img src="images/key_eggs.gif" alt="Contains Eggs" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=13" onfocus="this.blur()" title="Menu Items Containing Wheat - These menu items contain wheat or a wheat product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a wheat-based preservative or additive. If you must absolutely avoid wheat in any form, contact your dining hall manager."><img src="images/key_wheat.gif" alt="Contains Wheat" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-14223">
+                <div class="nutrBtnClose"><a href="#" id="clicker-14223" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 each</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>233</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   3.1 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   9.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   2.1 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   3.1 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>9 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  35.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>  15.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.4 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   1.2 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.08 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.70 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.11 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>3857.5 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.8 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>2681.5 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>271 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Chocolate Chip Cookie </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-5678" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=3" onfocus="this.blur()" title="Menu Items Containing Eggs - These menu items contain an egg product as added by Yale Dining. However, some of the ingredients we use also may contain an egg-based preservative or additive. If you must absolutely avoid eggs in any form, contact your dining hall manager."><img src="images/key_eggs.gif" alt="Contains Eggs" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-5678">
+
+                <div class="nutrBtnClose"><a href="#" id="clicker-5678" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>2 each</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>407</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   4.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  20.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   4.5 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   4.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>27 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  51.4 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>  22.7 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.7 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.22 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.66 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.11 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>   0.0 IU</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   1.9 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  51.0 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>287 milligrams</p>
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+
+                    <h2>Ingredients:</h2>
+                    <p>
+
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+
+            </div>
+
+            
+            <!-- end course -->  
+
+                        
+        </div>
+    </div>
+        
+   <!-- start meal -->
+    <div class="meal">
+        <h1>Dinner</h1>
+        <div class="mealBox">
+
+        
+        <!-- start course -->
+        
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Entrees ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Chicken Chilaquiles </h2>
+
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-14761" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=5" onfocus="this.blur()"  title="Lacto Vegetarian Entrees - Yale Dining adds no eggs or egg-based ingredients to these entrees. However, the ingredients we use may contain a egg-based preservative or additive. If you must absolutely avoid all forms of eggs, contact your dining hall manager."><img src="images/key_lacto.gif" alt="Lacto Entree" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=2" onfocus="this.blur()" title="Menu Items Containing Dairy - These menu items contain a dairy product as added by Yale Dining. However, some of the ingredients we use also may contain a dairy-based preservative or additive. If you must absolutely avoid all forms of dairy, contact your dining hall manager."><img src="images/key_dairy.gif" alt="Contains Dairy" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a>                                    
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-14761">
+                <div class="nutrBtnClose"><a href="#" id="clicker-14761" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>317</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  20.5 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  14.6 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   3.3 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   1.6 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>71 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  26.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   3.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   3.1 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  12.6 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.15 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>6.24 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.18 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 460.4 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.0 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 316.8 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>433 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+fresh tomatillos, 
+boneless chicken thigh, 
+yellow tortilla chips, 
+pepper jack cheese, 
+fresh garlic, 
+scallions, 
+fresh cilantro, 
+fresh jalapenos, 
+soybean oil, 
+ground cumin, 
+ground coriander. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Quinoa Black Bean &amp; Corn Pilaf </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-14658" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=15" onfocus="this.blur()"  title="Smart Choice Item - This is part of our Eat Smart, Live Well program.  The checkmark identifies entrees whose stated portion size meets these healthy criteria: less than 500 calories, less than 30% calories from fat &amp; less than 10% saturated fat, less than 100 mg of cholesterol, and less than 600 mg of sodium.  Other entrees need more watchful overall planning."><img src="images/key_SmartChoice.gif" alt="This is a Smart Choice item" border="0" width="17" height="17" class="icon" /></a>                                    
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-14658">
+                <div class="nutrBtnClose"><a href="#" id="clicker-14658" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1.5 serve spoons</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>Calories:</h2><p>298</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  13.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   4.1 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   1.8 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  53.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   2.2 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   9.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   4.8 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>0.47 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.50 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.20 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 163.1 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   3.7 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 121.1 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>543 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+golden/white variety quinoa, 
+diced onions, 
+dried turtle beans, 
+cut corn, 
+vegetable base, 
+lemons, 
+olive/canola oil blend, 
+fresh cilantro, 
+fresh garlic puree, 
+ground cumin, 
+ground coriander, 
+ground white pepper, 
+bayleaves. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Georgia Baked Ham </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-13210" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=8" onfocus="this.blur()" title="Menu Items Containing Pork - These menu items contain pork products as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a pork-based ingredient, preservative or additive. If you must absolutely avoid all forms of pork, contact your dining hall manager."><img src="images/key_pork.gif" alt="Contains pork" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-13210">
+                <div class="nutrBtnClose"><a href="#" id="clicker-13210" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 slice (4 oz)</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>Calories:</h2><p>156</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  23.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   5.4 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.7 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   1.8 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>58 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>   2.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   1.2 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   0.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.0 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>0.61 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>5.66 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.24 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>  25.6 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   1.0 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  25.8 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>1407 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+pitt ham, 
+water, 
+maple bourbon reduction. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Four Tomato Basil Pasta </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-8528" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=15" onfocus="this.blur()"  title="Smart Choice Item - This is part of our Eat Smart, Live Well program.  The checkmark identifies entrees whose stated portion size meets these healthy criteria: less than 500 calories, less than 30% calories from fat &amp; less than 10% saturated fat, less than 100 mg of cholesterol, and less than 600 mg of sodium.  Other entrees need more watchful overall planning."><img src="images/key_SmartChoice.gif" alt="This is a Smart Choice item" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=12" onfocus="this.blur()"  title="Vegan Entrees - These menu items contains no animal foods (including honey) whatsoever."><img src="images/key_vegan.gif" alt="This is a Vegan Entree" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=13" onfocus="this.blur()" title="Menu Items Containing Wheat - These menu items contain wheat or a wheat product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a wheat-based preservative or additive. If you must absolutely avoid wheat in any form, contact your dining hall manager."><img src="images/key_wheat.gif" alt="Contains Wheat" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-8528">
+                <div class="nutrBtnClose"><a href="#" id="clicker-8528" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>2 serve spoons</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>Calories:</h2><p>567</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>  18.0 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   8.8 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   2.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p> 103.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>  13.5 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   7.6 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  11.9 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>1.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>9.15 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.51 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 895.0 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   5.0 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 325.6 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>462 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+organic tomato sauce with basil, 
+penne pasta, 
+fresh native tomatoes, 
+fresh plum tomatoes, 
+diced onions, 
+olive/canola oil blend, 
+sundried tomatoes, 
+fresh garlic puree, 
+fresh basil, 
+crushed red pepper. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Express Bar ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Pho Noodle Bowl Bar </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-14835" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                   
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-14835">
+                <div class="nutrBtnClose"><a href="#" id="clicker-14835" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+pho broth, 
+thai rice noodles, 
+fresh tofu, 
+bean sprouts, 
+boneless skinless chicken breast, 
+limes, 
+fresh ginger root, 
+scallions, 
+hoisin sauce, 
+fresh cilantro, 
+fresh basil, 
+fresh serrano chilies. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Grill ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+
+                    
+                    <h3>Grilled-to-order Star Ranch All Natural Burgers &amp; Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries.</h3>
+                    
+                    </div>
+                    
+                    <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-0">
+
+                <div class="nutrBtnClose"><a href="#" id="clicker-0" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+
+        </p>
+                    </div>
+
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>Starch - YSFP ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Roasted Herbed Potatoes </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-8514" class="Show"></a></div>
+
+                    <div class="icons">
+
+                                        
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-8514">
+                <div class="nutrBtnClose"><a href="#" id="clicker-8514" class="Show"></a></div>
+
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>98</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   2.6 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   0.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.1 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.1 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  22.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   1.0 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   3.1 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  25.4 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.31 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.05 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 123.7 IU</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   1.3 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  90.5 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>128 milligrams</p>
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+
+                    <h2>Ingredients:</h2>
+                    <p>
+local red bliss potatoes, 
+arbequina ev oil olive, 
+fresh garlic, 
+fresh rosemary, 
+fresh thyme, 
+kosher salt, 
+fresh oregano, 
+black pepper. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Vegetables ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+
+                    
+                    <h2>Fresh Corn On The Cob </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-4776" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=2" onfocus="this.blur()" title="Menu Items Containing Dairy - These menu items contain a dairy product as added by Yale Dining. However, some of the ingredients we use also may contain a dairy-based preservative or additive. If you must absolutely avoid all forms of dairy, contact your dining hall manager."><img src="images/key_dairy.gif" alt="Contains Dairy" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-4776">
+                <div class="nutrBtnClose"><a href="#" id="clicker-4776" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+
+                        <h2>Serving Size:</h2><p>one ear</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>132</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   5.8 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   2.9 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.7 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   1.1 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>6 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  25.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   8.2 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   2.4 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   5.6 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.12 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.74 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.19 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p> 398.7 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.5 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 181.2 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>35 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+native corn on the cob, 
+reduced-fat milk. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Salad ~</span>
+
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Curried Rice Salad <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16097" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=6" onfocus="this.blur()" title="Menu Items Containing Tree Nuts - These menu items contain a tree nut or nut product as added by Yale Dining. However, some of the specialty ethnic ingredients we use also may contain a nut-based ingredient, preservative or additive. If you must absolutely avoid all forms of tree nuts, contact your dining hall manager."><img src="images/key_nut.gif" alt="Contains Nuts" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16097">
+                <div class="nutrBtnClose"><a href="#" id="clicker-16097" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>467</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   7.2 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  11.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   2.0 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.9 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  85.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>  17.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   3.4 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   8.7 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.12 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.52 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>  84.2 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.2 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>  96.2 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>254 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+purple rice                    , 
+basmati rice, 
+seedless raisins, 
+golden raisins, 
+lemon juice, 
+madiera, 
+scallions, 
+arbequina ev oil olive, 
+kosher salt, 
+whole cumin seeds, 
+black pepper, 
+curry powder, 
+coriander seed, 
+cayenne pepper. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Romaine with Sesame Ginger Vinaigrette <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16091" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=1" onfocus="this.blur()" title="Menu Items Containing Alcohol - These menu items contain an alcohol product as added by Yale Dining. However, some of the ingredients we use also may contain an alcohol-based ingredient, preservative or additive. If you must absolutely avoid all forms of alcohol, contact your dining hall manager."><img src="images/key_alcohol.gif" alt="" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=11" onfocus="this.blur()" title="Menu Items Containing Soy - These menu items contain a soybean product as added by Yale Dining. However, some of the specialty ethnic ingredients and prepared salad dressings we use also may contain a soy-based preservative or additive. If you must absolutely avoid soy in any form, contact your dining hall manager."><img src="images/key_soy.gif" alt="Contains Soy Products" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=14" onfocus="this.blur()" title="Menu Items Containing Gluten - These menu items contain wheat, rye, barley, oats, or products made using these grains.  If you have been diagnosed with celiac disease, contact your dining hall manager for additional help.  Yale Dining can get gluten-free breads, cereals, pasta, and other specialty products as well as follow gluten-free preparation requirements.  All you have to do is ask!"><img src="images/key_gluten.gif" alt="Contains Gluten" border="0" width="17" height="17" class="icon" /></a>                                     
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16091">
+
+                <div class="nutrBtnClose"><a href="#" id="clicker-16091" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>159</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   1.9 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  14.1 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   5.1 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   1.5 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>   8.2 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   5.1 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   1.1 grams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>  12.5 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.05 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.34 milligrams</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.05 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>2162.4 IU</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.7 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>1302.4 milligrams</p>
+
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>245 milligrams</p>
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+mandarin orange sections, 
+romaine, 
+cucumbers, 
+fresh tofu, 
+fresh bean sprouts, 
+sesame oil, 
+olive/canola oil blend, 
+scallions, 
+seasoned rice vinegar, 
+fresh garlic, 
+lemon juice, 
+fresh ginger root, 
+kosher salt, 
+lite soy sauce, 
+granulated sugar, 
+black pepper. 
+        </p>
+
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+            
+            <div class="serving">
+                    <div class="recipe">
+                    
+                    <h2>Aragonian Lentils &amp; Mushroom <img src="images/menu-ico-special.png" alt="" width="46" height="23" border="0" align="middle" /></h2>
+
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16089" class="Show"></a></div>
+
+                    <div class="icons">
+
+                                        
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16089">
+                <div class="nutrBtnClose"><a href="#" id="clicker-16089" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 serve spoon</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>97</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   5.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>   1.3 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>0 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  16.3 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>   1.6 grams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   6.9 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   7.8 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+                        <h2>B-1:</h2><p>0.20 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>1.35 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.10 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>1656.9 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   2.1 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p>1105.9 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>135 milligrams</p>
+                        <div class="nutritionRule"></div>
+
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+water, 
+french green lentils, 
+arbequina ev oil olive, 
+fresh sliced mushrooms, 
+diced fresh carrots, 
+fresh heirloom roma tomatoes, 
+fresh fennel, 
+fresh red onions, 
+fresh garlic, 
+fresh mint, 
+kosher salt, 
+black pepper, 
+sherry vinegar xeres. 
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+        
+         <div class="clear-all"></div>
+
+          <div class="course">
+
+            <span>The Sweets ~</span>
+           
+            <!-- start Servings -->         
+            
+            
+            <div class="serving">
+
+                    <div class="recipe">
+                    
+                    <h2>Pumpkin Cheesecake Kiss </h2>
+                        
+                    </div>
+                    
+                    
+                    <div class="btn-nutrition"><a href="#" id="clicker-16643" class="Show"></a></div>
+
+                    <div class="icons">
+
+    <a href="dietary_search.cfm?GuideID=2" onfocus="this.blur()" title="Menu Items Containing Dairy - These menu items contain a dairy product as added by Yale Dining. However, some of the ingredients we use also may contain a dairy-based preservative or additive. If you must absolutely avoid all forms of dairy, contact your dining hall manager."><img src="images/key_dairy.gif" alt="Contains Dairy" border="0" width="17" height="17" class="icon" /></a> <a href="dietary_search.cfm?GuideID=3" onfocus="this.blur()" title="Menu Items Containing Eggs - These menu items contain an egg product as added by Yale Dining. However, some of the ingredients we use also may contain an egg-based preservative or additive. If you must absolutely avoid eggs in any form, contact your dining hall manager."><img src="images/key_eggs.gif" alt="Contains Eggs" border="0" width="17" height="17" class="icon" /></a>                                    
+                </div><!-- Close DIV icons -->
+
+
+                <!-- Close CFIF NOT isStandard -->
+            </div><!-- Close DIV serving -->
+
+
+<!-- start nutrition box -->
+
+                
+
+
+
+
+            <div class="nutrition slider" id="clicker-16643">
+                <div class="nutrBtnClose"><a href="#" id="clicker-16643" class="Show"></a></div>
+                <h3> Analysis: Nutrition</h3>
+
+                  <div class="nutrTwoCol">
+                        <h2>Serving Size:</h2><p>1 each</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Calories:</h2><p>202</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Protein:</h2><p>   3.5 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Fat:</h2><p>  13.0 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Poly Unsaturated Fat:</h2><p>   1.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                
+                        <h2>Saturated Fat:</h2><p>   6.0 grams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>Cholesterol:</h2><p>55 milligrams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Carbohydrates:</h2><p>  18.7 grams</p>
+                        <div class="nutritionRule"></div>
+                        <h2>Sugar:</h2><p>  11.8 grams</p>
+
+                        <div class="nutritionRule"></div>
+
+              </div>
+                    
+                    <div class="nutrTwoCol">
+                        <h2>Dietary Fiber:</h2><p>   0.2 grams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin C:</h2><p>   0.2 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+                        <h2>B-1:</h2><p>0.01 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Niacin:</h2><p>0.04 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>B-2:</h2><p>0.05 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Vitamin A:</h2><p>1238.8 IU</p>
+
+                        <div class="nutritionRule"></div>                       
+                        <h2>Iron:</h2><p>   0.7 milligrams</p>
+                        <div class="nutritionRule"></div>                       
+                        <h2>Calcium:</h2><p> 698.9 milligrams</p>
+                        <div class="nutritionRule"></div>                                                               
+                        <h2>Sodium:</h2><p>165 milligrams</p>
+
+                        <div class="nutritionRule"></div>
+              </div>
+                              
+                    
+                    <div class="nutrOneCol">
+                    <h2>Ingredients:</h2>
+                    <p>
+
+        </p>
+                    </div>
+            </div><!-- end nutrition -->
+
+
+<!-- end nutrition box -->
+        
+
+                <!-- end Serving -->                            
+                
+
+                
+
+
+                <div class="clear-all"></div>
+            </div>
+
+            
+            <!-- end course -->  
+
+                        
+        </div>
+    </div>
+    
+    <!-- end meal -->
+    
+      
+
+    </div>
+
+    
+
+    <!-- menu end -->
+
+
+
+<div class="clearAll"></div>
+    <div class="post-menu">
+        
+
+    </div>
+
+
+
+
+
+
+        </div><!-- end tabs -->
+
+        
+</div><!-- end content -->
+
+
+
+<!-- FOOTER ======================================================== -->
+<div id="footer">
+<!-- FOOTER INCLUDE ================================================ -->
+<!-- Footer -->
+<a href="http://www.yale.edu/"><img src="resources/images/yale_dk_blue_32pt.gif" width="92" height="38" alt="Yale University" /></a>
+<p>Copyright &copy; 
+<script type="text/javascript" language="javascript">
+// <![CDATA[
+var now = new Date();
+function fourdigits(number) {
+    return (number < 1000) ? number + 1900 : number;
+    }
+document.write(fourdigits(now.getYear()));
+// ]]>
+</script> 
+Yale Dining. All rights reserved.<br />
+Phone (203) 432-0400. P.O. Box 208261 New Haven, CT 06520</p>
+
+<div class="clear-all"></div>
+<!-- keeps footer open under graphic -->
+<!-- /FOOTER INCLUDE =============================================== --></div>
+<!-- /FOOTER ======================================================== --></div>
+<!-- container --></div>
+<!-- end outer-wrap --></div>
+</body>
+</html>

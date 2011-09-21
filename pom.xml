@@ -19,15 +19,22 @@
 
     <!-- Dependency Version Properties -->
     <properties>
+        <antisamy.version>1.4.4</antisamy.version>
+        <ehcache.version>2.4.5</ehcache.version>
         <jaxb2basics.version>0.6.0</jaxb2basics.version>
-        <portlet-api-version>2.0</portlet-api-version>
-        <servlet-api-version>2.5</servlet-api-version>
-        <spring-version>3.0.5.RELEASE</spring-version>
-        <jstl-version>1.1.2</jstl-version>
-        <log4j-version>1.2.14</log4j-version>
-        <junit-version>3.8.1</junit-version>
+        <http-client.version>4.1.2</http-client.version>
+        <mockito.version>1.8.5</mockito.version>
+        <neko-html.version>1.9.15</neko-html.version>
+        <portlet-api.version>2.0</portlet-api.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <spring.version>3.0.5.RELEASE</spring.version>
+        <jstl.version>1.1.2</jstl.version>
+        <log4j.version>1.2.14</log4j.version>
+        <junit.version>4.8.2</junit.version>
+        <commons-io.version>2.0.1</commons-io.version>
         <commons-lang.version>2.6</commons-lang.version>
-        <commons-logging-version>1.1.1</commons-logging-version>
+        <commons-logging.version>1.1.1</commons-logging.version>
+        <xerces.version>2.10.0</xerces.version>
     </properties>
 
     <dependencyManagement>
@@ -38,37 +45,57 @@
                 <version>2.2.2</version>
             </dependency>
             <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
-                <version>${commons-logging-version}</version>
+                <version>${commons-logging.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.portlet</groupId>
                 <artifactId>portlet-api</artifactId>
-                <version>${portlet-api-version}</version>
+                <version>${portlet-api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
-                <version>${jstl-version}</version>
+                <version>${jstl.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
-                <version>${servlet-api-version}</version>
+                <version>${servlet-api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>${junit-version}</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>${log4j-version}</version>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-core</artifactId>
+                <version>${ehcache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${http-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -76,29 +103,44 @@
                 <version>${jaxb2basics.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.owasp.antisamy</groupId>
+                <artifactId>antisamy</artifactId>
+                <version>${antisamy.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc-portlet</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>taglibs</groupId>
                 <artifactId>standard</artifactId>
-                <version>${jstl-version}</version>
+                <version>${jstl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xerces.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -107,6 +149,14 @@
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>
@@ -136,8 +186,24 @@
             <artifactId>log4j</artifactId>
         </dependency>
         <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.jvnet.jaxb2_commons</groupId>
             <artifactId>jaxb2-basics-runtime</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.owasp.antisamy</groupId>
+            <artifactId>antisamy</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -158,6 +224,10 @@
         <dependency>
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
         </dependency>
     </dependencies>
 

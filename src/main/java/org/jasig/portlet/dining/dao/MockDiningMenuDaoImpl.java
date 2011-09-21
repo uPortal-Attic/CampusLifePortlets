@@ -19,6 +19,7 @@
 package org.jasig.portlet.dining.dao;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.portlet.PortletRequest;
 import javax.xml.bind.JAXBContext;
@@ -27,6 +28,7 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.jasig.portlet.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.dining.model.menu.xml.Menu;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.io.Resource;
@@ -57,8 +59,14 @@ public class MockDiningMenuDaoImpl implements IDiningMenuDao, InitializingBean {
     }
 
     @Override
-    public Menu getMenu(PortletRequest request) {
-        return this.menu;
+    public DiningHall getMenu(PortletRequest request, String diningHall) {
+        return this.menu.getDiningHall().get(0);
+    }
+
+    @Override
+    public List<String> getDiningHalls(PortletRequest request) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

@@ -26,25 +26,26 @@
 
     <div data-role="header" class="titlebar portlet-titlebar">
         <a class="menu-back-link" href="javascript:;" data-role="button" data-icon="back" data-inline="true">Back</a>
-        <h2 class="title">${ diningHall.name }</h2>
+        <h2 class="title"><spring:message code="dining.hall.${ diningHallKey }.name"/></h2>
     </div>
 
     <div data-role="content" class="portlet-content">
 
         <ul data-role="listview" class="meals">
-            <c:forEach items="${ diningHall.meal }" var="meal" varStatus="status">
+            <c:forEach items="${ menu.meal }" var="meal" varStatus="status">
                 <li><a href="javascript:;">${ meal.name }</a></li>
             </c:forEach>
         </ul>
 
-        <c:forEach items="${ diningHall.meal }" var="meal" varStatus="status">
+        <c:forEach items="${ menu.meal }" var="meal" varStatus="status">
             <ul id="${n}meal_${status.index}" style="display:none" data-role="listview" class="meal">
                 <c:forEach items="${ meal.foodCategory }" var="category" varStatus="status">
                     <li data-role="list-divider">${ category.name }</li>
                     <c:forEach items="${ category.dish }" var="dish">
-                        <li style=""><a href="" style="min-height: 0px; padding-left: 15px">
+                        <portlet:renderURL var="dishUrl"><portlet:param name="action" value="dish"/><portlet:param name="diningHall" value="${ diningHallKey }"/><portlet:param name="dishName" value="${ dish.name }"/></portlet:renderURL>
+                        <li style=""><a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
                             ${ dish.name } 
-                            <c:forEach items="${ dish.code }" var="code"><img src="${dishCodeImages[code]}" style="float: none; position: relative"/></c:forEach>
+                            <c:forEach items="${ dish.code }" var="code"><img src="${dishCodeImages[code]}" style="float: none; position: relative; margin-right: 10px"/></c:forEach>
                         </a></li>
                     </c:forEach>
                 </c:forEach>

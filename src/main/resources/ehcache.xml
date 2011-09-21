@@ -1,4 +1,4 @@
-<%--
+<!--
 
     Licensed to Jasig under one or more contributor license
     agreements. See the NOTICE file distributed with this work
@@ -17,18 +17,22 @@
     specific language governing permissions and limitations
     under the License.
 
---%>
+-->
 
-<jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
+<ehcache>
 
-<div class="portlet">
-    <div data-role="content" class="portlet-content">
+    <!-- Default ehcache -->
+    <defaultCache
+        maxElementsInMemory="100"
+        eternal="true"
+        overflowToDisk="false"
+        memoryStoreEvictionPolicy="LFU"/>
 
-        <ul data-role="listview">
-            <c:forEach items="${ diningHalls }" var="diningHall">
-                <li><a href="<portlet:renderURL><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHall }"/></portlet:renderURL>"><spring:message code="dining.hall.${ diningHall }.name"/></a></li>
-            </c:forEach>
-        </ul>
-    
-    </div>
-</div>
+    <cache name="diningHallCache"
+        maxElementsInMemory="100"
+        eternal="false"
+        timeToLiveSeconds="14400"
+        overflowToDisk="false"
+        memoryStoreEvictionPolicy="LRU"/>
+
+</ehcache>

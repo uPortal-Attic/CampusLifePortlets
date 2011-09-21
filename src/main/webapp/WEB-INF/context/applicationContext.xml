@@ -29,9 +29,10 @@
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-    <property name="location" value="classpath:configuration.properties"/>
-  </bean>
+    <bean
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:configuration.properties" />
+    </bean>
 
     <!-- Message source for this context, loaded from localized "messages_xx" files -->
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
@@ -42,26 +43,63 @@
         </property>
     </bean>
 
+    <!-- 
+     | CACHE CONFIGURATION
+     +-->
+    
+    <!-- EHCache Configuration -->
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ehcache.xml</value>
+        </property>
+    </bean>
+    
+    <bean id="diningHallCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean"
+        p:cacheManager-ref="cacheManager" p:cacheName="diningHallCache"/>
+
     <bean id="viewSelector" class="org.jasig.portlet.dining.mvc.ThemeNameViewSelectorImpl"/>
     
-    <bean class="org.jasig.portlet.dining.dao.MockDiningMenuDaoImpl" p:mockData="classpath:/mock-data/berkeley.xml"/>
-
+    <bean id="yaleDao" class="org.jasig.portlet.dining.dao.YaleDiningMenuDaoImpl"
+        p:xslt="classpath:/mock-data/yale.xsl" p:policy="classpath:/mock-data/antisamy-yale-1.4.4.xml"
+        p:diningHalls-ref="diningHalls" p:cache-ref="diningHallCache"/>
+        
     <util:map id="dishCodeImages">
-        <entry key="A" value="http://www.yaledining.org/images/key_alcohol.gif"/>
-        <entry key="D" value="http://www.yaledining.org/images/key_dairy.gif"/>
-        <entry key="E" value="http://www.yaledining.org/images/key_eggs.gif"/>
-        <entry key="FS" value="http://www.yaledining.org/images/key_fish.gif"/>
-        <entry key="G" value="http://www.yaledining.org/images/key_gluten.gif"/>
-        <entry key="L" value="http://www.yaledining.org/images/key_lacto.gif"/>
-        <entry key="N" value="http://www.yaledining.org/images/key_nut.gif"/>
-        <entry key="O" value="http://www.yaledining.org/images/key_ovo.gif"/>
-        <entry key="P" value="http://www.yaledining.org/images/key_pork.gif"/>
-        <entry key="S" value="http://www.yaledining.org/images/key_shellfish.gif"/>
-        <entry key="SM" value="http://www.yaledining.org/images/key_smartchoice.gif"/>
-        <entry key="SY" value="http://www.yaledining.org/images/key_soy.gif"/>
-        <entry key="V" value="http://www.yaledining.org/images/key_vegan.gif"/>
-        <entry key="W" value="http://www.yaledining.org/images/key_wheat.gif"/>
+        <entry key="1" value="http://www.yaledining.org/images/key_alcohol.gif"/>
+        <entry key="2" value="http://www.yaledining.org/images/key_dairy.gif"/>
+        <entry key="3" value="http://www.yaledining.org/images/key_eggs.gif"/>
+        <entry key="4" value="http://www.yaledining.org/images/key_fish.gif"/>
+        <entry key="14" value="http://www.yaledining.org/images/key_gluten.gif"/>
+        <entry key="5" value="http://www.yaledining.org/images/key_lacto.gif"/>
+        <entry key="6" value="http://www.yaledining.org/images/key_nut.gif"/>
+        <entry key="7" value="http://www.yaledining.org/images/key_ovo.gif"/>
+        <entry key="9" value="http://www.yaledining.org/images/key_peanut.gif"/>
+        <entry key="8" value="http://www.yaledining.org/images/key_pork.gif"/>
+        <entry key="10" value="http://www.yaledining.org/images/key_shellfish.gif"/>
+        <entry key="15" value="http://www.yaledining.org/images/key_smartchoice.gif"/>
+        <entry key="11" value="http://www.yaledining.org/images/key_soy.gif"/>
+        <entry key="12" value="http://www.yaledining.org/images/key_vegan.gif"/>
+        <entry key="13" value="http://www.yaledining.org/images/key_wheat.gif"/>
     </util:map>
+
+    <util:list id="diningHalls">
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+        <value>11</value>
+        <value>4</value>
+        <value>12</value>
+        <value>6</value>
+        <value>15</value>
+        <value>5</value>
+        <value>7</value>
+        <value>23</value>
+        <value>8</value>
+        <value>24</value>
+        <value>9</value>
+        <value>10</value>
+    </util:list>
+    
+    
 
     <!-- Default View Resolver -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

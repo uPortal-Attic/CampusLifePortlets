@@ -64,8 +64,17 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="nutrition-item" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="ingredients" type="xs:string" minOccurs="0"/>
             </xs:sequence>
             <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nutrition-item">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="value" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 
