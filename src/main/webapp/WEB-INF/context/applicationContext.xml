@@ -60,7 +60,7 @@
     <bean id="viewSelector" class="org.jasig.portlet.dining.mvc.ThemeNameViewSelectorImpl"/>
     
     <bean id="yaleDao" class="org.jasig.portlet.dining.dao.ScreenScrapingDiningMenuDaoImpl"
-        p:xslt="classpath:/mock-data/yale.xsl" p:policy="classpath:/mock-data/antisamy-yale-1.4.4.xml"
+        p:xslt="classpath:/yale/yale.xsl" p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
         p:diningHalls-ref="diningHalls" p:cache-ref="diningHallCache"/>
         
     <util:map id="dishCodeImages">
