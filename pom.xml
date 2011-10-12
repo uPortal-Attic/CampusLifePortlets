@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
         <groupId>org.jasig.parent</groupId>
@@ -11,16 +10,16 @@
     <groupId>org.jasig.portlet.dining</groupId>
     <artifactId>DiningMenusPortlet</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0-M1-SNAPSHOT</version>
+    <version>1.0.0-M1</version>
     <name>Dining Menu Portlet</name>
     <description>
         List of dining halls
     </description>
 
     <scm>
-        <connection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</connection>
-        <developerConnection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</developerConnection>
-        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/DiningMenusPortlet/trunk</url>
+        <connection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/tags/DiningMenusPortlet-1.0.0-M1</connection>
+        <developerConnection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/tags/DiningMenusPortlet-1.0.0-M1</developerConnection>
+        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/DiningMenusPortlet/tags/DiningMenusPortlet-1.0.0-M1</url>
     </scm>
 
     <!-- Dependency Version Properties -->
