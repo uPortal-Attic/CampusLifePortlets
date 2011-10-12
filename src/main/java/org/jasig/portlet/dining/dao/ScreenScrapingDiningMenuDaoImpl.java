@@ -1,3 +1,21 @@
+/**
+ * Licensed to Jasig under one or more contributor license
+ * agreements. See the NOTICE file distributed with this work
+ * for additional information regarding copyright ownership.
+ * Jasig licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a
+ * copy of the License at:
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on
+ * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
 package org.jasig.portlet.dining.dao;
 
 import java.io.IOException;
@@ -38,7 +56,15 @@ import org.owasp.validator.html.ScanException;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.core.io.Resource;
 
-public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
+/**
+ * Dining menu DAO capable of collecting menu information vi screen scraping
+ * HTML content.  This implementation should only be used if no more structured
+ * content can be made available.
+ * 
+ * @author Jen Bourey, jennifer.bourey@gmail.com
+ * @version $Revision$
+ */
+public class ScreenScrapingDiningMenuDaoImpl implements IDiningMenuDao {
 
     protected final Log log = LogFactory.getLog(getClass());
 
@@ -53,18 +79,36 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
 
     private Resource xslt;
     
+    /**
+     * Set the XSLT to use when transforming clean, valid HTML to portlet-specific
+     * XML.
+     * 
+     * @param xslt
+     */
     public void setXslt(Resource xslt) {
         this.xslt = xslt;
     }
     
     private Policy policy;
     
+    /**
+     * Set the AntiSamy policy to be used to clean and validate HTML content.
+     * 
+     * @param config
+     * @throws PolicyException
+     * @throws IOException
+     */
     public void setPolicy(Resource config) throws PolicyException, IOException {
         this.policy = Policy.getInstance(config.getFile());
     }
     
     private List<String> diningHalls;
     
+    /**
+     * Set the list of dining hall names.
+     * 
+     * @param diningHalls
+     */
     public void setDiningHalls(List<String> diningHalls) {
         this.diningHalls = diningHalls;
     }
@@ -115,6 +159,14 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
 
     }
     
+    /**
+     * Get HTML content for the specified dining hall.
+     * 
+     * @param diningHall
+     * @return
+     * @throws ClientProtocolException
+     * @throws IOException
+     */
     protected String getHtmlContent(String diningHall) throws ClientProtocolException, IOException {
         final DefaultHttpClient httpclient = new DefaultHttpClient();
         final HttpGet httpget = new HttpGet("http://www.yaledining.org/menu.cfm?mDH=" + diningHall);
@@ -124,6 +176,14 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
         return content;
     }
     
+    /**
+     * Get clean, valid HTML for the supplied HTML markup.
+     * 
+     * @param html
+     * @return
+     * @throws ScanException
+     * @throws PolicyException
+     */
     protected String getCleanedHtmlContent(String html) throws ScanException, PolicyException {
         final AntiSamy as = new AntiSamy();
         final CleanResults cr = as.scan(html, policy);
@@ -132,6 +192,14 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
         return unescaped;
     }
 
+    /**
+     * Get portlet-specific XML for clean, valid HTML.
+     * 
+     * @param cleanHtml
+     * @return
+     * @throws TransformerException
+     * @throws IOException
+     */
     protected String getXml(String cleanHtml) throws TransformerException, IOException {
         final StreamSource xsltSource = new StreamSource(xslt.getInputStream());
         final Transformer identityTransformer = transformerFactory.newTransformer(xsltSource);
@@ -144,6 +212,13 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
         return content;
     }
     
+    /**
+     * Deserialize a menu from the provided XML.
+     * 
+     * @param xml
+     * @return
+     * @throws JAXBException
+     */
     protected Menu getMenu(String xml) throws JAXBException {
         final String packageName = Menu.class.getPackage().getName();
         final JAXBContext jc = JAXBContext.newInstance( packageName );

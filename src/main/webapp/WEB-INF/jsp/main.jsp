@@ -21,6 +21,14 @@
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
 
-<h2>Hello ${ fn:escapeXml(displayName) }!</h2>
+<div class="portlet">
+    <div data-role="content" class="portlet-content">
 
-<p>Your email address is ${ fn:escapeXml(emailAddress) }</p>
+        <ul data-role="listview">
+            <c:forEach items="${ diningHalls }" var="diningHall">
+                <li><a href="<portlet:renderURL><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHall }"/></portlet:renderURL>"><spring:message code="dining.hall.${ diningHall }.name"/></a></li>
+            </c:forEach>
+        </ul>
+    
+    </div>
+</div>

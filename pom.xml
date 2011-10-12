@@ -11,11 +11,17 @@
     <groupId>org.jasig.portlet.dining</groupId>
     <artifactId>DiningMenusPortlet</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <name>${pom.artifactId}</name>
+    <version>1.0.0-M1-SNAPSHOT</version>
+    <name>Dining Menu Portlet</name>
     <description>
-        Starter Spring PortletMVC shell for Jasig JSR-286 Portlets
+        List of dining halls
     </description>
+
+    <scm>
+        <connection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</connection>
+        <developerConnection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</developerConnection>
+        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/DiningMenusPortlet/trunk</url>
+    </scm>
 
     <!-- Dependency Version Properties -->
     <properties>
@@ -287,6 +293,7 @@
                         <exclude>NOTICE</exclude>
                         <exclude>NOTICE.template</exclude>
                         <exclude>bin/**</exclude>
+                        <exclude>src/test/resources/yale-menu.html</exclude>
                     </excludes>
                     <mapping>
                         <xjb>XML_STYLE</xjb>

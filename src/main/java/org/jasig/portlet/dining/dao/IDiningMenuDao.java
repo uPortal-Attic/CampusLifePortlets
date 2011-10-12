@@ -24,10 +24,30 @@ import javax.portlet.PortletRequest;
 
 import org.jasig.portlet.dining.model.menu.xml.DiningHall;
 
+/**
+ * IDiningMenuDao presents a generic interface for collecting dining hall
+ * menu information.
+ * 
+ * @author Jen Bourey, jennifer.bourey@gmail.com
+ * @version $Revision$
+ */
 public interface IDiningMenuDao {
     
+    /**
+     * Get the list of dining halls for a given portlet request.
+     * 
+     * @param request
+     * @return
+     */
     public List<String> getDiningHalls(PortletRequest request);
     
+    /**
+     * Get the menu for the specified dining hall.
+     * 
+     * @param request
+     * @param diningHall
+     * @return
+     */
     public DiningHall getMenu(PortletRequest request, String diningHall);
 
 }
