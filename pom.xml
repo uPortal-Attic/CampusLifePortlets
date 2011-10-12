@@ -10,16 +10,16 @@
     <groupId>org.jasig.portlet.dining</groupId>
     <artifactId>DiningMenusPortlet</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0-M1</version>
+    <version>1.0.0-M2-SNAPSHOT</version>
     <name>Dining Menu Portlet</name>
     <description>
         List of dining halls
     </description>
 
     <scm>
-        <connection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/tags/DiningMenusPortlet-1.0.0-M1</connection>
-        <developerConnection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/tags/DiningMenusPortlet-1.0.0-M1</developerConnection>
-        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/DiningMenusPortlet/tags/DiningMenusPortlet-1.0.0-M1</url>
+        <connection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</connection>
+        <developerConnection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</developerConnection>
+        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/DiningMenusPortlet/trunk</url>
     </scm>
 
     <!-- Dependency Version Properties -->
