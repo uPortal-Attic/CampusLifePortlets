@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.jasig.portlet.dining.mvc.portlet;
+package org.jasig.portlet.campuslife.dining.mvc.portlet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,12 +28,12 @@ import javax.portlet.RenderRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.jasig.portlet.campuslife.dining.dao.IDiningMenuDao;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
 import org.jasig.portlet.campuslife.mvc.IViewSelector;
-import org.jasig.portlet.dining.dao.IDiningMenuDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -78,7 +78,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "main-jQM" : "main";        
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("dining/".concat(viewName));
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for main view");
@@ -98,7 +98,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "diningHall-jQM" : "diningHall";        
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("dining/".concat(viewName));
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for dining hall view");
@@ -120,7 +120,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "meal-jQM" : "meal";
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("dining/".concat(viewName));
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for meal view");
@@ -150,7 +150,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "dish-jQM" : "dish";
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("dining/".concat(viewName));
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for dish view");

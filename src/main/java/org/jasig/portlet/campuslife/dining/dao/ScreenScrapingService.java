@@ -1,4 +1,4 @@
-package org.jasig.portlet.dining.dao;
+package org.jasig.portlet.campuslife.dining.dao;
 
 import java.io.IOException;
 import java.io.InputStream;

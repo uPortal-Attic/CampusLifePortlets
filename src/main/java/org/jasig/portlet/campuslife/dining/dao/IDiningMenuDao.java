@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.dining.dao;
+package org.jasig.portlet.campuslife.dining.dao;
 
 import java.util.List;
 

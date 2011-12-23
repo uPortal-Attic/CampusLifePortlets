@@ -27,16 +27,16 @@
       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:component-scan base-package="org.jasig.portlet.dining.mvc.portlet" />
+    <context:component-scan base-package="org.jasig.portlet.campuslife.dining.mvc.portlet" />
     <context:annotation-config />
 
     <bean id="diningHallCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean"
         p:cacheManager-ref="cacheManager" p:cacheName="diningHallCache"/>
 
-    <bean id="yaleDao" class="org.jasig.portlet.dining.dao.YaleDiningMenuDaoImpl"
+    <bean id="yaleDao" class="org.jasig.portlet.campuslife.dining.dao.YaleDiningMenuDaoImpl"
         p:diningHalls-ref="diningHalls">
         <property name="diningHallService">
-            <bean class="org.jasig.portlet.dining.dao.ScreenScrapingService"
+            <bean class="org.jasig.portlet.campuslife.dining.dao.ScreenScrapingService"
                 p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
                 p:xslt="classpath:/yale/yale.xsl" />
         </property>
