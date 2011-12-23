@@ -19,11 +19,12 @@
 
 package org.jasig.portlet.dining.mvc.portlet;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -71,8 +72,7 @@ public class MainController {
     }
     
     @RenderMapping
-    public ModelAndView showMainView(
-            final RenderRequest request, final RenderResponse response) {
+    public ModelAndView showMainView(final RenderRequest request) {
 
         // determine if the request represents a mobile browser and set the
         // view name accordingly
@@ -91,8 +91,7 @@ public class MainController {
     }
 
     @RenderMapping(params="action=diningHall")
-    public ModelAndView showDiningHallView(
-            final RenderRequest request, final RenderResponse response,
+    public ModelAndView showDiningHallView(final RenderRequest request, 
             final String diningHall) {
 
         // determine if the request represents a mobile browser and set the
@@ -102,50 +101,67 @@ public class MainController {
         final ModelAndView mav = new ModelAndView(viewName);
         
         if(logger.isDebugEnabled()) {
-            logger.debug("Using view name " + viewName + " for main view");
+            logger.debug("Using view name " + viewName + " for dining hall view");
         }
         
-        DiningHall menu = menuDao.getMenu(request, diningHall);
-        mav.addObject("menu", menu);
+        DiningHall dh = menuDao.getDiningHall(diningHall);
+        mav.addObject("menu", dh);
         mav.addObject("diningHallKey", diningHall);
 
-        mav.addObject("dishCodeImages", dishCodeImages);
+        return mav;
+
+    }
+    
+    @RenderMapping(params="action=meal")
+    public ModelAndView showMealView(final RenderRequest request,
+            final String diningHall, final String mealName) {
+
+        // determine if the request represents a mobile browser and set the
+        // view name accordingly
+        final boolean isMobile = viewSelector.isMobile(request);
+        final String viewName = isMobile ? "meal-jQM" : "meal";
+        final ModelAndView mav = new ModelAndView(viewName);
         
+        if(logger.isDebugEnabled()) {
+            logger.debug("Using view name " + viewName + " for meal view");
+        }
+        
+        mav.addObject("dishCodeImages", dishCodeImages);
+        mav.addObject("diningHallKey", diningHall);
+        
+        Meal meal = menuDao.getMeal(diningHall, mealName);
+        
+        List<FoodCategory> categories = new ArrayList<FoodCategory>();
+        for (FoodCategory category : meal.getFoodCategory()) {
+            categories.add(menuDao.getFoodCategory(diningHall, mealName, category.getName()));
+        }
+        
+        mav.addObject("meal", meal);
+        mav.addObject("categories", categories);
         return mav;
 
     }
 
     @RenderMapping(params="action=dish")
-    public ModelAndView showDishView(
-            final RenderRequest request, final RenderResponse response,
-            final String dishName, final String diningHall) {
+    public ModelAndView showDishView(final RenderRequest request,
+            final String diningHall, final String mealName, final String dishName) {
 
         // determine if the request represents a mobile browser and set the
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
-        final String viewName = isMobile ? "dish-jQM" : "dish";        
+        final String viewName = isMobile ? "dish-jQM" : "dish";
         final ModelAndView mav = new ModelAndView(viewName);
         
         if(logger.isDebugEnabled()) {
-            logger.debug("Using view name " + viewName + " for main view");
+            logger.debug("Using view name " + viewName + " for dish view");
         }
         
         mav.addObject("dishCodeImages", dishCodeImages);
         mav.addObject("diningHallKey", diningHall);
+        mav.addObject("mealName", mealName);
         
-        DiningHall menu = menuDao.getMenu(request, diningHall);
-        for (Meal meal : menu.getMeal()) {
-            for (FoodCategory cat : meal.getFoodCategory()) {
-                for (Dish dish : cat.getDish()) {
-                    if (dishName.equals(dish.getName())) {
-                        mav.addObject("dish", dish);
-                        return mav;
-                    }
-                    
-                }
-            }
-        }
-
+        Dish dish = menuDao.getDish(diningHall, mealName, dishName);
+        mav.addObject("dish", dish);
         return mav;
 
     }

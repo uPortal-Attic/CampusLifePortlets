@@ -26,6 +26,7 @@
     <properties>
         <antisamy.version>1.4.4</antisamy.version>
         <ehcache.version>2.4.5</ehcache.version>
+        <ehcache-annotations.version>1.2.0</ehcache-annotations.version>
         <jaxb2basics.version>0.6.0</jaxb2basics.version>
         <http-client.version>4.1.2</http-client.version>
         <mockito.version>1.8.5</mockito.version>
@@ -44,6 +45,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.googlecode.ehcache-spring-annotations</groupId>
+                <artifactId>ehcache-spring-annotations</artifactId>
+                <version>${ehcache-annotations.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
@@ -151,6 +157,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>com.googlecode.ehcache-spring-annotations</groupId>
+            <artifactId>ehcache-spring-annotations</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>

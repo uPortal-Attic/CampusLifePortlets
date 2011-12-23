@@ -40,7 +40,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = "/testContext.xml")
 public class ScreenScrapingDiningMenuDaoImplTest {
 
-    @Autowired ScreenScrapingDiningMenuDaoImpl dao;
+    @Autowired ScreenScrapingService service;
     @Mock PortletRequest request;
     
     @Autowired
@@ -54,7 +54,7 @@ public class ScreenScrapingDiningMenuDaoImplTest {
     @Test
     public void testCleanHtml() throws ScanException, PolicyException, IOException {
         Resource menu = ctx.getResource("classpath:/yale-menu.html");
-        String cleaned = dao.getCleanedHtmlContent(IOUtils.toString(menu.getInputStream()));
+        String cleaned = service.getCleanedHtmlContent(IOUtils.toString(menu.getInputStream()));
     }
 
 }

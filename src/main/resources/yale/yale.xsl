@@ -22,17 +22,14 @@
   <xsl:output method="xml" indent="no"/>
 
     <xsl:template match="/">
-        <menu
+        <dining-hall name="{//a[@href='#tabs-1']}"
             xmlns="https://source.jasig.org/schemas/portlet/dining/menu"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="https://source.jasig.org/schemas/portlet/dining/menu ../xsd/menu.xsd"
-            day="Today">
-            <dining-hall name="{//a[@href='#tabs-1']}">
-                <xsl:for-each select="./descendant::div[@class='meal']">
-                    <xsl:apply-templates select="."/>
-                </xsl:for-each>
-            </dining-hall>
-        </menu>
+            xsi:schemaLocation="https://source.jasig.org/schemas/portlet/dining/menu ../xsd/menu.xsd">
+            <xsl:for-each select="./descendant::div[@class='meal']">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </dining-hall>
     </xsl:template>
 
     <xsl:template match="div[@class='meal']">

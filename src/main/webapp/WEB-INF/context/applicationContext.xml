@@ -59,9 +59,14 @@
 
     <bean id="viewSelector" class="org.jasig.portlet.dining.mvc.ThemeNameViewSelectorImpl"/>
     
-    <bean id="yaleDao" class="org.jasig.portlet.dining.dao.ScreenScrapingDiningMenuDaoImpl"
-        p:xslt="classpath:/yale/yale.xsl" p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
-        p:diningHalls-ref="diningHalls" p:cache-ref="diningHallCache"/>
+    <bean id="yaleDao" class="org.jasig.portlet.dining.dao.YaleDiningMenuDaoImpl"
+        p:diningHalls-ref="diningHalls">
+        <property name="diningHallService">
+            <bean class="org.jasig.portlet.dining.dao.ScreenScrapingService"
+                p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
+                p:xslt="classpath:/yale/yale.xsl" />
+        </property>
+    </bean>
         
     <util:map id="dishCodeImages">
         <entry key="1" value="http://www.yaledining.org/images/key_alcohol.gif"/>

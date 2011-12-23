@@ -23,6 +23,9 @@ import java.util.List;
 import javax.portlet.PortletRequest;
 
 import org.jasig.portlet.dining.model.menu.xml.DiningHall;
+import org.jasig.portlet.dining.model.menu.xml.Dish;
+import org.jasig.portlet.dining.model.menu.xml.FoodCategory;
+import org.jasig.portlet.dining.model.menu.xml.Meal;
 
 /**
  * IDiningMenuDao presents a generic interface for collecting dining hall
@@ -41,13 +44,12 @@ public interface IDiningMenuDao {
      */
     public List<String> getDiningHalls(PortletRequest request);
     
-    /**
-     * Get the menu for the specified dining hall.
-     * 
-     * @param request
-     * @param diningHall
-     * @return
-     */
-    public DiningHall getMenu(PortletRequest request, String diningHall);
+    public DiningHall getDiningHall(String diningHall);
+    
+    public Meal getMeal(String diningHall, String mealName);
 
+    public FoodCategory getFoodCategory(String diningHall, String mealName, String categoryName);
+    
+    public Dish getDish(String dininghall, String meal, String dishName);
+    
 }

@@ -25,7 +25,11 @@
 <div id="${n}container" class="portlet">
 
     <div data-role="header" class="titlebar portlet-titlebar">
-        <portlet:renderURL var="backUrl"><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHallKey }"/></portlet:renderURL>
+        <portlet:renderURL var="backUrl">
+            <portlet:param name="action" value="meal"/>
+            <portlet:param name="diningHall" value="${ diningHallKey }"/>
+            <portlet:param name="mealName" value="${ mealName }"/>
+        </portlet:renderURL>
         <a class="menu-back-link" href="${ backUrl }" data-role="button" data-icon="back" data-inline="true">Back</a>
         <h2 class="title">Dish Details</h2>
     </div>

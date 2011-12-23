@@ -25,54 +25,22 @@
 <div id="${n}container" class="portlet">
 
     <div data-role="header" class="titlebar portlet-titlebar">
-        <a class="menu-back-link" href="javascript:;" data-role="button" data-icon="back" data-inline="true">Back</a>
+        <a class="menu-back-link" href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">Back</a>
         <h2 class="title"><spring:message code="dining.hall.${ diningHallKey }.name"/></h2>
     </div>
 
     <div data-role="content" class="portlet-content">
-
+    
         <ul data-role="listview" class="meals">
             <c:forEach items="${ menu.meal }" var="meal" varStatus="status">
-                <li><a href="javascript:;">${ meal.name }</a></li>
+                <portlet:renderURL var="mealUrl">
+                    <portlet:param name="action" value="meal"/>
+                    <portlet:param name="diningHall" value="${ diningHallKey }"/>
+                    <portlet:param name="mealName" value="${ meal.name }"/>
+                </portlet:renderURL>
+                <li><a href="${ mealUrl }">${ meal.name }</a></li>
             </c:forEach>
         </ul>
-
-        <c:forEach items="${ menu.meal }" var="meal" varStatus="status">
-            <ul id="${n}meal_${status.index}" style="display:none" data-role="listview" class="meal">
-                <c:forEach items="${ meal.foodCategory }" var="category" varStatus="status">
-                    <li data-role="list-divider">${ category.name }</li>
-                    <c:forEach items="${ category.dish }" var="dish">
-                        <portlet:renderURL var="dishUrl"><portlet:param name="action" value="dish"/><portlet:param name="diningHall" value="${ diningHallKey }"/><portlet:param name="dishName" value="${ dish.name }"/></portlet:renderURL>
-                        <li style=""><a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
-                            ${ dish.name } 
-                            <c:forEach items="${ dish.code }" var="code"><img src="${dishCodeImages[code]}" style="float: none; position: relative; margin-right: 10px"/></c:forEach>
-                        </a></li>
-                    </c:forEach>
-                </c:forEach>
-            </ul>
-        </c:forEach>
     
     </div>
 </div>
-
-<script type="text/javascript">
-up.jQuery(function () {
-    var $ = up.jQuery;
-    $(document).ready(function () {
-        $(".menu-back-link").click(function () { 
-            if ($(".meals").css("display") !== 'none') {
-                window.location = "<portlet:renderURL/>";
-            } else {
-                $(".meal").hide();
-                $(".meals").show();
-                return false;
-            }
-        });
-        $(".meals li a").click(function () {
-            var index = $(this).index(".meals li a");
-            $(".meals").hide();
-            $("#${n}meal_" + index).show();
-        });
-    });
-});
-</script>
