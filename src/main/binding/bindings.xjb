@@ -36,7 +36,7 @@
       
     <jaxb:bindings schemaLocation="../resources/xsd/menu.xsd">
         <jaxb:schemaBindings>
-            <jaxb:package name="org.jasig.portlet.dining.model.menu.xml" />
+            <jaxb:package name="org.jasig.portlet.campuslife.dining.model.menu.xml" />
         </jaxb:schemaBindings>
     </jaxb:bindings>
 

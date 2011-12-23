@@ -22,10 +22,10 @@ import java.util.List;
 
 import javax.portlet.PortletRequest;
 
-import org.jasig.portlet.dining.model.menu.xml.DiningHall;
-import org.jasig.portlet.dining.model.menu.xml.Dish;
-import org.jasig.portlet.dining.model.menu.xml.FoodCategory;
-import org.jasig.portlet.dining.model.menu.xml.Meal;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
 
 /**
  * IDiningMenuDao presents a generic interface for collecting dining hall

@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.jasig.portlet.dining.mvc;
+package org.jasig.portlet.campuslife.mvc;
 
 import javax.portlet.PortletRequest;
 

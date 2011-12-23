@@ -28,34 +28,20 @@
     version="1.0">
 
     <portlet>
-        <portlet-name>DiningMenusPortlet</portlet-name>
+        <portlet-name>dining</portlet-name>
         <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
         <init-param>
             <name>contextConfigLocation</name>
-            <!-- Change this file to be DiningMenusPortlet-portlet.xml after creation 
-                (rename the file and reference it here). -->
             <value>/WEB-INF/context/portlet/DiningMenusPortlet-portlet.xml</value>
         </init-param>
-        <!-- This value is to 0 in dev, can set to cache at a positive value in seconds 
-            for caching, or -1 to never expire cache -->
         <expiration-cache>0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
-            <portlet-mode>edit</portlet-mode>
-            <portlet-mode>help</portlet-mode>
         </supports>
         <portlet-info>
-            <title>DiningMenusPortlet Portlet</title>
+            <title>Dining</title>
         </portlet-info>
     </portlet>
-    <user-attribute>
-        <description>User Display Name</description>
-        <name>displayName</name>
-    </user-attribute>
-    <user-attribute>
-        <description>User Email Address</description>
-        <name>mail</name>
-    </user-attribute>
 
 </portlet-app>

@@ -23,7 +23,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.jasig.portlet.dining.model.menu.xml.DiningHall;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.owasp.validator.html.AntiSamy;
 import org.owasp.validator.html.CleanResults;
 import org.owasp.validator.html.Policy;

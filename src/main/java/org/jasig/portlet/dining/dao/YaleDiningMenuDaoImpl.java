@@ -24,10 +24,10 @@ import javax.portlet.PortletRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.jasig.portlet.dining.model.menu.xml.DiningHall;
-import org.jasig.portlet.dining.model.menu.xml.Dish;
-import org.jasig.portlet.dining.model.menu.xml.FoodCategory;
-import org.jasig.portlet.dining.model.menu.xml.Meal;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
 
 /**
  * Dining menu DAO capable of collecting menu information vi screen scraping

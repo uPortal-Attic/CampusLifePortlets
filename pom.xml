@@ -7,19 +7,19 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.jasig.portlet.dining</groupId>
-    <artifactId>DiningMenusPortlet</artifactId>
+    <groupId>org.jasig.portlet.campus</groupId>
+    <artifactId>CampusLifePortlets</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0-M2-SNAPSHOT</version>
-    <name>Dining Menu Portlet</name>
+    <version>1.0.0-M1-SNAPSHOT</version>
+    <name>Campus Life Portlets</name>
     <description>
-        List of dining halls
+        Useful campus portlets
     </description>
 
     <scm>
-        <connection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</connection>
-        <developerConnection>scm:svn:https://source.jasig.org/sandbox/DiningMenusPortlet/trunk</developerConnection>
-        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/DiningMenusPortlet/trunk</url>
+        <connection>scm:svn:https://source.jasig.org/sandbox/CampusLifePortlets/trunk</connection>
+        <developerConnection>scm:svn:https://source.jasig.org/sandbox/CampusLifePortlets/trunk</developerConnection>
+        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/CampusLifePortlets/trunk</url>
     </scm>
 
     <!-- Dependency Version Properties -->
@@ -353,7 +353,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <attachClasses>true</attachClasses>
-                    <warName>DiningMenusPortlet</warName>
+                    <warName>${artifactId}</warName>
                     <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>

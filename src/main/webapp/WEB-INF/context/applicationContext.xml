@@ -54,57 +54,7 @@
         </property>
     </bean>
     
-    <bean id="diningHallCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean"
-        p:cacheManager-ref="cacheManager" p:cacheName="diningHallCache"/>
-
-    <bean id="viewSelector" class="org.jasig.portlet.dining.mvc.ThemeNameViewSelectorImpl"/>
-    
-    <bean id="yaleDao" class="org.jasig.portlet.dining.dao.YaleDiningMenuDaoImpl"
-        p:diningHalls-ref="diningHalls">
-        <property name="diningHallService">
-            <bean class="org.jasig.portlet.dining.dao.ScreenScrapingService"
-                p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
-                p:xslt="classpath:/yale/yale.xsl" />
-        </property>
-    </bean>
-        
-    <util:map id="dishCodeImages">
-        <entry key="1" value="http://www.yaledining.org/images/key_alcohol.gif"/>
-        <entry key="2" value="http://www.yaledining.org/images/key_dairy.gif"/>
-        <entry key="3" value="http://www.yaledining.org/images/key_eggs.gif"/>
-        <entry key="4" value="http://www.yaledining.org/images/key_fish.gif"/>
-        <entry key="14" value="http://www.yaledining.org/images/key_gluten.gif"/>
-        <entry key="5" value="http://www.yaledining.org/images/key_lacto.gif"/>
-        <entry key="6" value="http://www.yaledining.org/images/key_nut.gif"/>
-        <entry key="7" value="http://www.yaledining.org/images/key_ovo.gif"/>
-        <entry key="9" value="http://www.yaledining.org/images/key_peanut.gif"/>
-        <entry key="8" value="http://www.yaledining.org/images/key_pork.gif"/>
-        <entry key="10" value="http://www.yaledining.org/images/key_shellfish.gif"/>
-        <entry key="15" value="http://www.yaledining.org/images/key_smartchoice.gif"/>
-        <entry key="11" value="http://www.yaledining.org/images/key_soy.gif"/>
-        <entry key="12" value="http://www.yaledining.org/images/key_vegan.gif"/>
-        <entry key="13" value="http://www.yaledining.org/images/key_wheat.gif"/>
-    </util:map>
-
-    <util:list id="diningHalls">
-        <value>1</value>
-        <value>2</value>
-        <value>3</value>
-        <value>11</value>
-        <value>4</value>
-        <value>12</value>
-        <value>6</value>
-        <value>15</value>
-        <value>5</value>
-        <value>7</value>
-        <value>23</value>
-        <value>8</value>
-        <value>24</value>
-        <value>9</value>
-        <value>10</value>
-    </util:list>
-    
-    
+    <bean id="viewSelector" class="org.jasig.portlet.campuslife.mvc.ThemeNameViewSelectorImpl"/>
 
     <!-- Default View Resolver -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

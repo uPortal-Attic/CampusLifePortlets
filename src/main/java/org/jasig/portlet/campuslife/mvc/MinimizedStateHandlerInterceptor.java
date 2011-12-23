@@ -17,12 +17,22 @@
  * under the License.
  */
 
-package org.jasig.portlet.dining.mvc;
+package org.jasig.portlet.campuslife.mvc;
 
-import javax.portlet.PortletRequest;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+import javax.portlet.WindowState;
 
-public interface IViewSelector {
+import org.springframework.web.portlet.handler.HandlerInterceptorAdapter;
 
-    public boolean isMobile(PortletRequest request);
+public class MinimizedStateHandlerInterceptor extends HandlerInterceptorAdapter {
 
+    @Override
+    public boolean preHandleRender(RenderRequest request, RenderResponse response, Object handler) throws Exception {
+        if (WindowState.MINIMIZED.equals(request.getWindowState())) {
+            return false;
+        }
+        
+        return true;
+    }
 }
