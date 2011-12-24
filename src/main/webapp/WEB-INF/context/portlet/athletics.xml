@@ -27,11 +27,66 @@
       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:component-scan base-package="org.jasig.portlet.athletics.mvc.portlet" />
+    <context:component-scan base-package="org.jasig.portlet.campuslife.athletics.mvc.portlet" />
     <context:annotation-config />
 
+    <util:map id="sportScoreUrls">
+          <entry value="http://athletics.uchicago.edu/baseball/bb-schedule.htm" key="Baseball"/>
+          <entry value="http://athletics.uchicago.edu/mensbasketball/mbk-schedule.htm" key="Men's Basketball"/>
+          <entry value="http://athletics.uchicago.edu/ccmen/mcc-schedule.htm" key="Men's Cross Country"/>
+          <entry value="http://athletics.uchicago.edu/football/fb-schedule.htm" key="Football"/>
+          <entry value="http://athletics.uchicago.edu/menssoccer/msc-schedule.htm" key="Men's Soccer"/>
+          <entry value="http://athletics.uchicago.edu/swmen/msw-schedule.htm" key="Men's Swimming &amp; Diving"/>
+          <entry value="http://athletics.uchicago.edu/tnmen/mt-schedule.htm" key="Men's Tennis"/>
+          <entry value="http://athletics.uchicago.edu/tfmen/mtf-schedule.htm" key="Men's Track &amp; Field"/>
+          <entry value="http://athletics.uchicago.edu/wrestling/wr-schedule.htm" key="Wrestling"/>
+          <entry value="http://athletics.uchicago.edu/womensbasketball/wbk-schedule.htm" key="Women's Basketball"/>
+          <entry value="http://athletics.uchicago.edu/ccwomen/wcc-schedule.htm" key="Women's Cross Country"/>
+          <entry value="http://athletics.uchicago.edu/womenssoccer/wsc-schedule.htm" key="Women's Soccer"/>
+          <entry value="http://athletics.uchicago.edu/softball/sb-schedule.htm" key="Softball"/>
+          <entry value="http://athletics.uchicago.edu/swwomen/wsw-schedule.htm" key="Women's Swimming &amp; Diving"/>
+          <entry value="http://athletics.uchicago.edu/tnwomen/wt-schedule.htm" key="Women's Tennis"/>
+          <entry value="http://athletics.uchicago.edu/tfwomen/wtf-schedule.htm" key="Women's Track &amp; Field"/>
+          <entry value="http://athletics.uchicago.edu/volleyball/vb-schedule.htm" key="Volleyball"/>
+    </util:map>
+
+    <util:map id="sportNewsUrls">
+          <entry value="http://athletics.uchicago.edu/baseball/bb-pressreleases.htm" key="Baseball"/>
+          <entry value="http://athletics.uchicago.edu/mensbasketball/mbk-pressreleases.htm" key="Men's Basketball"/>
+          <entry value="http://athletics.uchicago.edu/ccmen/mcc-pressreleases.htm" key="Men's Cross Country"/>
+          <entry value="http://athletics.uchicago.edu/football/fb-pressreleases.htm" key="Football"/>
+          <entry value="http://athletics.uchicago.edu/menssoccer/msc-pressreleases.htm" key="Men's Soccer"/>
+          <entry value="http://athletics.uchicago.edu/swmen/msw-pressreleases.htm" key="Men's Swimming &amp; Diving"/>
+          <entry value="http://athletics.uchicago.edu/tnmen/mt-pressreleases.htm" key="Men's Tennis"/>
+          <entry value="http://athletics.uchicago.edu/tfmen/mtf-pressreleases.htm" key="Men's Track &amp; Field"/>
+          <entry value="http://athletics.uchicago.edu/wrestling/wr-pressreleases.htm" key="Wrestling"/>
+          <entry value="http://athletics.uchicago.edu/womensbasketball/wbk-pressreleases.htm" key="Women's Basketball"/>
+          <entry value="http://athletics.uchicago.edu/ccwomen/wcc-pressreleases.htm" key="Women's Cross Country"/>
+          <entry value="http://athletics.uchicago.edu/womenssoccer/wsc-pressreleases.htm" key="Women's Soccer"/>
+          <entry value="http://athletics.uchicago.edu/softball/sb-pressreleases.htm" key="Softball"/>
+          <entry value="http://athletics.uchicago.edu/swwomen/wsw-pressreleases.htm" key="Women's Swimming &amp; Diving"/>
+          <entry value="http://athletics.uchicago.edu/tnwomen/wt-pressreleases.htm" key="Women's Tennis"/>
+          <entry value="http://athletics.uchicago.edu/tfwomen/wtf-pressreleases.htm" key="Women's Track &amp; Field"/>
+          <entry value="http://athletics.uchicago.edu/volleyball/vb-pressreleases.htm" key="Volleyball"/>
+    </util:map>
+
+    <bean class="org.jasig.portlet.campuslife.athletics.dao.AthleticsDaoMergingImpl">
+        <property name="daos">
+            <util:list>
+                <bean class="org.jasig.portlet.campuslife.athletics.dao.sample.UChicagoScoresAthleticsDaoImpl"
+                    p:xslt="classpath:/uchicago/uchicago-scores.xsl" 
+                    p:policy="classpath:/uchicago/antisamy-uchicago-1.4.4.xml"
+                    p:sportUrls-ref="sportScoreUrls"/>
+                <bean class="org.jasig.portlet.campuslife.athletics.dao.sample.UChicagoNewsAthleticsDaoImpl"
+                    p:xslt="classpath:/uchicago/uchicago-news.xsl" 
+                    p:policy="classpath:/uchicago/antisamy-uchicago-1.4.4.xml"
+                    p:sportUrls-ref="sportNewsUrls"/>
+            </util:list>
+        </property>
+    </bean>
+
     <bean class="org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-        <property name="interceptors"><bean class="org.jasig.portlet.athletics.mvc.MinimizedStateHandlerInterceptor"/></property>
+        <property name="interceptors"><bean class="org.jasig.portlet.campuslife.mvc.MinimizedStateHandlerInterceptor"/></property>
     </bean>
 
 </beans>

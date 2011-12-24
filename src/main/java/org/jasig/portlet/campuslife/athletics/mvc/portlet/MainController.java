@@ -17,17 +17,17 @@
  * under the License.
  */
 
-package org.jasig.portlet.athletics.mvc.portlet;
+package org.jasig.portlet.campuslife.athletics.mvc.portlet;
 
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.jasig.portlet.athletics.dao.IAthleticsDao;
-import org.jasig.portlet.athletics.model.feed.xml.AthleticsFeed;
-import org.jasig.portlet.athletics.model.feed.xml.Sport;
-import org.jasig.portlet.athletics.mvc.IViewSelector;
+import org.jasig.portlet.campuslife.athletics.dao.IAthleticsDao;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.mvc.IViewSelector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -66,7 +66,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "main-jQM" : "main";        
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("athletics/" + viewName);
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for main view");
@@ -91,7 +91,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "sportScores-jQM" : "main";        
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("athletics/" + viewName);
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for main view");
@@ -116,7 +116,7 @@ public class MainController {
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
         final String viewName = isMobile ? "sportNews-jQM" : "main";        
-        final ModelAndView mav = new ModelAndView(viewName);
+        final ModelAndView mav = new ModelAndView("athletics/" + viewName);
         
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for main view");

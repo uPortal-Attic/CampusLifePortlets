@@ -16,14 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.athletics.dao;
+package org.jasig.portlet.campuslife.athletics.dao;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jasig.portlet.athletics.model.feed.xml.AthleticsFeed;
-import org.jasig.portlet.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
 
 import com.googlecode.ehcache.annotations.Cacheable;
 

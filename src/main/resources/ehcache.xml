@@ -29,10 +29,18 @@
         memoryStoreEvictionPolicy="LFU"/>
 
     <cache name="diningHallCache"
-        maxElementsInMemory="100"
-        eternal="false"
-        timeToLiveSeconds="14400"
-        overflowToDisk="false"
+        maxElementsInMemory="100" eternal="false"
+        timeToLiveSeconds="14400" overflowToDisk="false"
         memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="athleticsFeedCache" eternal="false"
+        maxElementsInMemory="100" overflowToDisk="false" diskPersistent="false"
+        timeToIdleSeconds="0" timeToLiveSeconds="900"
+        memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="sportCache" eternal="false"
+        maxElementsInMemory="100" overflowToDisk="false" diskPersistent="false"
+        timeToIdleSeconds="0" timeToLiveSeconds="900"
+        memoryStoreEvictionPolicy="LRU" />
 
 </ehcache>

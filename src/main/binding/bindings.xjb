@@ -33,6 +33,12 @@
             <jaxb:serializable/>
         </jaxb:globalBindings>
     </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../resources/xsd/athletics-feed.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.jasig.portlet.campuslife.athletics.model.feed.xml" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
       
     <jaxb:bindings schemaLocation="../resources/xsd/menu.xsd">
         <jaxb:schemaBindings>

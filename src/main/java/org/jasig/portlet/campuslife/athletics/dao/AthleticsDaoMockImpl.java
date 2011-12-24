@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.athletics.dao;
+package org.jasig.portlet.campuslife.athletics.dao;
 
 import java.io.IOException;
 
@@ -26,8 +26,8 @@ import javax.xml.bind.Unmarshaller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.jasig.portlet.athletics.model.feed.xml.AthleticsFeed;
-import org.jasig.portlet.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.io.Resource;
 
@@ -57,7 +57,7 @@ public class AthleticsDaoMockImpl implements InitializingBean, IAthleticsDao {
     }
     
     /* (non-Javadoc)
-     * @see org.jasig.portlet.athletics.dao.sample.IAthleticsDao#getFeed()
+     * @see org.jasig.portlet.campuslife.athletics.dao.sample.IAthleticsDao#getFeed()
      */
     @Override
     public AthleticsFeed getFeed() {
@@ -65,7 +65,7 @@ public class AthleticsDaoMockImpl implements InitializingBean, IAthleticsDao {
     }
     
     /* (non-Javadoc)
-     * @see org.jasig.portlet.athletics.dao.sample.IAthleticsDao#getSport(java.lang.String)
+     * @see org.jasig.portlet.campuslife.athletics.dao.sample.IAthleticsDao#getSport(java.lang.String)
      */
     @Override
     public Sport getSport(String sport) {

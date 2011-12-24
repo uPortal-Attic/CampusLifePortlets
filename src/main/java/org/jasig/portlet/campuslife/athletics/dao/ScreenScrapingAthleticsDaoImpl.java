@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.athletics.dao;
+package org.jasig.portlet.campuslife.athletics.dao;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,8 +41,8 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.jasig.portlet.athletics.model.feed.xml.AthleticsFeed;
-import org.jasig.portlet.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
 import org.owasp.validator.html.AntiSamy;
 import org.owasp.validator.html.CleanResults;
 import org.owasp.validator.html.Policy;

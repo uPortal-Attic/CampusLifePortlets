@@ -16,11 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.athletics.dao.sample;
+package org.jasig.portlet.campuslife.athletics.dao.sample;
 
-import org.jasig.portlet.athletics.dao.ScreenScrapingAthleticsDaoImpl;
-import org.jasig.portlet.athletics.model.feed.xml.NewsItem;
-import org.jasig.portlet.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.athletics.dao.ScreenScrapingAthleticsDaoImpl;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.NewsItem;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
 
 /**
  * UChicagoScoresAthleticsDaoImpl extends the ScreenScrapingAthleticsDaoImpl to
