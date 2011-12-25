@@ -40,6 +40,18 @@
         </jaxb:schemaBindings>
     </jaxb:bindings>
       
+    <jaxb:bindings schemaLocation="../resources/xsd/computerlabs.xsd">
+        <jaxb:bindings node="//xs:element[@name='computer-lab']">
+            <jaxb:property name="computerLabs"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='computer-type']">
+            <jaxb:property name="computerTypes"/>
+        </jaxb:bindings>
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.jasig.portlet.campuslife.computerlabs.model.labs.xml" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
     <jaxb:bindings schemaLocation="../resources/xsd/menu.xsd">
         <jaxb:schemaBindings>
             <jaxb:package name="org.jasig.portlet.campuslife.dining.model.menu.xml" />
