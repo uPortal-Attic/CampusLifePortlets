@@ -26,6 +26,8 @@ import org.jasig.portlet.campuslife.computerlabs.model.labs.xml.ComputerLab;
 
 public interface IComputerLabsDao {
 
+    public ComputerLab getDefaultComputerLab(PortletRequest request);
+    
     public List<ComputerLab> getComputerLabs(PortletRequest request);
 
 }

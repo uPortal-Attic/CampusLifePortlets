@@ -64,5 +64,10 @@ public class MockComputerLabsDaoImpl implements InitializingBean, IComputerLabsD
     public List<ComputerLab> getComputerLabs(PortletRequest request) {
         return labs.getComputerLabs();
     }
+    
+    @Override
+    public ComputerLab getDefaultComputerLab(PortletRequest request) {
+        return null;
+    }
 
 }

@@ -39,7 +39,7 @@
                 <xs:element ref="computer-type" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="building-code" type="xs:string"/>
+            <xs:attribute name="location-code" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     
