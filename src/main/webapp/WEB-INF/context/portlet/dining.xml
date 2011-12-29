@@ -36,13 +36,14 @@
     <bean id="yaleDao" class="org.jasig.portlet.campuslife.dining.dao.YaleDiningMenuDaoImpl"
         p:diningHalls-ref="diningHalls">
         <property name="diningHallService">
-            <bean class="org.jasig.portlet.campuslife.dining.dao.ScreenScrapingService"
+            <bean class="org.jasig.portlet.campuslife.dining.dao.DiningScreenScrapingService"
                 p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
                 p:xslt="classpath:/yale/yale.xsl">
                 <property name="postProcessors">
                     <list>
                         <bean class="org.jasig.portlet.campuslife.dining.dao.DefaultDiningHallInfoPostProcessor"
-                            p:diningHallInfo-ref="diningHalls"/>
+                            p:diningHallInfo-ref="diningHalls">
+                        </bean>
                     </list>
                 </property>
             </bean>

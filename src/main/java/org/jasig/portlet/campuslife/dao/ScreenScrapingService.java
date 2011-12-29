@@ -1,4 +1,4 @@
-package org.jasig.portlet.campuslife.dining.dao;
+package org.jasig.portlet.campuslife.dao;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +24,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.owasp.validator.html.AntiSamy;
 import org.owasp.validator.html.CleanResults;
 import org.owasp.validator.html.Policy;
@@ -34,7 +33,7 @@ import org.springframework.core.io.Resource;
 
 import com.googlecode.ehcache.annotations.Cacheable;
 
-public class ScreenScrapingService<T> {
+public abstract class ScreenScrapingService<T> {
     protected final Log log = LogFactory.getLog(getClass());
 
     private static final TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -63,6 +62,8 @@ public class ScreenScrapingService<T> {
     public void setPolicy(Resource config) throws PolicyException, IOException {
         this.policy = Policy.getInstance(config.getFile());
     }
+    
+    public abstract String getPackageName();
     
     private List<IScreenScrapingPostProcessor<T>> postProcessors;
     
@@ -169,8 +170,8 @@ public class ScreenScrapingService<T> {
      * @throws JAXBException
      */
     protected T getItem(String xml) throws JAXBException {
-        final String packageName = DiningHall.class.getPackage().getName();
-        final JAXBContext jc = JAXBContext.newInstance( packageName );
+        
+        final JAXBContext jc = JAXBContext.newInstance( getPackageName() );
         final Unmarshaller u = jc.createUnmarshaller();
         
         @SuppressWarnings("unchecked")

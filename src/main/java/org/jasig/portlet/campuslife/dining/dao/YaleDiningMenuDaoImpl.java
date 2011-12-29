@@ -24,6 +24,7 @@ import javax.portlet.PortletRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.jasig.portlet.campuslife.dao.ScreenScrapingService;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
@@ -59,9 +60,9 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
         return this.diningHalls;
     }
 
-    private ScreenScrapingService<DiningHall> diningHallService;
+    private DiningScreenScrapingService<DiningHall> diningHallService;
     
-    public void setDiningHallService(ScreenScrapingService<DiningHall> diningHallService) {
+    public void setDiningHallService(DiningScreenScrapingService<DiningHall> diningHallService) {
         this.diningHallService = diningHallService;
     }
 

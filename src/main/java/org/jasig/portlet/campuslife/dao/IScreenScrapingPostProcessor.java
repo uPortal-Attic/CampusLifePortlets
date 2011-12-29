@@ -1,4 +1,4 @@
-package org.jasig.portlet.campuslife.dining.dao;
+package org.jasig.portlet.campuslife.dao;
 
 public interface IScreenScrapingPostProcessor<T> {
 

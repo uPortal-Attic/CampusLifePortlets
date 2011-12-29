@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.jasig.portlet.campuslife.dao.IScreenScrapingPostProcessor;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 
 public class DefaultDiningHallInfoPostProcessor implements
