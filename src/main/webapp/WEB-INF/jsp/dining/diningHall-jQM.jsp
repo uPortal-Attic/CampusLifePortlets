@@ -26,16 +26,19 @@
 
     <div data-role="header" class="titlebar portlet-titlebar">
         <a class="menu-back-link" href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">Back</a>
-        <h2 class="title"><spring:message code="dining.hall.${ diningHallKey }.name"/></h2>
+        <h2 class="title">${ diningHall.name }</h2>
     </div>
 
     <div data-role="content" class="portlet-content">
     
-        <ul data-role="listview" class="meals">
-            <c:forEach items="${ menu.meal }" var="meal" varStatus="status">
+        <ul data-role="listview">
+            <li>
+                <p class="ul-li-aside"><a href="/uPortal/s/location?id=${ diningHall.locationCode }">Map</a></p>
+            </li>
+            <c:forEach items="${ diningHall.meal }" var="meal" varStatus="status">
                 <portlet:renderURL var="mealUrl">
                     <portlet:param name="action" value="meal"/>
-                    <portlet:param name="diningHall" value="${ diningHallKey }"/>
+                    <portlet:param name="diningHall" value="${ diningHall.key }"/>
                     <portlet:param name="mealName" value="${ meal.name }"/>
                 </portlet:renderURL>
                 <li><a href="${ mealUrl }">${ meal.name }</a></li>

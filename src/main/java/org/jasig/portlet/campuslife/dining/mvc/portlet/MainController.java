@@ -105,8 +105,7 @@ public class MainController {
         }
         
         DiningHall dh = menuDao.getDiningHall(diningHall);
-        mav.addObject("menu", dh);
-        mav.addObject("diningHallKey", diningHall);
+        mav.addObject("diningHall", dh);
 
         return mav;
 

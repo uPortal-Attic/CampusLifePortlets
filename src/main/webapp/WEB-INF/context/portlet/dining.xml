@@ -38,7 +38,14 @@
         <property name="diningHallService">
             <bean class="org.jasig.portlet.campuslife.dining.dao.ScreenScrapingService"
                 p:policy="classpath:/yale/antisamy-yale-1.4.4.xml"
-                p:xslt="classpath:/yale/yale.xsl" />
+                p:xslt="classpath:/yale/yale.xsl">
+                <property name="postProcessors">
+                    <list>
+                        <bean class="org.jasig.portlet.campuslife.dining.dao.DefaultDiningHallInfoPostProcessor"
+                            p:diningHallInfo-ref="diningHalls"/>
+                    </list>
+                </property>
+            </bean>
         </property>
     </bean>
         
@@ -61,21 +68,36 @@
     </util:map>
 
     <util:list id="diningHalls">
-        <value>1</value>
-        <value>2</value>
-        <value>3</value>
-        <value>11</value>
-        <value>4</value>
-        <value>12</value>
-        <value>6</value>
-        <value>15</value>
-        <value>5</value>
-        <value>7</value>
-        <value>23</value>
-        <value>8</value>
-        <value>24</value>
-        <value>9</value>
-        <value>10</value>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="1" p:locationCode="BK" p:name="Berkeley"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="2" p:locationCode="BR" p:name="Branford"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="3" p:locationCode="CC" p:name="Calhoun"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="11" p:locationCode="UC" p:name="Commons"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="4" p:locationCode="Davenport" p:name="DC"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="12" p:locationCode="HGS" p:name="HGS"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="6" p:locationCode="JE" p:name="Jonathan Edwards"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="15" p:locationCode="ESH" p:name="Marigolds"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="5" p:locationCode="MC" p:name="Morse"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="7" p:locationCode="Pearson" p:name="PC"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="23" p:locationCode="Saybrook" p:name="SY"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="8" p:locationCode="Silliman" p:name="SM"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="24" p:locationCode="Stiles" p:name="ES"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="9" p:locationCode="TD" p:name="Timothy Dwight"/>
+        <bean class="org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall"
+            p:key="10" p:locationCode="TC" p:name="Trumbull"/>
     </util:list>
     
     <bean class="org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping">

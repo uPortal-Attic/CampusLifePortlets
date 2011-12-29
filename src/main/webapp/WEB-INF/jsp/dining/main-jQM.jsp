@@ -26,7 +26,7 @@
 
         <ul data-role="listview">
             <c:forEach items="${ diningHalls }" var="diningHall">
-                <li><a href="<portlet:renderURL><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHall }"/></portlet:renderURL>"><spring:message code="dining.hall.${ diningHall }.name"/></a></li>
+                <li><a href="<portlet:renderURL><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHall.key }"/></portlet:renderURL>">${ diningHall.name }</a></li>
             </c:forEach>
         </ul>
     

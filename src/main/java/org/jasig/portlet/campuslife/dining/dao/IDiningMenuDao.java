@@ -42,7 +42,7 @@ public interface IDiningMenuDao {
      * @param request
      * @return
      */
-    public List<String> getDiningHalls(PortletRequest request);
+    public List<DiningHall> getDiningHalls(PortletRequest request);
     
     public DiningHall getDiningHall(String diningHall);
     

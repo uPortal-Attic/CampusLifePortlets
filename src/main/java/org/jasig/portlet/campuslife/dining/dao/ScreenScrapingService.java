@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -63,6 +64,16 @@ public class ScreenScrapingService<T> {
         this.policy = Policy.getInstance(config.getFile());
     }
     
+    private List<IScreenScrapingPostProcessor<T>> postProcessors;
+    
+    /**
+     * 
+     * @param postProcessors
+     */
+    public void setPostProcessors(List<IScreenScrapingPostProcessor<T>> postProcessors) {
+        this.postProcessors = postProcessors;
+    }
+    
     @Cacheable(cacheName="diningHallCache")
     public T getDiningItem(String url) {
         try {
@@ -71,6 +82,11 @@ public class ScreenScrapingService<T> {
             final String cleanedContent = getCleanedHtmlContent(htmlContent);
             final String xml = getXml(cleanedContent);
             final T item = getItem(xml);
+            
+            for (IScreenScrapingPostProcessor<T> processor : postProcessors) {
+                processor.postProcess(item);
+            }
+            
             return item;
             
         } catch (ClientProtocolException e) {
@@ -156,6 +172,8 @@ public class ScreenScrapingService<T> {
         final String packageName = DiningHall.class.getPackage().getName();
         final JAXBContext jc = JAXBContext.newInstance( packageName );
         final Unmarshaller u = jc.createUnmarshaller();
+        
+        @SuppressWarnings("unchecked")
         final T menu = (T) u.unmarshal(IOUtils.toInputStream(xml));
         return menu;
     }

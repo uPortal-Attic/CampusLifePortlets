@@ -43,19 +43,19 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
 
     protected final Log log = LogFactory.getLog(getClass());
 
-    private List<String> diningHalls;
+    private List<DiningHall> diningHalls;
 
     /**
      * Set the list of dining hall names.
      * 
      * @param diningHalls
      */
-    public void setDiningHalls(List<String> diningHalls) {
+    public void setDiningHalls(List<DiningHall> diningHalls) {
         this.diningHalls = diningHalls;
     }
 
     @Override
-    public List<String> getDiningHalls(PortletRequest request) {
+    public List<DiningHall> getDiningHalls(PortletRequest request) {
         return this.diningHalls;
     }
 
