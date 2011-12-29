@@ -52,6 +52,18 @@
         </jaxb:schemaBindings>
     </jaxb:bindings>
 
+    <jaxb:bindings schemaLocation="../resources/xsd/laundry.xsd">
+        <jaxb:bindings node="//xs:element[@name='laundromat']">
+            <jaxb:property name="laundromats"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='machine-type']">
+            <jaxb:property name="machineTypes"/>
+        </jaxb:bindings>
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.jasig.portlet.campuslife.laundry.model.laundry.xml" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
     <jaxb:bindings schemaLocation="../resources/xsd/menu.xsd">
         <jaxb:schemaBindings>
             <jaxb:package name="org.jasig.portlet.campuslife.dining.model.menu.xml" />
