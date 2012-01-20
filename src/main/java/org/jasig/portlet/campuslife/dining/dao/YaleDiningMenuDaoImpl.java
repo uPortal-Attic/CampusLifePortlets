@@ -69,7 +69,7 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
 
     @Override
     public DiningHall getDiningHall(String diningHall) {
-        return diningHallService.getDiningItem(diningUrl + diningHall);
+        return diningHallService.getItem(diningHall, diningUrl + diningHall);
     }
 
     

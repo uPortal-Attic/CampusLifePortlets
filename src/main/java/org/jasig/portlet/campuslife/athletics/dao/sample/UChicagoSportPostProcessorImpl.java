@@ -18,28 +18,34 @@
  */
 package org.jasig.portlet.campuslife.athletics.dao.sample;
 
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.jasig.portlet.campuslife.athletics.dao.ScreenScrapingAthleticsDaoImpl;
 import org.jasig.portlet.campuslife.athletics.model.feed.xml.Competition;
 import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.dao.IScreenScrapingPostProcessor;
 
-
-/**
- * UChicagoScoresAthleticsDaoImpl extends the ScreenScrapingAthleticsDaoImpl to
- * provide custom postprocessing logic specific to the UChicago sports score pages.
- * 
- * @author Jen Bourey, jennifer.bourey@gmail.com
- * @revision $Revision$
- */
-public class UChicagoScoresAthleticsDaoImpl extends ScreenScrapingAthleticsDaoImpl {
+public class UChicagoSportPostProcessorImpl implements IScreenScrapingPostProcessor<Sport> {
 
     private static Pattern whitespace = Pattern.compile("\\s+");
     private static Pattern invalidNameChars = Pattern.compile("[^a-zA-Z\\(\\)\\- ]");
 
+    private Map<String,String> sportUrls;
+
+    /**
+     * Set the mapping of URLs for each sport.  This implementation assumes that
+     * each sport is represented by its own HTML page.
+     * 
+     * @param urlMap
+     */
+    public void setSportUrls(Map<String,String> urlMap) {
+        this.sportUrls = urlMap;
+    }
+
     @Override
-    protected void postProcessSport(Sport sport) {
+    public void postProcess(String key, Sport sport) {
+        sport.setName(key);
         for (Competition competition : sport.getCompetition()) {
             
             // remove all invalid characters from the competition name
@@ -55,7 +61,7 @@ public class UChicagoScoresAthleticsDaoImpl extends ScreenScrapingAthleticsDaoIm
             // add the full path to the url
             final String url = competition.getUrl();
             if (url != null) {
-                final String sportUrl = this.getSportUrls().get(sport.getName());
+                final String sportUrl = this.sportUrls.get(sport.getName());
                 final String fullUrl = sportUrl.substring(0, sportUrl.lastIndexOf("/")).concat("/").concat(url);
                 competition.setUrl(fullUrl);
             }

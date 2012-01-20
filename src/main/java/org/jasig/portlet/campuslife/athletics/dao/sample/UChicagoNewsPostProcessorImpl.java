@@ -18,28 +18,35 @@
  */
 package org.jasig.portlet.campuslife.athletics.dao.sample;
 
-import org.jasig.portlet.campuslife.athletics.dao.ScreenScrapingAthleticsDaoImpl;
+import java.util.Map;
+
 import org.jasig.portlet.campuslife.athletics.model.feed.xml.NewsItem;
 import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
+import org.jasig.portlet.campuslife.dao.IScreenScrapingPostProcessor;
 
-/**
- * UChicagoScoresAthleticsDaoImpl extends the ScreenScrapingAthleticsDaoImpl to
- * provide custom postprocessing logic specific to the UChicago sports news pages.
- * 
- * @author Jen Bourey, jennifer.bourey@gmail.com
- * @revision $Revision$
- */
-public class UChicagoNewsAthleticsDaoImpl extends
-        ScreenScrapingAthleticsDaoImpl {
+public class UChicagoNewsPostProcessorImpl implements IScreenScrapingPostProcessor<Sport> {
+
+    private Map<String,String> sportUrls;
+
+    /**
+     * Set the mapping of URLs for each sport.  This implementation assumes that
+     * each sport is represented by its own HTML page.
+     * 
+     * @param urlMap
+     */
+    public void setSportUrls(Map<String,String> urlMap) {
+        this.sportUrls = urlMap;
+    }
 
     @Override
-    protected void postProcessSport(Sport sport) {
+    public void postProcess(String key, Sport sport) {
+        sport.setName(key);
         for (NewsItem news : sport.getNewsItem()) {
             
             // add the full path to the url
             final String url = news.getStoryUrl();
             if (url != null) {
-                final String sportUrl = this.getSportUrls().get(sport.getName());
+                final String sportUrl = this.sportUrls.get(sport.getName());
                 final String fullUrl = sportUrl.substring(0, sportUrl.lastIndexOf("/")).concat("/").concat(url);
                 news.setStoryUrl(fullUrl);
             }

@@ -25,43 +25,44 @@
   xmlns:context="http://www.springframework.org/schema/context"
   xmlns:p="http://www.springframework.org/schema/p"
   xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+  http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd">
 
-    <bean
-        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:configuration.properties" />
-    </bean>
+    <context:property-placeholder location="classpath:configuration.properties"/>
+    <context:annotation-config/>
 
     <!-- Message source for this context, loaded from localized "messages_xx" files -->
-    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basenames">
-            <list>
-                <value>messages</value>
-            </list>
-        </property>
-    </bean>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
+        p:basenames="messages"/>
+        
+    <bean class="org.jasig.portlet.campuslife.service.UPortalURLServiceImpl"/>
 
     <!-- 
      | CACHE CONFIGURATION
      +-->
     
+    <ehcache:annotation-driven />
+    <ehcache:config cache-manager="cacheManager">
+        <ehcache:evict-expired-elements interval="60" />
+    </ehcache:config>
+    
     <!-- EHCache Configuration -->
-    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
-        <property name="configLocation">
-            <value>classpath:ehcache.xml</value>
-        </property>
-    </bean>
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
+        p:configLocation="classpath:/ehcache.xml"/>
+    
+
+    <!-- 
+     | VIEW LAYER CONFIGURATION
+     +-->
     
     <bean id="viewSelector" class="org.jasig.portlet.campuslife.mvc.ThemeNameViewSelectorImpl"/>
 
     <!-- Default View Resolver -->
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="cache" value="${viewResCache}"/>
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+        p:cache="${viewResCache}" p:viewClass="org.springframework.web.servlet.view.JstlView"
+        p:prefix="/WEB-INF/jsp/" p:suffix=".jsp"/>
 
 </beans>

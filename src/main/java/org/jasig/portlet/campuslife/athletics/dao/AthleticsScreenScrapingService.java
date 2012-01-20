@@ -16,18 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.campuslife.dining.dao;
+package org.jasig.portlet.campuslife.athletics.dao;
 
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
 import org.jasig.portlet.campuslife.dao.ScreenScrapingService;
-import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 
 import com.googlecode.ehcache.annotations.Cacheable;
 
-public class DiningScreenScrapingService<T> extends ScreenScrapingService<T> {
+public class AthleticsScreenScrapingService<T> extends ScreenScrapingService<T> {
 
-    private final String packageName = DiningHall.class.getPackage().getName();
+    private final String packageName = AthleticsFeed.class.getPackage().getName();
 
-    @Cacheable(cacheName="diningHallCache")
+    @Cacheable(cacheName="athleticsCache")
     public T getItem(String key, String url) {
         return super.getItem(key, url);
     }

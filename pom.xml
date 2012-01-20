@@ -25,6 +25,7 @@
     <!-- Dependency Version Properties -->
     <properties>
         <antisamy.version>1.4.4</antisamy.version>
+        <cglib.version>2.2.2</cglib.version>
         <ehcache.version>2.4.5</ehcache.version>
         <ehcache-annotations.version>1.2.0</ehcache-annotations.version>
         <jaxb2basics.version>0.6.0</jaxb2basics.version>
@@ -45,6 +46,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.googlecode.ehcache-spring-annotations</groupId>
                 <artifactId>ehcache-spring-annotations</artifactId>
@@ -167,6 +173,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.googlecode.ehcache-spring-annotations</groupId>
             <artifactId>ehcache-spring-annotations</artifactId>

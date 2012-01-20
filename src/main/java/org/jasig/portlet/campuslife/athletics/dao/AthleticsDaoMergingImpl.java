@@ -25,8 +25,6 @@ import java.util.Map;
 import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
 import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
 
-import com.googlecode.ehcache.annotations.Cacheable;
-
 /**
  * AthleticsDaoMergingImpl merges together the results of multiple athletics
  * feed DAOs.  The news items and competition results for each sport will be
@@ -44,7 +42,6 @@ public class AthleticsDaoMergingImpl implements IAthleticsDao {
     }
     
     @Override
-    @Cacheable(cacheName="athleticsFeedCache")
     public AthleticsFeed getFeed() {
         
         AthleticsFeed feed = new AthleticsFeed();
@@ -70,7 +67,6 @@ public class AthleticsDaoMergingImpl implements IAthleticsDao {
     }
 
     @Override
-    @Cacheable(cacheName="sportCache")
     public Sport getSport(String sportKey) {
         
         Sport sport = new Sport();
