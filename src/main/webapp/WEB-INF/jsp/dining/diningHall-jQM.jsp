@@ -32,8 +32,16 @@
     <div data-role="content" class="portlet-content">
     
         <ul data-role="listview">
-            <li>
-                <p class="ul-li-aside"><a href="/uPortal/s/location?id=${ diningHall.locationCode }">Map</a></p>
+            <li data-role="list-divider">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><h3><spring:message code="meals"/></h3></div>
+                    <div class="ui-block-b">
+                        <a href="${ locationUrl }" data-role="button" 
+                                data-iconpos="notext" data-icon="map" data-theme="b">
+                            <spring:message code="map"/>
+                        </a>
+                    </div>
+                </div>
             </li>
             <c:forEach items="${ diningHall.meal }" var="meal" varStatus="status">
                 <portlet:renderURL var="mealUrl">

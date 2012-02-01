@@ -18,3 +18,56 @@
     under the License.
 
 --%>
+
+<jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
+<c:set var="n"><portlet:namespace/></c:set>
+
+<div class="fl-widget portlet" role="section">
+
+  <!-- Portlet Titlebar -->
+  <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
+      <div class="breadcrumb">
+        <portlet:renderURL var="backUrl">
+            <portlet:param name="action" value="diningHall"/>
+            <portlet:param name="diningHall" value="${ diningHallKey }"/>
+        </portlet:renderURL>
+        <a href="<portlet:renderURL/>">
+            <spring:message code="dining.halls"/>
+        </a> &gt;
+        <a href="${ backUrl }">${ diningHall.name }</a>
+      </div>
+      <h2 class="title" role="heading">${ meal.name }</h2>
+  </div> <!-- end: portlet-titlebar -->
+  
+  <!-- Portlet Content -->
+  <div class="fl-widget-content content portlet-content" role="main">
+
+      <c:forEach items="${ categories }" var="category" varStatus="status">
+         <div class="portlet-section" role="region">
+            <div class="titlebar">
+                <h3 class="title" role="heading">${ category.name }</h3>
+            </div>
+            <div class="content">
+            
+              <ul>
+                <c:forEach items="${ category.dish }" var="dish">
+                    <portlet:renderURL var="dishUrl">
+                        <portlet:param name="action" value="dish"/>
+                        <portlet:param name="diningHall" value="${ diningHallKey }"/>
+                        <portlet:param name="mealName" value="${ meal.name }"/>
+                        <portlet:param name="dishName" value="${ dish.name }"/>
+                    </portlet:renderURL>
+                    <li><a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
+                        ${ dish.name }
+                        <c:forEach items="${ dish.code }" var="code">
+                            <img src="${dishCodeImages[code]}" style="float: none; position: relative; margin-right: 10px"/>
+                        </c:forEach>
+                    </a></li>
+                </c:forEach>
+              </ul>
+            </div>
+         </div>
+      </c:forEach>
+    
+    </div>
+</div>

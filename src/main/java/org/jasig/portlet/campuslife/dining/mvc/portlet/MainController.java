@@ -20,6 +20,7 @@
 package org.jasig.portlet.campuslife.dining.mvc.portlet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,7 +34,9 @@ import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
+import org.jasig.portlet.campuslife.laundry.model.laundry.xml.Laundromat;
 import org.jasig.portlet.campuslife.mvc.IViewSelector;
+import org.jasig.portlet.campuslife.service.IURLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -71,6 +74,13 @@ public class MainController {
         this.dishCodeImages = images;
     }
     
+    private IURLService urlService;
+    
+    @Autowired(required = true)
+    public void setUrlService(IURLService urlService) {
+        this.urlService = urlService;
+    }
+    
     @RenderMapping
     public ModelAndView showMainView(final RenderRequest request) {
 
@@ -106,6 +116,9 @@ public class MainController {
         
         DiningHall dh = menuDao.getDiningHall(diningHall);
         mav.addObject("diningHall", dh);
+        
+        final String url = urlService.getLocationUrl(dh.getLocationCode(), request);
+        mav.addObject("locationUrl", url);
 
         return mav;
 
@@ -134,6 +147,9 @@ public class MainController {
         for (FoodCategory category : meal.getFoodCategory()) {
             categories.add(menuDao.getFoodCategory(diningHall, mealName, category.getName()));
         }
+
+        DiningHall hall = menuDao.getDiningHall(diningHall);
+        mav.addObject("diningHall", hall);
         
         mav.addObject("meal", meal);
         mav.addObject("categories", categories);
@@ -161,6 +177,10 @@ public class MainController {
         
         Dish dish = menuDao.getDish(diningHall, mealName, dishName);
         mav.addObject("dish", dish);
+        
+        DiningHall hall = menuDao.getDiningHall(diningHall);
+        mav.addObject("diningHall", hall);
+        
         return mav;
 
     }
