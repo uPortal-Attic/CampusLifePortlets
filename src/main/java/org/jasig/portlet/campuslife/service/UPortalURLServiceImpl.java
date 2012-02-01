@@ -42,7 +42,7 @@ public class UPortalURLServiceImpl implements IURLService {
     public String getLocationUrl(String identifier, PortletRequest request) {
         try {
             final String encodedLocation = URLEncoder.encode(identifier, "UTF-8");
-            return portalContext.concat("/s/map?location=").concat(encodedLocation);
+            return portalContext.concat("/s/location?id=").concat(encodedLocation);
         } catch (UnsupportedEncodingException e) {
             log.error("Unable to encode location id " + identifier);
             return null;

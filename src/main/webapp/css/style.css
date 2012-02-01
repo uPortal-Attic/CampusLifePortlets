@@ -1,0 +1,10 @@
+.laundry .machine-type span, .computer-lab .computer-type span {
+	display: block;  
+	min-height: 24px;
+	line-height: 24px;
+	padding-left: 36px; 
+	font-size: 11pt;
+	font-weight: normal;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

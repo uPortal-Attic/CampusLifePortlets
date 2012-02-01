@@ -20,21 +20,53 @@
 --%>
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
+<link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css"/>
+<style>
+	.laundry .Washer span {
+		background: url(<c:url value="/images/washer-24x24.png"/>) left center no-repeat; 
+	}
 
-<div class="portlet">
+	.laundry .Dryer span {
+		background: url(<c:url value="/images/dryer-24x24.png"/>) left center no-repeat; 
+	}
+	
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		/* laundry portlet */
+		.laundry .washers span {
+			background: url(<c:url value="/images/washer-48x48.png"/>) left center no-repeat; 
+			background-size: 24px 24px;
+		}
+
+		.laundry .dryers span {
+			background: url(<c:url value="/images/dryer-48x48.png"/>) left center no-repeat; 
+			background-size: 24px 24px;
+		}
+	}
+</style>
+<div class="portlet laundry">
     <div data-role="content" class="portlet-content">
-
         <ul data-role="listview">
             <c:forEach items="${ laundromats }" var="laundromat">
-                <li data-role="list-divider">${ laundromat.name }</li>
+                <li data-role="list-divider">
+                	<div class="ui-grid-a">
+						<div class="ui-block-a"><h3>${ laundromat.name }</h3></div>
+						<div class="ui-block-b">
+                            <a href="${ locationUrls[laundromat.locationCode] }" data-role="button" 
+                                    data-iconpos="notext" data-icon="map" data-theme="b">
+                                <spring:message code="map"/>
+                            </a>
+                        </div>
+					</div>
+                </li>
                 <c:forEach items="${ laundromat.machineTypes }" var="type">
-                    <li>
-                        <h3><spring:message code="${ type.messageKey }"/></h3>
-                        <p>${ type.available } / ${ type.total } machines available</p>
+                    <li class="machine-type <spring:message code="${ type.key }"/> no-ui-li-count">
+                        <spring:message var="machineTypeName" code="${ type.messageKey }"/>
+                        <span class="${ type.available == type.total ? "full" : "" }">
+                            <spring:message code="proportion.machines.available" arguments="${ type.available },${ type.total },${ machineTypeName }"/>
+                        </span>
                     </li>
                 </c:forEach>
             </c:forEach>
         </ul>
-        
     </div>
 </div>

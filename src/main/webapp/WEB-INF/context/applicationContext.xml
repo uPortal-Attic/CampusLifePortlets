@@ -36,7 +36,7 @@
 
     <!-- Message source for this context, loaded from localized "messages_xx" files -->
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
-        p:basenames="messages"/>
+        p:basenames="messages" p:useCodeAsDefaultMessage="true"/>
         
     <bean class="org.jasig.portlet.campuslife.service.UPortalURLServiceImpl"/>
 

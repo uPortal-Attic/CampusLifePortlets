@@ -19,13 +19,19 @@
 
 package org.jasig.portlet.campuslife.computerlabs.mvc.portlet;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jasig.portlet.campuslife.computerlabs.dao.IComputerLabsDao;
+import org.jasig.portlet.campuslife.computerlabs.model.labs.xml.ComputerLab;
 import org.jasig.portlet.campuslife.mvc.IViewSelector;
+import org.jasig.portlet.campuslife.service.IURLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,6 +62,13 @@ public class MainController {
         this.computerLabsDao = computerLabsDao;
     }
     
+    private IURLService urlService;
+    
+    @Autowired(required = true)
+    public void setUrlService(IURLService urlService) {
+        this.urlService = urlService;
+    }
+    
     @RenderMapping
     public ModelAndView showMainView(
             final RenderRequest request, final RenderResponse response) {
@@ -70,7 +83,16 @@ public class MainController {
             logger.debug("Using view name " + viewName + " for main view");
         }
 
-        mav.addObject("labs", computerLabsDao.getComputerLabs(request));
+        final List<ComputerLab> labs = computerLabsDao.getComputerLabs(request);
+        mav.addObject("labs", labs);
+
+        // use the URL service to get a map URL for each laundromat location
+        final Map<String,String> locationUrls = new HashMap<String,String>();
+        for (ComputerLab lab : labs) {
+            final String url = urlService.getLocationUrl(lab.getLocationCode(), request);
+            locationUrls.put(lab.getLocationCode(), url);
+        }
+        mav.addObject("locationUrls", locationUrls);
 
         if(logger.isDebugEnabled()) {
             logger.debug("Rendering main view");

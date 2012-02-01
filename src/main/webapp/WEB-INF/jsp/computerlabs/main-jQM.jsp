@@ -20,21 +20,53 @@
 --%>
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
+<link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css"/>
+<style>
+	.computer-lab .PC span {
+		background: url(<c:url value="/images/windows-24x24.png"/>) left center no-repeat; 
+	}
 
-<div class="portlet">
+	.computer-lab .Mac span {
+		background: url(<c:url value="/images/apple-24x24.png"/>) left center no-repeat; 
+	}
+	
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		/* computer lab portlet */
+		.computer-lab .Windows span {
+			background: url(<c:url value="/images/windows-48x48.png"/>) left center no-repeat; 
+			background-size: 24px 24px;
+		}
+
+		.computer-lab .OSX span {
+			background: url(<c:url value="/images/apple-48x48.png"/>) left center no-repeat; 
+			background-size: 24px 24px;
+		}
+	}
+</style>
+<div class="portlet computer-lab">
     <div data-role="content" class="portlet-content">
-
         <ul data-role="listview">
             <c:forEach items="${ labs }" var="lab">
-                <li data-role="list-divider">${ lab.name }</li>
+                <li data-role="list-divider">
+                	<div class="ui-grid-a">
+						<div class="ui-block-a"><h3>${ lab.name }</h3></div>
+						<div class="ui-block-b">
+                            <a href="${ locationUrls[lab.locationCode] }" data-role="button" 
+                                    data-iconpos="notext" data-icon="map">
+                                <spring:message code="map"/>
+                            </a>
+                        </div>
+					</div>
+                </li>
                 <c:forEach items="${ lab.computerTypes }" var="type">
-                    <li>
-                        <h3><spring:message code="${ type.messageKey }"/></h3>
-                        <p>${ type.available } / ${ type.total } seats available</p>
+                    <li class="computer-type <spring:message code="${ type.key }"/> no-ui-li-count">
+                        <spring:message var="machineTypeName" code="${ type.messageKey }"/>
+                        <span class="${ type.available == type.total ? "full" : "" }">
+                            <spring:message code="proportion.machines.available" arguments="${ type.available },${ type.total },${ machineTypeName }"/>
+                        </span>
                     </li>
                 </c:forEach>
             </c:forEach>
-        </ul>
-        
+        </ul>   
     </div>
 </div>
