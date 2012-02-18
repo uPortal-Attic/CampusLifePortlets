@@ -94,9 +94,11 @@ public abstract class ScreenScrapingService<T> {
     public T getItem(String key, String url) {
         try {
             
+            log.debug(url);
             final String htmlContent = getHtmlContent(url);
             final String cleanedContent = getCleanedHtmlContent(htmlContent);
             final String xml = getXml(cleanedContent);
+            log.debug(xml);
             final T item = deserializeItem(xml);
             
             for (IScreenScrapingPostProcessor<T> processor : postProcessors) {

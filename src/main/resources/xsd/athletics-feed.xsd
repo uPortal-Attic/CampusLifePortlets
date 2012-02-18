@@ -47,7 +47,7 @@
             <xs:sequence>
                 <xs:element name="title" type="xs:string"/>
                 <xs:element name="date" type="xs:string"/>
-                <xs:element name="summary" type="xs:string"/>
+                <xs:element name="summary" type="xs:string" minOccurs="0"/>
                 <xs:element name="image-url" type="xs:string" minOccurs="0"/>
                 <xs:element name="story-url" type="xs:string" minOccurs="0"/>
             </xs:sequence>

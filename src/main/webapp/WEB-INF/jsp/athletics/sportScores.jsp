@@ -20,19 +20,34 @@
 --%>
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
+<style type="text/css">
+    .athletic-portlet-scores h3,
+    .athletic-portlet-scores p {
+        font-size: 12px;
+    }
+    .athletic-portlet-scores ul li.ui-btn {
+        background: none !important;
+    }
+    .athletic-portlet-scores ul li {
+        border-bottom: 1px solid #c9c9c9 !important;
+    }
+    .athletic-portlet-scores ul li a {
+        color: #444 !important;
+    }
+</style>
 
 <div class="portlet">
     <div data-role="header" class="titlebar portlet-titlebar">
-        <a href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">Back</a>
+        <a href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">All Sports</a>
         <h2>${ sport.name }</h2>
         <portlet:renderURL var="newsUrl">
             <portlet:param name="action" value="sportNews"/>
             <portlet:param name="sport" value="${ sport.name }"/>
         </portlet:renderURL>
-        <a href="${ newsUrl }">News</a>
+        <a data-role="button" href="${ newsUrl }">News</a>
     </div>
     
-    <div data-role="content" class="portlet-content">
+    <div data-role="content" class="portlet-content athletic-portlet-scores">
         <ul data-role="listview">
             <c:forEach items="${ sport.competition }" var="competition">
                 <li>

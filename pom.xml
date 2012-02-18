@@ -34,11 +34,11 @@
         <neko-html.version>1.9.15</neko-html.version>
         <portlet-api.version>2.0</portlet-api.version>
         <servlet-api.version>2.5</servlet-api.version>
-        <spring.version>3.0.5.RELEASE</spring.version>
+        <spring.version>3.1.0.RELEASE</spring.version>
         <jstl.version>1.1.2</jstl.version>
         <log4j.version>1.2.14</log4j.version>
         <junit.version>4.8.2</junit.version>
-        <commons-io.version>2.0.1</commons-io.version>
+        <commons-io.version>2.1</commons-io.version>
         <commons-lang.version>2.6</commons-lang.version>
         <commons-logging.version>1.1.1</commons-logging.version>
         <xerces.version>2.10.0</xerces.version>
@@ -142,6 +142,26 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>spring-beans</artifactId>
+                <groupId>org.springframework</groupId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>spring-context</artifactId>
+                <groupId>org.springframework</groupId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>spring-core</artifactId>
+                <groupId>org.springframework</groupId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>spring-expression</artifactId>
+                <groupId>org.springframework</groupId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
@@ -249,8 +269,20 @@
             <artifactId>modules</artifactId>
         </dependency>
         <dependency>
+            <artifactId>spring-beans</artifactId>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-context</artifactId>
+            <groupId>org.springframework</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-core</artifactId>
+            <groupId>org.springframework</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-expression</artifactId>
+            <groupId>org.springframework</groupId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

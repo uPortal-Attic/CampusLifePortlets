@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to Jasig under one or more contributor license
+    agreements. See the NOTICE file distributed with this work
+    for additional information regarding copyright ownership.
+    Jasig licenses this file to you under the Apache License,
+    Version 2.0 (the "License"); you may not use this file
+    except in compliance with the License. You may obtain a
+    copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on
+    an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied. See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<athletics-feed
+    xmlns="https://source.jasig.org/schemas/portlet/athletics/athletics-feed"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://source.jasig.org/schemas/portlet/athletics/athletics-feed ../xsd/athletics-feed.xsd">
+
+    <sport name="M Basketball">
+        <competition name="Illinois-Chicago (ex.)" date="Nov. 2"
+            location="Chicago, Ill." result="L (45-61)" url="uic-uc.htm" />
+        <competition name="Dominican" date="Nov. 15" location="Home"
+            result="W (92-79)" url="du-ucm.htm" />
+        <competition name="Franklin" date="Nov. 19" location="Home"
+            result="W (83-68)" url="frnk-ucm.htm" />
+        <competition name="Lake Forest" date="Nov. 22" location="Home"
+            result="L (58-63)" url="lfc-ucm.htm" />
+        <competition name="Loras" date="Nov. 26" location="Home"
+            result="W (80-65)" url="lor-ucm.htm" />
+        <competition name="Coe" date="Nov. 27" location="Home"
+            result="W (82-76)" url="coe-ucm.htm" />
+        <competition name="Wheaton (Ill.)" date="Nov. 30" location="Wheaton, Ill."
+            result="L (54-76)" url="ucm-wht.htm" />
+        <competition name="Kalamazoo" date="Dec. 3" location="Home"
+            result="W (89-54)" url="kzoo-ucm.htm" />
+        <competition name="Illinois Wesleyan" date="Dec. 10"
+            location="Home" result="L (63-84)" url="iwu-ucm.htm" />
+        <competition name="Augustana" date="Dec. 14" location="Rock Island, Ill."
+            result="L (52-90)" url="ucm-augy.htm" />
+        <competition name="Berry" date="Dec. 17" location="Memphis, Tenn."
+            result="W (80-52)" url="ucm-bery.htm" />
+        <competition name="at Rhodes" date="Dec. 18" location="Memphis, Tenn."
+            result="W (88-79)" url="ucm-rho.htm" />
+        <competition name="Washington-St. Louis" date="Jan. 7"
+            location="St. Louis, Mo." result="L (72-79)" url="ucm-wash.htm" />
+        <competition name="Carnegie Mellon" date="Jan. 13" location="Pittsburgh, Pa."
+            result="W (100-55)" url="ucm-cmu.htm" />
+        <competition name="Case" date="Jan. 15" location="Cleveland, Ohio"
+            result="W (85-66)" url="ucm-cwru.htm" />
+        <competition name="NYU" date="Jan. 20" location="Home"
+            result="L (71-81)" url="nyu-ucm.htm" />
+        <competition name="Brandeis" date="Jan. 22" location="Home"
+            result="L (89-97, ot)" url="br-ucm.htm" />
+        <competition name="Emory" date="Jan. 27" location="Home"
+            result="W (103-102)" url="eu-ucm.htm" />
+        <competition name="Rochester" date="Jan. 29" location="Home"
+            result="W (96-92)" url="ur-ucm.htm" />
+        <competition name="Emory" date="Feb. 3" location="Atlanta, Ga."
+            result="L (67-83)" url="ucm-eum.htm" />
+        <competition name="Rochester" date="Feb. 5" location="Rochester, N.Y."
+            result="L (57-59)" url="urm-ucm.htm" />
+        <competition name="Carnegie Mellon" date="Feb. 10" location="Home"
+            result="W (77-75, ot)" url="cmu-ucm2.htm" />
+        <competition name="Case" date="Feb. 12" location="Home"
+            result="W (86-78)" url="cwr-ucm2.htm" />
+        <competition name="NYU" date="Feb. 17" location="New York, N.Y."
+            time=" 8 p.m. (ET)" />
+        <competition name="Brandeis" date="Feb. 19" location="Boston, Mass."
+            time="Noon (ET)" />
+        <competition name="Washington-St. Louis" date="Feb. 25"
+            location="Home" time="3 p.m." />
+    </sport>
+    <sport name="M Swimming">
+        <news-item>
+            <title>Maroons in 2nd Place After Second Day of UAA Championships</title>
+            <date>Feb. 16</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/sw-uaa-day2-021612.htm</story-url>
+        </news-item>
+        <competition name="Wheaton (Ill.)" date="Oct. 22" location="Wheaton, Ill."
+            result="W (166-82)" url="http://athletics.uchicago.edu/sw-results-2011-12/sw-wheaton-102211.htm" />
+        <competition name="Illinois Tech" date="Oct. 29" location="Home"
+            time="W (171-66)" />
+        <competition name="Washington-St. Louis" date="Nov. 5"
+            location="Home" result="W (164-134)" url="http://athletics.uchicago.edu/sw-results-2011-12/sw-washu-110511.htm" />
+        <competition name="Phoenix Fall Classic" date="Nov. 18 - Nov. 20"
+            location="Home" result="2nd of 9" url="http://athletics.uchicago.edu/sw-results-2011-12/pfc-day-final.htm" />
+        <competition name="Kalamazoo" date="Jan. 7" location="Home"
+            result="W (214-86)" url="http://athletics.uchicago.edu/sw-results-2011-12/sw-kzoo-010712.htm" />
+        <competition name="Chicago Invitational" date="Jan. 13 - Jan. 14"
+            location="Home" result="1st of 10"
+            url="http://athletics.uchicago.edu/sw-results-2011-12/chicago-invite-final.htm" />
+        <competition name="Wis.-Milwaukee" date="Jan. 21" location="Home"
+            result="L (79-173)" url="http://athletics.uchicago.edu/sw-results-2011-12/sw-milwaukee-012212.htm" />
+        <competition name="DePauw" date="Jan. 28" location="Home"
+            result="L (146.5-153.5)" url="http://athletics.uchicago.edu/sw-results-2011-12/sw-depauw-012812.htm" />
+        <competition name="UAA Championship" date="Feb. 15 - Feb. 18"
+            location="Cleveland, Ohio" result="Day 2 Results"
+            url="http://athletics.uchicago.edu/sw-results-2011-12/sw-uaa-day2.htm" />
+        <competition name="Midwest Invitational" date="Feb. 24 - Feb. 25"
+            location="Home" time="6 p.m./10 a.m." />
+        <competition name="NCAA Div. III Championship" date="Mar. 21 - Mar. 24"
+            location="Indianapolis, Ind." time="All Day" />
+    </sport>
+    <sport name="Wrestling">
+        <news-item>
+            <title>Chicago Captures 2nd Place at UAA Championship</title>
+            <date>Feb. 11</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wr-uaa-021112.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons Rally to Defeat North Central 25-16</title>
+            <date>Feb. 3</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wr-northcentral-020312.htm</story-url>
+        </news-item>
+        <competition name="Wheaton (Ill.)" date="Nov. 8" location="Home"
+            time="L (15-22)" />
+        <competition
+            name="Concordia Wisconsin Duals vs. Wis.-Eau Claire vs. Wis.-Platteville, vs. Concordia Wisconsin"
+            date="Nov. 12" location="Mequon, Wis." result="W (28-7), W (19-18), W (34-10)"
+            url="http://athletics.uchicago.edu/news-2011-12/wr-cuw-duals-111211.htm" />
+        <competition name="Concordia Wisconsin Open" date="Nov. 19"
+            location="Mequon, Wis." result="Results" url="CUW_Open_2011.pdf" />
+        <competition name="Elmhurst" date="Dec. 3" location="Elmhurst, Ill."
+            result="L (6-39)" url="http://athletics.uchicago.edu/news-2011-12/wr-elmhurst-120311.htm" />
+        <competition name="Midlands" date="Dec. 29 - Dec. 30"
+            location="Evanston, Ill." result="Results"
+            url="http://www.nusports.com/sports/m-wrestl/spec-rel/nw-2009-midlands-championships.html" />
+        <competition name="Knox Duals, vs. Loras, vs. Knox, vs. Central, vs. Wabash"
+            date="Jan. 7" location="Galesburg, Ill." result="L (15-18), W (37-15), W (17-15), L (14-22)"
+            url="wr-results-2011-12/wr-knox-duals-2012.pdf" />
+        <competition name="Elmhurst Invitational" date="Jan. 14"
+            location="Elmhurst, Ill." result="1st of 11"
+            url="wr-results-2011-12/elmhurst-invite-2012.pdf" />
+        <competition name="Augustana (Ill.)" date="Jan. 19"
+            location="Rock Island, Ill." result="L (18-22)"
+            url="http://athletics.uchicago.edu/news-2011-12/wr-augustana-011912.htm" />
+        <competition name="St. Olaf" date="Jan. 21" location="Home"
+            result="W (28-12)" url="http://athletics.uchicago.edu/news-2011-12/wr-stolaf-012112.htm" />
+        <competition name="Wheaton (Ill.) Invitational" date="Jan. 27 - Jan. 28"
+            location="Wheaton, Ill." result="18th of 31"
+            url="wr-results-2011-12/wr-wheaton-invite-012812.pdf" />
+        <competition name="North Central" date="Feb. 3" location="Naperville, Ill."
+            result="W (25-16)" url="http://athletics.uchicago.edu/news-2011-12/wr-northcentral-020312.htm" />
+        <competition name="UAA Championship: vs. NYU, vs. Case"
+            date="Feb. 11" location="Cleveland, Ohio" result="2nd of 3 L (14-19), W (40-6)"
+            url="http://athletics.uchicago.edu/news-2011-12/wr-uaa-021112.htm" />
+        <competition name="Great Lakes Regional" date="Feb. 25"
+            location="Minneapolis, Minn." time="9 a.m." />
+        <competition name="NCAA D3 Championship" date="Mar. 9 - Mar. 10"
+            location="La Crosse, Wis." time="9 a.m." />
+    </sport>
+    <sport name="W Basketball">
+        <news-item>
+            <title>Chicago Seeks Second Straight  UAA Title</title>
+            <date>Feb. 16</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-tweet-sheet-nyu-feb17.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons Defeat Case to Clinch Share of UAA Title</title>
+            <date>Feb. 12</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-case-021212.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Chicago Seeks to Clinch Share of UAA Title</title>
+            <date>Feb. 11</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-tweet-sheet-case-feb12.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons Roll Past Carnegie Mellon</title>
+            <date>Feb. 10</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-cmu-021012.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Chicago to Open Home Weekend vs. Carnegie Mellon</title>
+            <date>Feb. 9</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-tweet-sheet-cmu-feb10.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Morgan Herrick Earns D3hoops.com Weekly Honors</title>
+            <date>Feb. 7</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-herrick-morgan-d3tow-020712.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons Overcome Halftime Deficit at Rochester</title>
+            <date>Feb. 5</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-rochester-020512.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons Set for Rematch at #5 Rochester</title>
+            <date>Feb. 4</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-tweet-sheet-rochester-feb5.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons  Defeat Emory to Remain Unbeaten</title>
+            <date>Feb. 3</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-emory-020312.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Maroons Tip Off Second Half of UAA Schedule</title>
+            <date>Feb. 3</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-tweet-sheet-emory-feb3.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Taylor Simpson Selected to Academic All-District 1st Team</title>
+            <date>Feb. 2</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/wbk-simpson-aaa-district-020212.htm</story-url>
+        </news-item>
+        <competition
+            name="UChicago Tip-Off Tournament: Benedictine  vs. Macalester, Chicago vs. Fontbonne"
+            date="Nov. 18" location="Home" result="MC (68-56), UC (93-57)" url="tipoff1.htm" />
+        <competition
+            name="UChicago Tip-Off Tournament: Benedictine vs. Fontbonne, Chicago vs. Macalester"
+            date="Nov. 19" location="Home" result="BU (80-60), UC (81-59)" url="tipoff2.htm" />
+        <competition name="Lake Forest" date="Nov. 22" location="Home"
+            result="W (61-59)" url="lfc-ucw.htm" />
+        <competition name="Carthage" date="Nov. 27" location="Home"
+            result="W (66-45)" url="cart-ucw.htm" />
+        <competition name="Wheaton (Ill.)" date="Nov. 30" location="Wheaton, Ill."
+            result="W (71-60)" url="ucw-wht.htm" />
+        <competition name="Illinois Wesleyan" date="Dec. 3"
+            location="Home" result="W (80-77)" url="iwu-ucw.htm" />
+        <competition name="Olivet" date="Dec. 14" location="Olivet, Mich."
+            result="W (80-36)" url="ucw-olvt.htm" />
+        <competition name="St. Mary's (Ind.)" date="Dec. 17"
+            location="South Bend, Ind." result="W (70-60)" url="ucw-smc.htm" />
+        <competition name="North Park" date="Dec. 30" location="Chicago, Ill."
+            result="W (65-49)" url="ucw-npu.htm" />
+        <competition name="Bethany Lutheran" date="Jan. 3" location="Home"
+            result="W (67-46)" url="blc-ucw.htm" />
+        <competition name="Washington-St. Louis" date="Jan. 7"
+            location="St. Louis, Mo." result="W (65-62)" url="ucw-wash.htm" />
+        <competition name="Marian (Wis.)" date="Jan. 9" location="Home"
+            result="W (63-52)" url="mar-ucw.htm" />
+        <competition name="Carnegie Mellon" date="Jan. 13" location="Pittsburgh, Pa."
+            result="W (81-44)" url="ucw-cmu.htm" />
+        <competition name="Case" date="Jan. 15" location="Cleveland, Ohio"
+            result="W (62-57)" url="ucw-cwru.htm" />
+        <competition name="NYU" date="Jan. 20" location="Home"
+            result="W (77-55)" url="nyu-ucw.htm" />
+        <competition name="Brandeis" date="Jan. 22" location="Home"
+            result="W (76-48)" url="br-ucw.htm" />
+        <competition name="Emory" date="Jan. 27" location="Home"
+            result="W (68-49)" url="eu-ucw.htm" />
+        <competition name="Rochester" date="Jan. 29" location="Home"
+            result="W (75-59)" url="ur-ucw.htm" />
+        <competition name="Emory" date="Feb. 3" location="Atlanta, Ga."
+            result="W (79-55)" url="ucw-eu.htm" />
+        <competition name="Rochester" date="Feb. 5" location="Rochester, N.Y."
+            result="W (68-55)" url="urw-ucw.htm" />
+        <competition name="Carnegie Mellon" date="Feb. 10" location="Home"
+            result="W (95-46)" url="cmu-ucw2.htm" />
+        <competition name="Case" date="Feb. 12" location="Home"
+            result="W (73-44)" url="cwr2-ucw.htm" />
+        <competition name="NYU" date="Feb. 17" location="New York, N.Y."
+            time=" 6 p.m." />
+        <competition name="Brandeis" date="Feb. 19" location="Boston, Mass."
+            time="2 p.m." />
+        <competition name="Washington-St. Louis" date="Feb. 25"
+            location="Home" time="1 p.m." />
+    </sport>
+
+    <sport name="W Swimming">
+        <news-item>
+            <title>Maroons in 2nd Place After Second Day of UAA Championships</title>
+            <date>Feb. 16</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/sw-uaa-day2-021612.htm</story-url>
+        </news-item>
+        <news-item>
+            <title>Becky Schmidt Earns All-UAA Diving Honors</title>
+            <date>Feb. 15</date>
+            <story-url>http://athletics.uchicago.edu/news-2011-12/sw-uaa-day1-021512.htm</story-url>
+        </news-item>
+    </sport>
+</athletics-feed>

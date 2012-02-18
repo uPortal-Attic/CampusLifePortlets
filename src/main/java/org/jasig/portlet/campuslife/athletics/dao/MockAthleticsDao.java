@@ -16,31 +16,31 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portlet.campuslife.computerlabs.dao;
+package org.jasig.portlet.campuslife.athletics.dao;
 
-import java.util.List;
-
-import javax.portlet.PortletRequest;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.jasig.portlet.campuslife.computerlabs.model.labs.xml.ComputerLab;
-import org.jasig.portlet.campuslife.computerlabs.model.labs.xml.ComputerLabList;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.AthleticsFeed;
+import org.jasig.portlet.campuslife.athletics.model.feed.xml.Sport;
 import org.jasig.portlet.campuslife.dao.MockDataService;
 
-public class MockComputerLabsDaoImpl extends MockDataService<ComputerLabList> implements IComputerLabsDao {
+public class MockAthleticsDao extends MockDataService<AthleticsFeed> implements
+        IAthleticsDao {
 
-    protected final static String PACKAGE_NAME = ComputerLabList.class.getPackage().getName();
-    
-    protected final Log log = LogFactory.getLog(getClass());
+    final static String PACKAGE_NAME = AthleticsFeed.class.getPackage().getName(); 
     
     @Override
-    public List<ComputerLab> getComputerLabs(PortletRequest request) {
-        return this.getData().getComputerLabs();
+    public AthleticsFeed getFeed() {
+        return this.getData();
     }
-    
+
     @Override
-    public ComputerLab getDefaultComputerLab(PortletRequest request) {
+    public Sport getSport(String sportName) {
+        for (Sport sport : this.getData().getSport()) {
+            if (sport.getName().equals(sportName)) {
+                return sport;
+            }
+        }
+        
+        log.info("Unable to locate sport " + sportName);
         return null;
     }
 

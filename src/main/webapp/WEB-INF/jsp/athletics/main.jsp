@@ -21,9 +21,19 @@
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
 
-<div class="portlet">
-    <div data-role="content" class="portlet-content">
-        <ul data-role="listview">
+<!-- Portlet -->
+<div class="fl-widget portlet computer-lab" role="section">
+
+  <!-- Portlet Titlebar -->
+  <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
+    <h2 class="title" role="heading">
+        <spring:message code="athletics"/>
+    </h2>
+  </div> <!-- end: portlet-titlebar -->
+  
+  <!-- Portlet Content -->
+  <div class="fl-widget-content content portlet-content" role="main">
+        <ul>
             <c:forEach items="${ sports }" var="sport">
                 <portlet:renderURL var="sportUrl">
                     <portlet:param name="action" value="sportScores"/>
