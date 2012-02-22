@@ -34,7 +34,7 @@
         <a href="<portlet:renderURL/>">
             <spring:message code="dining.halls"/>
         </a> &gt;
-        <a href="${ backUrl }">${ diningHall.name }</a>
+        <a href="${ backUrl }">${ diningHall.name }</a> &gt;
       </div>
       <h2 class="title" role="heading">${ meal.name }</h2>
   </div> <!-- end: portlet-titlebar -->

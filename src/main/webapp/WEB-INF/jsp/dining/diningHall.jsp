@@ -27,9 +27,9 @@
   <!-- Portlet Titlebar -->
   <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
       <div class="breadcrumb">
-          <a class="menu-back-link" href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">
+          <a class="menu-back-link" href="<portlet:renderURL/>">
             <spring:message code="dining.halls"/>
-          </a>
+          </a> &gt;
       </div>
       <h2 class="title" role="heading">${ diningHall.name }</h2>
       <div class="toolbar">

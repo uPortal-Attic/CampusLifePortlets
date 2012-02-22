@@ -20,7 +20,7 @@
 --%>
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
-<link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css"/>
+<rs:aggregatedResources path="/skin.xml"/>
 <style>
 	.laundry .Washer span {
 		background: url(<c:url value="/images/washer-24x24.png"/>) left center no-repeat; 

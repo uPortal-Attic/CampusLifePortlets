@@ -40,7 +40,7 @@
             <spring:message code="dining.halls"/>
         </a> &gt;
         <a href="${ diningHallUrl }">${ diningHall.name }</a> &gt;
-        <a href="${ mealUrl }">${ mealName }</a>
+        <a href="${ mealUrl }">${ mealName }</a> &gt;
       </div>
       <h2 class="title" role="heading">${ dish.name }</h2>
   </div> <!-- end: portlet-titlebar -->

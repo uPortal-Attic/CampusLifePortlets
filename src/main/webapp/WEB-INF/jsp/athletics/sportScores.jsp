@@ -20,53 +20,42 @@
 --%>
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
-<style type="text/css">
-    .athletic-portlet-scores h3,
-    .athletic-portlet-scores p {
-        font-size: 12px;
-    }
-    .athletic-portlet-scores ul li.ui-btn {
-        background: none !important;
-    }
-    .athletic-portlet-scores ul li {
-        border-bottom: 1px solid #c9c9c9 !important;
-    }
-    .athletic-portlet-scores ul li a {
-        color: #444 !important;
-    }
-</style>
 
-<div class="portlet">
-    <div data-role="header" class="titlebar portlet-titlebar">
-        <a href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">All Sports</a>
-        <h2>${ sport.name }</h2>
+<div class="fl-widget portlet" role="section">
+
+  <!-- Portlet Titlebar -->
+  <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
+      <div class="breadcrumb">
+          <a class="menu-back-link" href="<portlet:renderURL/>">
+            <spring:message code="sports"/>
+          </a> &gt;
+      </div>
+      <h2 class="title" role="heading">${ sport.name }</h2>
+      <div class="toolbar">
+        <ul>
         <portlet:renderURL var="newsUrl">
             <portlet:param name="action" value="sportNews"/>
             <portlet:param name="sport" value="${ sport.name }"/>
         </portlet:renderURL>
-        <a data-role="button" href="${ newsUrl }">News</a>
-    </div>
-    
-    <div data-role="content" class="portlet-content athletic-portlet-scores">
-        <ul data-role="listview">
-            <c:forEach items="${ sport.competition }" var="competition">
-                <li>
-                    <c:choose>
-                        <c:when test="${ not empty competition.url }">
-                            <a href="${ competition.url }">
-                                <h3>${ competition.name }</h3>
-                                <p>${ competition.date } @ ${ competition.location }</p>
-                                <p>${ not empty competition.result ? competition.result : competition.time }</p>
-                            </a>
-                        </c:when>
-                        <c:otherwise>
-                            <h3>${ competition.name }</h3>
-                            <p>${ competition.date } @ ${ competition.location }</p>
-                            <p>${ not empty competition.result ? competition.result : competition.time }</p>
-                        </c:otherwise>
-                    </c:choose>
-                </li>
-            </c:forEach>
+          <li><a class="button" href="${ newsUrl }">
+            <spring:message code="news"/>
+          </a></li>
         </ul>
+      </div>
+  </div> <!-- end: portlet-titlebar -->
+  
+  <!-- Portlet Content -->
+  <div class="fl-widget-content content portlet-content" role="main">
+
+        <c:forEach items="${ sport.competition }" var="competition">
+            <h3>${ competition.name }</h3>
+            <p>
+                ${ competition.date } @ ${ competition.location }
+                <br/>${ not empty competition.result ? competition.result : competition.time }
+                <c:if test="${ not empty competition.url }">
+                    <br/><a href="${ competition.url }"><spring:message code="summary"/></a>
+                </c:if>
+            </p>
+        </c:forEach>
     </div>
 </div>

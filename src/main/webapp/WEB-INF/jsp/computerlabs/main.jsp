@@ -20,7 +20,7 @@
 --%>
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
-<link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css"/>
+<rs:aggregatedResources path="/skin.xml"/>
 <style>
     .computer-lab ul li {
         list-style-type: none; 

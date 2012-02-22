@@ -23,14 +23,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://source.jasig.org/schemas/portlet/computerlabs ../xsd/computerlabs.xsd">
 
-    <computer-lab name="CCL" location-code="CCL">
+    <computer-lab name="Bass Library" location-code="BASSLB">
         <computer-type key="PC" message-key="computer.type.pc"
             icon-key="pc" available="5" total="12" />
         <computer-type key="Mac" message-key="computer.type.mac"
             icon-key="mac" available="5" total="12" />
     </computer-lab>
 
-    <computer-lab name="Dunham" location-code="DH">
+    <computer-lab name="Dunham" location-code="DL">
         <computer-type key="PC" message-key="computer.type.pc"
             icon-key="pc" available="2" total="10" />
         <computer-type key="Mac" message-key="computer.type.mac"

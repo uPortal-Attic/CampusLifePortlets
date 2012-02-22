@@ -33,6 +33,7 @@
         <mockito.version>1.8.5</mockito.version>
         <neko-html.version>1.9.15</neko-html.version>
         <portlet-api.version>2.0</portlet-api.version>
+        <resource-server.version>1.0.23</resource-server.version>
         <servlet-api.version>2.5</servlet-api.version>
         <spring.version>3.1.0.RELEASE</spring.version>
         <jstl.version>1.1.2</jstl.version>
@@ -138,6 +139,21 @@
                 <groupId>rome</groupId>
                 <artifactId>modules</artifactId>
                 <version>0.3.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jasig.resourceserver</groupId>
+                <artifactId>resource-server-utils</artifactId>
+                <version>${resource-server.version}</version>            
+                <exclusions>
+                    <exclusion>
+                        <groupId>net.sf.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -249,6 +265,10 @@
             <artifactId>httpclient</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.jasig.resourceserver</groupId>
+            <artifactId>resource-server-utils</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.jvnet.jaxb2_commons</groupId>
             <artifactId>jaxb2-basics-runtime</artifactId>
         </dependency>
@@ -348,6 +368,27 @@
                         <version>2.2.1</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.jasig.resourceserver</groupId>
+                <artifactId>resource-server-plugin</artifactId>
+                <version>${resource-server.version}</version>
+                <executions>
+                    <execution>
+                        <id>aggregate-resources</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>batch-aggregate</goal>
+                        </goals>
+                        <inherited>false</inherited>
+                        <configuration>
+                            <displayJsWarnings>false</displayJsWarnings>
+                            <includes>
+                                <include>skin.xml</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>com.mycila.maven-license-plugin</groupId>

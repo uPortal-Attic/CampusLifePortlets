@@ -90,7 +90,7 @@ public class MainController {
         // determine if the request represents a mobile browser and set the
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
-        final String viewName = isMobile ? "sportScores-jQM" : "main";        
+        final String viewName = isMobile ? "sportScores-jQM" : "sportScores";        
         final ModelAndView mav = new ModelAndView("athletics/" + viewName);
         
         if(logger.isDebugEnabled()) {
@@ -115,7 +115,7 @@ public class MainController {
         // determine if the request represents a mobile browser and set the
         // view name accordingly
         final boolean isMobile = viewSelector.isMobile(request);
-        final String viewName = isMobile ? "sportNews-jQM" : "main";        
+        final String viewName = isMobile ? "sportNews-jQM" : "sportNews";        
         final ModelAndView mav = new ModelAndView("athletics/" + viewName);
         
         if(logger.isDebugEnabled()) {
