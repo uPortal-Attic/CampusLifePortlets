@@ -397,6 +397,7 @@
                     <aggregate>true</aggregate>
                     <excludes>
                         <exclude>target/**</exclude>
+                        <exclude>logs/**</exclude>
                         <exclude>pom.xml.*</exclude>
                         <exclude>release.properties</exclude>
                         <exclude>LICENSE</exclude>
