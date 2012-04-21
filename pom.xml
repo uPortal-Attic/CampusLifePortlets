@@ -3,7 +3,7 @@
     <parent>
         <groupId>org.jasig.parent</groupId>
         <artifactId>jasig-parent</artifactId>
-        <version>31</version>
+        <version>33</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -17,9 +17,9 @@
     </description>
 
     <scm>
-        <connection>scm:svn:https://source.jasig.org/sandbox/CampusLifePortlets/trunk</connection>
-        <developerConnection>scm:svn:https://source.jasig.org/sandbox/CampusLifePortlets/trunk</developerConnection>
-        <url>http://developer.jasig.org/source/browse/jasigsvn/svn/sandbox/CampusLifePortlets/trunk</url>
+        <connection>scm:git:git://github.com/Jasig/CampusLifePortlets.git</connection>
+        <developerConnection>scm:git:git@github.com:Jasig/CampusLifePortlets.git</developerConnection>
+        <url>https://github.com/Jasig/CampusLifePortlets</url>
     </scm>
 
     <!-- Dependency Version Properties -->
