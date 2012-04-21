@@ -37,7 +37,7 @@
             icon-key="mac" available="10" total="15" />
     </computer-lab>
 
-    <computer-lab name="CTHall" location-code="CT">
+    <computer-lab name="CTHall" location-code="C">
         <computer-type key="PC" message-key="computer.type.pc"
             icon-key="pc" available="10" total="12" />
         <computer-type key="Mac" message-key="computer.type.mac"
