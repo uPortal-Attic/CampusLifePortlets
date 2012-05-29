@@ -27,9 +27,17 @@
     <xs:element name="menu">
         <xs:complexType>
             <xs:sequence>
+                <xs:element ref="menu-day" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="menu-day">
+        <xs:complexType>
+            <xs:sequence>
                 <xs:element ref="dining-hall" maxOccurs="unbounded"/>
             </xs:sequence>
-            <xs:attribute name="day" type="xs:string"/>
+            <xs:attribute name="date" type="xs:date"/>
         </xs:complexType>
     </xs:element>
     

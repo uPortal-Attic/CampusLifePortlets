@@ -30,11 +30,23 @@
         <portlet:renderURL var="backUrl">
             <portlet:param name="action" value="diningHall"/>
             <portlet:param name="diningHall" value="${ diningHallKey }"/>
+            <portlet:param name="date" value="${ date }"/>
         </portlet:renderURL>
-        <a href="<portlet:renderURL/>">
-            <spring:message code="dining.halls"/>
+        <c:if test="${ hasMultipleLocations }">
+            <a href="<portlet:renderURL/>">
+                <spring:message code="dining.halls"/>
+            </a> &gt;
+        </c:if>
+        <a href="${ backUrl }">
+            <c:choose>
+                <c:when test="${ hasMultipleLocations }">
+                    ${ diningHall.name }
+                </c:when>
+                <c:otherwise>
+                    <spring:message code="meals"/>
+                </c:otherwise>
+            </c:choose>
         </a> &gt;
-        <a href="${ backUrl }">${ diningHall.name }</a> &gt;
       </div>
       <h2 class="title" role="heading">${ meal.name }</h2>
   </div> <!-- end: portlet-titlebar -->
@@ -50,12 +62,13 @@
             <div class="content">
             
               <ul>
-                <c:forEach items="${ category.dish }" var="dish">
+                <c:forEach items="${ category.dishes }" var="dish">
                     <portlet:renderURL var="dishUrl">
                         <portlet:param name="action" value="dish"/>
                         <portlet:param name="diningHall" value="${ diningHallKey }"/>
                         <portlet:param name="mealName" value="${ meal.name }"/>
                         <portlet:param name="dishName" value="${ dish.name }"/>
+                        <portlet:param name="date" value="${ date }"/>
                     </portlet:renderURL>
                     <li><a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
                         ${ dish.name }

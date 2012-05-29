@@ -25,11 +25,14 @@
 
   <!-- Portlet Titlebar -->
   <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
-      <h2 class="title" role="heading"><spring:message code="dining.halls"/></h2>
+      <h2 class="title" role="heading">${ displayDate }</h2>
   </div> <!-- end: portlet-titlebar -->
   
   <!-- Portlet Content -->
   <div class="fl-widget-content content portlet-content" role="main">
+        <c:if test="${ fn:length(diningHalls) == 0 }">
+            <p><spring:message code="no.meals"/></p>
+        </c:if>
 
         <ul data-role="listview">
             <c:forEach items="${ diningHalls }" var="diningHall">

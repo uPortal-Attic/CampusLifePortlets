@@ -26,6 +26,7 @@ import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
+import org.joda.time.DateMidnight;
 
 /**
  * IDiningMenuDao presents a generic interface for collecting dining hall
@@ -42,14 +43,14 @@ public interface IDiningMenuDao {
      * @param request
      * @return
      */
-    public List<DiningHall> getDiningHalls(PortletRequest request);
+    public List<DiningHall> getDiningHalls(DateMidnight date, PortletRequest request);
     
-    public DiningHall getDiningHall(String diningHall);
+    public DiningHall getDiningHall(DateMidnight date, String diningHall);
     
-    public Meal getMeal(String diningHall, String mealName);
+    public Meal getMeal(DateMidnight date, String diningHall, String mealName);
 
-    public FoodCategory getFoodCategory(String diningHall, String mealName, String categoryName);
+    public FoodCategory getFoodCategory(DateMidnight date, String diningHall, String mealName, String categoryName);
     
-    public Dish getDish(String dininghall, String meal, String dishName);
+    public Dish getDish(DateMidnight date, String dininghall, String meal, String dishName);
     
 }

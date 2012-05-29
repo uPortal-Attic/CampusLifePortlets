@@ -27,6 +27,7 @@
     <portlet:renderURL var="backUrl">
         <portlet:param name="action" value="diningHall"/>
         <portlet:param name="diningHall" value="${ diningHallKey }"/>
+        <portlet:param name="date" value="${ date }"/>
     </portlet:renderURL>
     <div data-role="header" class="titlebar portlet-titlebar">
         <a class="menu-back-link" href="${ backUrl }" data-role="button" data-icon="back" data-inline="true">Back</a>
@@ -38,12 +39,13 @@
         <ul data-role="listview">
             <c:forEach items="${ categories }" var="category" varStatus="status">
                 <li data-role="list-divider">${ category.name }</li>
-                <c:forEach items="${ category.dish }" var="dish">
+                <c:forEach items="${ category.dishes }" var="dish">
                     <portlet:renderURL var="dishUrl">
                         <portlet:param name="action" value="dish"/>
                         <portlet:param name="diningHall" value="${ diningHallKey }"/>
                         <portlet:param name="mealName" value="${ meal.name }"/>
                         <portlet:param name="dishName" value="${ dish.name }"/>
+                        <portlet:param name="date" value="${ date }"/>
                     </portlet:renderURL>
                     <li><a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
                         ${ dish.name }

@@ -30,6 +30,8 @@ import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Menu;
+import org.jasig.portlet.campuslife.dining.model.menu.xml.MenuDay;
+import org.joda.time.DateMidnight;
 
 public class MockDiningDaoImpl extends MockDataService<Menu> implements IDiningMenuDao {
 
@@ -38,15 +40,25 @@ public class MockDiningDaoImpl extends MockDataService<Menu> implements IDiningM
     protected final Log log = LogFactory.getLog(getClass());
     
     @Override
-    public List<DiningHall> getDiningHalls(PortletRequest request) {
-        return this.getData().getDiningHall();
+    public List<DiningHall> getDiningHalls(DateMidnight date, PortletRequest request) {
+        final List<MenuDay> days = this.getData().getDays();
+        if (days.size() > 0) {
+            return days.get(0).getDiningHalls();
+        }
+        
+        log.info("Unable to locate day " + date.toString());
+        return null;
     }
 
     @Override
-    public DiningHall getDiningHall(String diningHall) {
-        for (DiningHall hall : this.getData().getDiningHall()) {
-            if (hall.getKey().equals(diningHall)) {
-                return hall;
+    public DiningHall getDiningHall(DateMidnight date, String diningHall) {
+        final List<MenuDay> days = this.getData().getDays();
+        if (days.size() > 0) {
+            final List<DiningHall> halls = days.get(0).getDiningHalls();
+            for (DiningHall hall : halls) {
+                if (hall.getKey().equals(diningHall)) {
+                    return hall;
+                }
             }
         }
 
@@ -55,10 +67,10 @@ public class MockDiningDaoImpl extends MockDataService<Menu> implements IDiningM
     }
 
     @Override
-    public Meal getMeal(String diningHall, String mealName) {
-        final DiningHall hall = getDiningHall(diningHall);
+    public Meal getMeal(DateMidnight date, String diningHall, String mealName) {
+        final DiningHall hall = getDiningHall(date, diningHall);
         if (hall != null) {
-            for (Meal meal : hall.getMeal()) {
+            for (Meal meal : hall.getMeals()) {
                 if (meal.getName().equals(mealName)) {
                     return meal;
                 }
@@ -73,11 +85,11 @@ public class MockDiningDaoImpl extends MockDataService<Menu> implements IDiningM
     }
 
     @Override
-    public FoodCategory getFoodCategory(String diningHall, String mealName,
+    public FoodCategory getFoodCategory(DateMidnight date, String diningHall, String mealName,
             String categoryName) {
-        final Meal meal = getMeal(diningHall, mealName);
+        final Meal meal = getMeal(date, diningHall, mealName);
         if (meal != null) {
-            for (FoodCategory category : meal.getFoodCategory()) {
+            for (FoodCategory category : meal.getFoodCategories()) {
                 if (category.getName().equals(categoryName)) {
                     return category;
                 }
@@ -93,11 +105,11 @@ public class MockDiningDaoImpl extends MockDataService<Menu> implements IDiningM
     }
 
     @Override
-    public Dish getDish(String diningHall, String mealName, String dishName) {
-        final Meal meal = getMeal(diningHall, mealName);
+    public Dish getDish(DateMidnight date, String diningHall, String mealName, String dishName) {
+        final Meal meal = getMeal(date, diningHall, mealName);
         if (meal != null) {
-            for (FoodCategory category : meal.getFoodCategory()) {
-                for (Dish dish : category.getDish()) {
+            for (FoodCategory category : meal.getFoodCategories()) {
+                for (Dish dish : category.getDishes()) {
                     if (dish.getName().equals(dishName)) {
                         return dish;
                     }

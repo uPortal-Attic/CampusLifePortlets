@@ -25,29 +25,50 @@
 <div id="${n}container" class="portlet">
 
     <div data-role="header" class="titlebar portlet-titlebar">
-        <a class="menu-back-link" href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">Back</a>
-        <h2 class="title">${ diningHall.name }</h2>
+        <c:choose>
+            <c:when test="${ hasMultipleLocations }">
+                <a class="menu-back-link" href="<portlet:renderURL/>" data-role="button" data-icon="back" data-inline="true">Back</a>
+                <h2 class="title">${ diningHall.name }</h2>
+            </c:when>
+            <c:otherwise>
+                <h2 class="title">
+                    <portlet:renderURL var="prevUrl">
+                        <portlet:param name="action" value="diningHall"/>
+                        <portlet:param name="diningHall" value="${ diningHall.key }"/>
+                        <portlet:param name="date" value="${ prev }"/>
+                    </portlet:renderURL>
+                    <a data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true" href="${ prevUrl }">&lt;</a>
+                    ${ displayDate }
+                    <portlet:renderURL var="nextUrl">
+                        <portlet:param name="action" value="diningHall"/>
+                        <portlet:param name="diningHall" value="${ diningHall.key }"/>
+                        <portlet:param name="date" value="${ next }"/>
+                    </portlet:renderURL>
+                    <a data-role="button" data-icon="arrow-r" data-iconpos="notext" data-inline="true" href="${ nextUrl }">&lt;</a>
+                </h2>
+            </c:otherwise>
+        </c:choose>
+        <c:if test="${ not empty locationUrl }">
+            <a href="${ locationUrl }" data-role="button" data-iconpos="notext" data-icon="map" class="ui-btn-right">
+                <spring:message code="map"/>
+            </a>
+        </c:if>
+        
     </div>
 
     <div data-role="content" class="portlet-content">
     
         <ul data-role="listview">
-            <li data-role="list-divider">
-                <div class="ui-grid-a">
-                    <div class="ui-block-a"><h3><spring:message code="meals"/></h3></div>
-                    <div class="ui-block-b">
-                        <a href="${ locationUrl }" data-role="button" 
-                                data-iconpos="notext" data-icon="map" data-theme="b">
-                            <spring:message code="map"/>
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <c:forEach items="${ diningHall.meal }" var="meal" varStatus="status">
+            <c:if test="${ fn:length(diningHall.meals) == 0 }">
+                <p><spring:message code="no.meals"/></p>
+            </c:if>
+    
+            <c:forEach items="${ diningHall.meals }" var="meal" varStatus="status">
                 <portlet:renderURL var="mealUrl">
                     <portlet:param name="action" value="meal"/>
                     <portlet:param name="diningHall" value="${ diningHall.key }"/>
                     <portlet:param name="mealName" value="${ meal.name }"/>
+                    <portlet:param name="date" value="${ date }"/>
                 </portlet:renderURL>
                 <li><a href="${ mealUrl }">${ meal.name }</a></li>
             </c:forEach>

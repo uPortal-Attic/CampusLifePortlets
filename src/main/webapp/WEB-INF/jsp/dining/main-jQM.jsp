@@ -21,12 +21,29 @@
 
 <jsp:directive.include file="/WEB-INF/jsp/include.jsp"/>
 
+<div data-role="header" class="titlebar portlet-titlebar">
+    <h2 class="title">
+        <portlet:renderURL var="prevUrl">
+            <portlet:param name="date" value="${ prev }"/>
+        </portlet:renderURL>
+        <a data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true" href="${ prevUrl }">&lt;</a>
+        ${ displayDate }
+        <portlet:renderURL var="nextUrl">
+            <portlet:param name="date" value="${ next }"/>
+        </portlet:renderURL>
+        <a data-role="button" data-icon="arrow-r" data-iconpos="notext" data-inline="true" href="${ nextUrl }">&lt;</a>    
+    </h2>
+</div>
+
 <div class="portlet">
     <div data-role="content" class="portlet-content">
 
         <ul data-role="listview">
+            <c:if test="${ fn:length(diningHalls) == 0 }">
+                <li><spring:message code="no.meals"/></li>
+            </c:if>
             <c:forEach items="${ diningHalls }" var="diningHall">
-                <li><a href="<portlet:renderURL><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHall.key }"/></portlet:renderURL>">${ diningHall.name }</a></li>
+                <li><a href="<portlet:renderURL><portlet:param name="action" value="diningHall"/><portlet:param name="diningHall" value="${ diningHall.key }"/><portlet:param name="date" value="${ date }"/></portlet:renderURL>">${ diningHall.name }</a></li>
             </c:forEach>
         </ul>
     

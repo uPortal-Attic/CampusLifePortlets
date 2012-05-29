@@ -20,7 +20,6 @@
 package org.jasig.portlet.campuslife.dining.mvc.portlet;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,9 +33,11 @@ import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
-import org.jasig.portlet.campuslife.laundry.model.laundry.xml.Laundromat;
 import org.jasig.portlet.campuslife.mvc.IViewSelector;
 import org.jasig.portlet.campuslife.service.IURLService;
+import org.joda.time.DateMidnight;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormatterBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,6 +53,9 @@ import org.springframework.web.portlet.bind.annotation.RenderMapping;
 public class MainController {
 
     protected final Log logger = LogFactory.getLog(getClass());
+    
+    private DateTimeFormatter displayFormat = new DateTimeFormatterBuilder().appendPattern("EEE MMM d").toFormatter();
+    private DateTimeFormatter paramFormat = new DateTimeFormatterBuilder().appendPattern("dd-MM-yyyy").toFormatter();
 
     private IDiningMenuDao menuDao;
     
@@ -82,7 +86,7 @@ public class MainController {
     }
     
     @RenderMapping
-    public ModelAndView showMainView(final RenderRequest request) {
+    public ModelAndView showMainView(final RenderRequest request, String date) {
 
         // determine if the request represents a mobile browser and set the
         // view name accordingly
@@ -93,16 +97,33 @@ public class MainController {
         if(logger.isDebugEnabled()) {
             logger.debug("Using view name " + viewName + " for main view");
         }
-        
-        mav.addObject("diningHalls", menuDao.getDiningHalls(request));
 
-        return mav;
+        DateMidnight d;
+        if (date == null) {
+            d = new DateMidnight();
+        } else {
+            d = paramFormat.parseLocalDate(date).toDateMidnight();
+        }
+        final List<DiningHall> halls = menuDao.getDiningHalls(d, request);
+        
+        if (halls.size() == 1) {
+            return showDiningHallView(request, halls.get(0).getKey(), paramFormat.print(d));
+        }
+        
+        else {
+            mav.addObject("diningHalls", menuDao.getDiningHalls(d, request));
+            mav.addObject("displayDate", displayFormat.print(d));
+            mav.addObject("date", paramFormat.print(d));
+            mav.addObject("prev", paramFormat.print(d.minusDays(1)));
+            mav.addObject("next", paramFormat.print(d.plusDays(1)));
+            return mav;
+        }
 
     }
 
     @RenderMapping(params="action=diningHall")
     public ModelAndView showDiningHallView(final RenderRequest request, 
-            final String diningHall) {
+            final String diningHall, final String date) {
 
         // determine if the request represents a mobile browser and set the
         // view name accordingly
@@ -114,11 +135,21 @@ public class MainController {
             logger.debug("Using view name " + viewName + " for dining hall view");
         }
         
-        DiningHall dh = menuDao.getDiningHall(diningHall);
+        final DateMidnight d = paramFormat.parseLocalDate(date).toDateMidnight();
+        final DiningHall dh = menuDao.getDiningHall(d, diningHall);
         mav.addObject("diningHall", dh);
         
-        final String url = urlService.getLocationUrl(dh.getLocationCode(), request);
-        mav.addObject("locationUrl", url);
+        if (dh.getLocationCode() != null) {
+            final String url = urlService.getLocationUrl(dh.getLocationCode(), request);
+            mav.addObject("locationUrl", url);
+        }
+
+        final List<DiningHall> halls = menuDao.getDiningHalls(d, request);
+        mav.addObject("hasMultipleLocations", halls.size() > 1);
+        mav.addObject("date", paramFormat.print(d));
+        mav.addObject("prev", paramFormat.print(d.minusDays(1)));
+        mav.addObject("next", paramFormat.print(d.plusDays(1)));
+        mav.addObject("displayDate", displayFormat.print(d));
 
         return mav;
 
@@ -126,7 +157,7 @@ public class MainController {
     
     @RenderMapping(params="action=meal")
     public ModelAndView showMealView(final RenderRequest request,
-            final String diningHall, final String mealName) {
+            final String diningHall, final String mealName, final String date) {
 
         // determine if the request represents a mobile browser and set the
         // view name accordingly
@@ -141,16 +172,21 @@ public class MainController {
         mav.addObject("dishCodeImages", dishCodeImages);
         mav.addObject("diningHallKey", diningHall);
         
-        Meal meal = menuDao.getMeal(diningHall, mealName);
+        final DateMidnight d = paramFormat.parseLocalDate(date).toDateMidnight();
+        final Meal meal = menuDao.getMeal(d, diningHall, mealName);
         
-        List<FoodCategory> categories = new ArrayList<FoodCategory>();
-        for (FoodCategory category : meal.getFoodCategory()) {
-            categories.add(menuDao.getFoodCategory(diningHall, mealName, category.getName()));
+        final List<FoodCategory> categories = new ArrayList<FoodCategory>();
+        for (FoodCategory category : meal.getFoodCategories()) {
+            categories.add(menuDao.getFoodCategory(d, diningHall, mealName, category.getName()));
         }
 
-        DiningHall hall = menuDao.getDiningHall(diningHall);
+        final DiningHall hall = menuDao.getDiningHall(d, diningHall);
         mav.addObject("diningHall", hall);
-        
+
+        final List<DiningHall> halls = menuDao.getDiningHalls(d, request);
+        mav.addObject("hasMultipleLocations", halls.size() > 1);
+
+        mav.addObject("date", paramFormat.print(d));
         mav.addObject("meal", meal);
         mav.addObject("categories", categories);
         return mav;
@@ -159,7 +195,7 @@ public class MainController {
 
     @RenderMapping(params="action=dish")
     public ModelAndView showDishView(final RenderRequest request,
-            final String diningHall, final String mealName, final String dishName) {
+            final String diningHall, final String mealName, final String dishName, final String date) {
 
         // determine if the request represents a mobile browser and set the
         // view name accordingly
@@ -174,13 +210,19 @@ public class MainController {
         mav.addObject("dishCodeImages", dishCodeImages);
         mav.addObject("diningHallKey", diningHall);
         mav.addObject("mealName", mealName);
+
+        final DateMidnight d = paramFormat.parseLocalDate(date).toDateMidnight();
+        mav.addObject("date", paramFormat.print(d));
         
-        Dish dish = menuDao.getDish(diningHall, mealName, dishName);
+        final Dish dish = menuDao.getDish(d, diningHall, mealName, dishName);
         mav.addObject("dish", dish);
         
-        DiningHall hall = menuDao.getDiningHall(diningHall);
+        final DiningHall hall = menuDao.getDiningHall(d, diningHall);
         mav.addObject("diningHall", hall);
         
+        final List<DiningHall> halls = menuDao.getDiningHalls(d, request);
+        mav.addObject("hasMultipleLocations", halls.size() > 1);
+
         return mav;
 
     }

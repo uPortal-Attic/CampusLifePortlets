@@ -65,6 +65,24 @@
     </jaxb:bindings>
 
     <jaxb:bindings schemaLocation="../resources/xsd/menu.xsd">
+        <jaxb:bindings node="//xs:element[@name='menu-day']">
+            <jaxb:property name="days"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='dining-hall']">
+            <jaxb:property name="diningHalls"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='meal']">
+            <jaxb:property name="meals"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='food-category']">
+            <jaxb:property name="foodCategories"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='dish']">
+            <jaxb:property name="dishes"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//xs:element[@name='nutrition-item']">
+            <jaxb:property name="nutritionItems"/>
+        </jaxb:bindings>
         <jaxb:schemaBindings>
             <jaxb:package name="org.jasig.portlet.campuslife.dining.model.menu.xml" />
         </jaxb:schemaBindings>

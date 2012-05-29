@@ -24,11 +24,11 @@ import javax.portlet.PortletRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.jasig.portlet.campuslife.dao.ScreenScrapingService;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.DiningHall;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Dish;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.FoodCategory;
 import org.jasig.portlet.campuslife.dining.model.menu.xml.Meal;
+import org.joda.time.DateMidnight;
 
 /**
  * Dining menu DAO capable of collecting menu information vi screen scraping
@@ -56,7 +56,7 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
     }
 
     @Override
-    public List<DiningHall> getDiningHalls(PortletRequest request) {
+    public List<DiningHall> getDiningHalls(DateMidnight date, PortletRequest request) {
         return this.diningHalls;
     }
 
@@ -68,16 +68,16 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
 
 
     @Override
-    public DiningHall getDiningHall(String diningHall) {
+    public DiningHall getDiningHall(DateMidnight date, String diningHall) {
         return diningHallService.getItem(diningHall, diningUrl + diningHall);
     }
 
     
     @Override
-    public Meal getMeal(String diningHall, String mealName) {
+    public Meal getMeal(DateMidnight date, String diningHall, String mealName) {
         
-        DiningHall hall = getDiningHall(diningHall);
-        for (Meal meal : hall.getMeal()) {
+        DiningHall hall = getDiningHall(date, diningHall);
+        for (Meal meal : hall.getMeals()) {
             if (meal.getName().equals(mealName)) {
                 return meal;
             }
@@ -89,11 +89,11 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
     }
 
     @Override
-    public FoodCategory getFoodCategory(String diningHall, String mealName,
+    public FoodCategory getFoodCategory(DateMidnight date, String diningHall, String mealName,
             String categoryName) {
         
-        Meal meal = getMeal(diningHall, mealName);
-        for (FoodCategory category : meal.getFoodCategory()) {
+        Meal meal = getMeal(date, diningHall, mealName);
+        for (FoodCategory category : meal.getFoodCategories()) {
             if (category.getName().equals(categoryName)) {
                 return category;
             }
@@ -106,11 +106,11 @@ public class YaleDiningMenuDaoImpl implements IDiningMenuDao {
     }
 
     @Override
-    public Dish getDish(String diningHall, String mealName, String dishName) {
+    public Dish getDish(DateMidnight date, String diningHall, String mealName, String dishName) {
         
-        Meal meal = getMeal(diningHall, mealName);
-        for (FoodCategory category : meal.getFoodCategory()) {
-            for (Dish dish : category.getDish()) {
+        Meal meal = getMeal(date, diningHall, mealName);
+        for (FoodCategory category : meal.getFoodCategories()) {
+            for (Dish dish : category.getDishes()) {
                 if (dishName.equals(dish.getName()))
                     return dish;
             }

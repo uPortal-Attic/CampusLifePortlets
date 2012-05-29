@@ -26,30 +26,60 @@
 
   <!-- Portlet Titlebar -->
   <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
-      <div class="breadcrumb">
-          <a class="menu-back-link" href="<portlet:renderURL/>">
-            <spring:message code="dining.halls"/>
-          </a> &gt;
-      </div>
-      <h2 class="title" role="heading">${ diningHall.name }</h2>
-      <div class="toolbar">
-        <ul>
-          <li><a class="button" href="${ locationUrl }">
-            <spring:message code="map"/>
-          </a></li>
-        </ul>
-      </div>
+      <c:if test="${ hasMultipleLocations }">
+          <div class="breadcrumb">
+              <a class="menu-back-link" href="<portlet:renderURL/>">
+                <spring:message code="dining.halls"/>
+              </a> &gt;
+          </div>
+      </c:if>
+      <h2 class="title" role="heading">
+          <c:choose>
+              <c:when test="${ hasMultipleLocations }">
+                  ${ diningHall.name }
+              </c:when>
+              <c:otherwise>
+                    <portlet:renderURL var="prevUrl">
+                        <portlet:param name="action" value="diningHall"/>
+                        <portlet:param name="diningHall" value="${ diningHall.key }"/>
+                        <portlet:param name="date" value="${ prev }"/>
+                    </portlet:renderURL>
+                    <a href="${ prevUrl }">&lt;</a>
+                    Menu for ${ displayDate }
+                    <portlet:renderURL var="nextUrl">
+                        <portlet:param name="action" value="diningHall"/>
+                        <portlet:param name="diningHall" value="${ diningHall.key }"/>
+                        <portlet:param name="date" value="${ next }"/>
+                    </portlet:renderURL>
+                    <a href="${ nextUrl }">&gt;</a>
+              </c:otherwise>
+          </c:choose>
+      </h2>
+      <c:if test="${ not empty locationUrl }">
+          <div class="toolbar">
+            <ul>
+              <li><a class="button" href="${ locationUrl }">
+                <spring:message code="map"/>
+              </a></li>
+            </ul>
+          </div>
+      </c:if>
   </div> <!-- end: portlet-titlebar -->
   
   <!-- Portlet Content -->
   <div class="fl-widget-content content portlet-content" role="main">
+        <c:if test="${ fn:length(diningHall.meals) == 0 }">
+            <p><spring:message code="no.meals"/></p>
+        </c:if>
+
 
         <ul>
-            <c:forEach items="${ diningHall.meal }" var="meal" varStatus="status">
+            <c:forEach items="${ diningHall.meals }" var="meal" varStatus="status">
                 <portlet:renderURL var="mealUrl">
                     <portlet:param name="action" value="meal"/>
                     <portlet:param name="diningHall" value="${ diningHall.key }"/>
                     <portlet:param name="mealName" value="${ meal.name }"/>
+                    <portlet:param name="date" value="${ date }"/>
                 </portlet:renderURL>
                 <li><a href="${ mealUrl }">${ meal.name }</a></li>
             </c:forEach>

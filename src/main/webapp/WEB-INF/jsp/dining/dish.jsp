@@ -30,16 +30,29 @@
         <portlet:renderURL var="diningHallUrl">
             <portlet:param name="action" value="diningHall"/>
             <portlet:param name="diningHall" value="${ diningHallKey }"/>
+            <portlet:param name="date" value="${ date }"/>
         </portlet:renderURL>
         <portlet:renderURL var="mealUrl">
             <portlet:param name="action" value="meal"/>
             <portlet:param name="diningHall" value="${ diningHallKey }"/>
             <portlet:param name="mealName" value="${ mealName }"/>
+            <portlet:param name="date" value="${ date }"/>
         </portlet:renderURL>
-        <a href="<portlet:renderURL/>">
-            <spring:message code="dining.halls"/>
+        <c:if test="${ hasMultipleLocations }">
+            <a href="<portlet:renderURL/>">
+                <spring:message code="dining.halls"/>
+            </a> &gt;
+        </c:if>
+        <a href="${ diningHallUrl }">
+            <c:choose>
+                <c:when test="${ hasMultipleLocations }">
+                    ${ diningHall.name }
+                </c:when>
+                <c:otherwise>
+                    <spring:message code="meals"/>
+                </c:otherwise>
+            </c:choose>
         </a> &gt;
-        <a href="${ diningHallUrl }">${ diningHall.name }</a> &gt;
         <a href="${ mealUrl }">${ mealName }</a> &gt;
       </div>
       <h2 class="title" role="heading">${ dish.name }</h2>
@@ -55,7 +68,7 @@
         <div data-role="collapsible" data-collapsed="true">
             <h3><spring:message code="nutrition"/></h3>
             <table>
-                <c:forEach items="${ dish.nutritionItem }" var="item">
+                <c:forEach items="${ dish.nutritionItems }" var="item">
                     <tr><td style="padding-right: 5px;">${ item.name }</td><td>${ item.value }</td></tr>
                 </c:forEach>
             </table>

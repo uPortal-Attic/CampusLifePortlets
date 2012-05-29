@@ -29,6 +29,7 @@
             <portlet:param name="action" value="meal"/>
             <portlet:param name="diningHall" value="${ diningHallKey }"/>
             <portlet:param name="mealName" value="${ mealName }"/>
+            <portlet:param name="date" value="${ date }"/>
         </portlet:renderURL>
         <a class="menu-back-link" href="${ backUrl }" data-role="button" data-icon="back" data-inline="true">Back</a>
         <h2 class="title">Dish Details</h2>
@@ -43,7 +44,7 @@
         <div data-role="collapsible" data-collapsed="true">
             <h3>Nutrition</h3>
             <table>
-                <c:forEach items="${ dish.nutritionItem }" var="item">
+                <c:forEach items="${ dish.nutritionItems }" var="item">
                     <tr><td style="padding-right: 5px;">${ item.name }</td><td>${ item.value }</td></tr>
                 </c:forEach>
             </table>
