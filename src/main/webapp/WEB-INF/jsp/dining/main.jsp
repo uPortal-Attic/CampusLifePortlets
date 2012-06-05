@@ -25,7 +25,17 @@
 
   <!-- Portlet Titlebar -->
   <div class="fl-widget-titlebar titlebar portlet-titlebar" role="sectionhead">
-      <h2 class="title" role="heading">${ displayDate }</h2>
+      <h2 class="title" role="heading">
+        <portlet:renderURL var="prevUrl">
+            <portlet:param name="date" value="${ prev }"/>
+        </portlet:renderURL>
+        <a href="${ prevUrl }">&lt;</a>
+        Menu for ${ displayDate }
+        <portlet:renderURL var="nextUrl">
+            <portlet:param name="date" value="${ next }"/>
+        </portlet:renderURL>
+        <a href="${ nextUrl }">&gt;</a>
+      </h2>
   </div> <!-- end: portlet-titlebar -->
   
   <!-- Portlet Content -->

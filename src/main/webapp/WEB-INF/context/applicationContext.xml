@@ -40,6 +40,14 @@
         
     <bean class="org.jasig.portlet.campuslife.service.UPortalURLServiceImpl"/>
 
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <property name="messageConverters">
+            <util:list>
+                <bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+            </util:list>
+        </property>
+    </bean>
+
     <bean id="elementsProvider" class="org.jasig.resourceserver.utils.aggr.ResourcesElementsProviderImpl"/>
 
     <bean id="pageCachingFilter" class="org.jasig.portlet.campuslife.mvc.AggregationAwareFilterBean">

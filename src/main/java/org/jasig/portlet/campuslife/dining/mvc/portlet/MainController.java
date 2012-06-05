@@ -39,6 +39,7 @@ import org.joda.time.DateMidnight;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.DateTimeFormatterBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.ModelAndView;
@@ -85,6 +86,13 @@ public class MainController {
         this.urlService = urlService;
     }
     
+    private boolean showDishDetails = true;
+    
+    @Value("${dining.showDishDetails:true}")
+    public void showDishDetails(boolean showDishDetails) {
+        this.showDishDetails = showDishDetails;
+    }
+    
     @RenderMapping
     public ModelAndView showMainView(final RenderRequest request, String date) {
 
@@ -106,7 +114,7 @@ public class MainController {
         }
         final List<DiningHall> halls = menuDao.getDiningHalls(d, request);
         
-        if (halls.size() == 1) {
+        if (halls != null && halls.size() == 1) {
             return showDiningHallView(request, halls.get(0).getKey(), paramFormat.print(d));
         }
         
@@ -189,6 +197,7 @@ public class MainController {
         mav.addObject("date", paramFormat.print(d));
         mav.addObject("meal", meal);
         mav.addObject("categories", categories);
+        mav.addObject("showDishDetails", this.showDishDetails);
         return mav;
 
     }

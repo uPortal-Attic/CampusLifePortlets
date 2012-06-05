@@ -30,11 +30,17 @@
       http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd">
 
     <context:component-scan base-package="org.jasig.portlet.campuslife.dining.mvc.portlet" />
+    <context:property-placeholder location="classpath:configuration.properties"/>
     <context:annotation-config />
     <ehcache:annotation-driven />
 
     <bean id="diningDao" class="org.jasig.portlet.campuslife.dining.dao.MockDiningDaoImpl"
         p:mockData="classpath:/mock-data/dining.xml"/>
+
+    <!--bean id="diningHallCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean"
+        p:cacheManager-ref="cacheManager" p:cacheName="diningHallCache"/>
+    <bean id="diningDao" class="org.jasig.portlet.campuslife.dining.dao.HttpDiningMenuDaoImpl"
+        p:cache-ref="diningHallCache"/-->
         
     <util:map id="dishCodeImages">
         <entry key="1" value="http://www.yaledining.org/images/key_alcohol.gif"/>

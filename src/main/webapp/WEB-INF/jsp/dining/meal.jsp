@@ -63,19 +63,31 @@
             
               <ul>
                 <c:forEach items="${ category.dishes }" var="dish">
-                    <portlet:renderURL var="dishUrl">
-                        <portlet:param name="action" value="dish"/>
-                        <portlet:param name="diningHall" value="${ diningHallKey }"/>
-                        <portlet:param name="mealName" value="${ meal.name }"/>
-                        <portlet:param name="dishName" value="${ dish.name }"/>
-                        <portlet:param name="date" value="${ date }"/>
-                    </portlet:renderURL>
-                    <li><a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
-                        ${ dish.name }
-                        <c:forEach items="${ dish.code }" var="code">
-                            <img src="${dishCodeImages[code]}" style="float: none; position: relative; margin-right: 10px"/>
-                        </c:forEach>
-                    </a></li>
+                    <li>
+                        <c:choose>
+                            <c:when test="${ showDishDetails }">
+                                <portlet:renderURL var="dishUrl">
+                                    <portlet:param name="action" value="dish"/>
+                                    <portlet:param name="diningHall" value="${ diningHallKey }"/>
+                                    <portlet:param name="mealName" value="${ meal.name }"/>
+                                    <portlet:param name="dishName" value="${ dish.name }"/>
+                                    <portlet:param name="date" value="${ date }"/>
+                                </portlet:renderURL>
+                                <a href="${ dishUrl }" style="min-height: 0px; padding-left: 15px">
+                                    ${ dish.name }
+                                    <c:forEach items="${ dish.code }" var="code">
+                                        <img src="${dishCodeImages[code]}" style="float: none; position: relative; margin-right: 10px"/>
+                                    </c:forEach>
+                                </a>
+                            </c:when>
+                            <c:otherwise>
+                                ${ dish.name }
+                                <c:forEach items="${ dish.code }" var="code">
+                                    <img src="${dishCodeImages[code]}" style="float: none; position: relative; margin-right: 10px"/>
+                                </c:forEach>
+                            </c:otherwise>
+                        </c:choose>
+                    </li>
                 </c:forEach>
               </ul>
             </div>

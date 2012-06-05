@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed to Jasig under one or more contributor license agreements. See the 
+    NOTICE file distributed with this work for additional information regarding copyright 
+    ownership. Jasig licenses this file to you under the Apache License, Version 2.0 
+    (the "License"); you may not use this file except in compliance with the License. 
+    You may obtain a copy of the License at: http://www.apache.org/licenses/LICENSE-2.0 
+    Unless required by applicable law or agreed to in writing, software distributed under 
+    the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+    OF ANY KIND, either express or implied. See the License for the specific language 
+    governing permissions and limitations under the License. -->
+<menu xmlns="https://source.jasig.org/schemas/portlet/dining/menu"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://source.jasig.org/schemas/portlet/dining/menu ../xsd/menu.xsd">
+
+    <menu-day date="2012-06-11">
+        <dining-hall key="1" name="General">
+            <meal name="Breakfast">
+                <food-category name="First Course">
+                    <dish name="Steelcut Oats "/>
+                </food-category>
+                <food-category name="The Entrees">
+                    <dish name="Waffle Bar "/>
+                </food-category>
+                <food-category name="Morning Sweets">
+                    <dish name="Cheddar &amp;amp; Green Onion Scone "/>
+                </food-category>
+            </meal>
+            <meal name="Lunch">
+                <food-category name="The Soup">
+                    <dish name="Vegetarian French Onion Soup "/>
+                    <dish name="Manhattan Clam Chowder "/>
+                </food-category>
+                <food-category name="The Entrees">
+                    <dish name="Marinated Oven Roasted Tofu "/>
+                    <dish name="Spinach Frittata With Ricotta "/>
+                </food-category>
+                <food-category name="The Express Bar">
+                    <dish name="Cheese Sauce"/>
+                    <dish name="Steakhouse French Fries "/>
+                    <dish name="Brown Sauce"/>
+                    <dish name="Black Pepper Mayonnaise "/>
+                </food-category>
+                <food-category name="The Grill">
+                    <dish name="Hand Shaped Angus Hamurger "/>
+                    <dish name="Hand Shaped Angus Cheeseburger "/>
+                    <dish
+                        name="Grilled-to-order Star Ranch All Natural Burgers &amp;amp; Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."/>
+                </food-category>
+                <food-category name="The Deli">
+                    <dish name="Egg Salad Mixture "/>
+                </food-category>
+                <food-category name="The Vegetables">
+                    <dish name="Baked Zucchini &amp;amp; Tomatoes "/>
+                </food-category>
+                <food-category name="The Salad">
+                    <dish name="Mesclun, Fresh Mozzarella &amp;amp; Olives "/>
+                    <dish name="Broccoli Olive &amp;amp; Ricotta Salata Salad "/>
+                    <dish name="German Potato Salad "/>
+                </food-category>
+                <food-category name="The Sweets">
+                    <dish name="Rootbeer Cupcake "/>
+                    <dish name="Chocolate Chip Cookie "/>
+                </food-category>
+            </meal>
+        </dining-hall>
+    </menu-day>
+
+    <menu-day date="2012-06-12">
+        <dining-hall key="1" name="General">
+            <meal name="Breakfast">
+                <food-category name="First Course">
+                    <dish name="Steelcut Oats "/>
+                </food-category>
+                <food-category name="The Entrees">
+                    <dish name="Waffle Bar "/>
+                </food-category>
+                <food-category name="Morning Sweets">
+                    <dish name="Cheddar &amp;amp; Green Onion Scone "/>
+                </food-category>
+            </meal>
+            <meal name="Lunch">
+                <food-category name="The Soup">
+                    <dish name="Vegetarian French Onion Soup "/>
+                    <dish name="Manhattan Clam Chowder "/>
+                </food-category>
+                <food-category name="The Entrees">
+                    <dish name="Marinated Oven Roasted Tofu "/>
+                    <dish name="Spinach Frittata With Ricotta "/>
+                </food-category>
+                <food-category name="The Express Bar">
+                    <dish name="Cheese Sauce"/>
+                    <dish name="Steakhouse French Fries "/>
+                    <dish name="Brown Sauce"/>
+                    <dish name="Black Pepper Mayonnaise "/>
+                </food-category>
+                <food-category name="The Grill">
+                    <dish name="Hand Shaped Angus Hamurger "/>
+                    <dish name="Hand Shaped Angus Cheeseburger "/>
+                    <dish
+                        name="Grilled-to-order Star Ranch All Natural Burgers &amp;amp; Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."/>
+                </food-category>
+                <food-category name="The Deli">
+                    <dish name="Egg Salad Mixture "/>
+                </food-category>
+                <food-category name="The Vegetables">
+                    <dish name="Baked Zucchini &amp;amp; Tomatoes "/>
+                </food-category>
+                <food-category name="The Salad">
+                    <dish name="Mesclun, Fresh Mozzarella &amp;amp; Olives "/>
+                    <dish name="Broccoli Olive &amp;amp; Ricotta Salata Salad "/>
+                    <dish name="German Potato Salad "/>
+                </food-category>
+                <food-category name="The Sweets">
+                    <dish name="Rootbeer Cupcake "/>
+                    <dish name="Chocolate Chip Cookie "/>
+                </food-category>
+            </meal>
+        </dining-hall>
+    </menu-day>
+
+    <menu-day date="2012-06-13">
+        <dining-hall key="1" name="General">
+            <meal name="Breakfast">
+                <food-category name="First Course">
+                    <dish name="Steelcut Oats "/>
+                </food-category>
+                <food-category name="The Entrees">
+                    <dish name="Waffle Bar "/>
+                </food-category>
+                <food-category name="Morning Sweets">
+                    <dish name="Cheddar &amp;amp; Green Onion Scone "/>
+                </food-category>
+            </meal>
+            <meal name="Lunch">
+                <food-category name="The Soup">
+                    <dish name="Vegetarian French Onion Soup "/>
+                    <dish name="Manhattan Clam Chowder "/>
+                </food-category>
+                <food-category name="The Entrees">
+                    <dish name="Marinated Oven Roasted Tofu "/>
+                    <dish name="Spinach Frittata With Ricotta "/>
+                </food-category>
+                <food-category name="The Express Bar">
+                    <dish name="Cheese Sauce"/>
+                    <dish name="Steakhouse French Fries "/>
+                    <dish name="Brown Sauce"/>
+                    <dish name="Black Pepper Mayonnaise "/>
+                </food-category>
+                <food-category name="The Grill">
+                    <dish name="Hand Shaped Angus Hamurger "/>
+                    <dish name="Hand Shaped Angus Cheeseburger "/>
+                    <dish
+                        name="Grilled-to-order Star Ranch All Natural Burgers &amp;amp; Cheeseburgers, All Natural Chicken Breasts, Jumbo All Beef Franks, Gardenburgers The Original, Gardenburger Black Bean Veggie Burgers, or Grilled Tofu, plus French Fries."/>
+                </food-category>
+                <food-category name="The Deli">
+                    <dish name="Egg Salad Mixture "/>
+                </food-category>
+                <food-category name="The Vegetables">
+                    <dish name="Baked Zucchini &amp;amp; Tomatoes "/>
+                </food-category>
+                <food-category name="The Salad">
+                    <dish name="Mesclun, Fresh Mozzarella &amp;amp; Olives "/>
+                    <dish name="Broccoli Olive &amp;amp; Ricotta Salata Salad "/>
+                    <dish name="German Potato Salad "/>
+                </food-category>
+                <food-category name="The Sweets">
+                    <dish name="Rootbeer Cupcake "/>
+                    <dish name="Chocolate Chip Cookie "/>
+                </food-category>
+            </meal>
+        </dining-hall>
+    </menu-day>
+
+</menu>
